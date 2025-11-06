@@ -1,3 +1,10 @@
+"""
+Genre Constellation Manifest Generator
+
+Selects seed tracks for each genre, computes features, and exports a manifest
+for the music guessing game level select screen.
+"""
+
 import json
 import re
 import math
@@ -8,14 +15,45 @@ import random
 import time
 import os
 
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
 
-random.seed(42)
+CONFIG = {
+    # File paths
+    'data_file': 'server/data/prepped.json',
+    'output_file': 'genre_constellation_manifest.json',
+    'dataset_id': 'prepped_v7_2025-11-04',
+
+    # Seed selection
+    'seeds_per_genre': 5,
+    'random_seed': 42,
+
+    # Tempo normalization
+    'min_bpm': 70.0,
+    'max_bpm': 200.0,
+
+    # Scoring weights
+    'score_exact_match': 2.5,
+    'score_whitelist_bonus': 1.5,
+    'score_boost_bonus': 0.8,
+    'score_contamination_penalty': -0.3,
+    'score_random_noise': 0.05,
+
+    # Popularity scoring (plateau function)
+    'pop_center': 69.0,
+    'pop_plateau': 5.0,
+    'pop_width': 55.0,
+    'pop_weight': 0.5,
+}
+
+random.seed(CONFIG['random_seed'])
 
 print("=" * 60, flush=True)
 print("Starting Genre Constellation Manifest Generator", flush=True)
 print("=" * 60, flush=True)
 
-DATA_FILE = 'server/data/prepped.json'
+DATA_FILE = CONFIG['data_file']
 if not os.path.exists(DATA_FILE):
     print(f"❌ ERROR: Input file not found: {DATA_FILE}", flush=True)
     exit(1)
@@ -73,13 +111,14 @@ def generate_filename(artist, track_name):
     return f"{safe_artist}-{safe_name}.json"
 
 def clamp(x, lo, hi):
+    """Clamp value x between lo and hi."""
     return lo if x < lo else hi if x > hi else x
 
-MIN_BPM = 70.0
-MAX_BPM = 200.0
-
 def tempo_to_norm(bpm: float) -> float:
-    return clamp((bpm - MIN_BPM) / (MAX_BPM - MIN_BPM), 0.0, 1.0)
+    """Normalize BPM to 0-1 range using configured min/max."""
+    min_bpm = CONFIG['min_bpm']
+    max_bpm = CONFIG['max_bpm']
+    return clamp((bpm - min_bpm) / (max_bpm - min_bpm), 0.0, 1.0)
 
 def median_sorted(vals):
     n = len(vals)
@@ -1387,40 +1426,51 @@ used_track_ids_by_parent: Dict[str, Set[str]] = defaultdict(set)
 used_artists_by_parent: Dict[str, Set[str]] = defaultdict(set)
 
 def proto_score(target_genre: str, t: Dict[str, Any]) -> float:
+    """
+    Score a track's fitness for a target genre.
+
+    Combines exact genre matches, artist whitelists, popularity plateau,
+    and contamination penalties to rank candidates.
+    """
     tags = norm_tags(t.get("artist_genres") or t.get("genres"))
     target = target_genre.lower()
     artists = [a.lower() for a in (t.get("artists") or [])]
-    exact = 2.5 if any(g == target for g in tags) else 0.0
 
+    # Exact genre match bonus
+    exact = CONFIG['score_exact_match'] if any(g == target for g in tags) else 0.0
+
+    # Check genre-specific rules
     rules = GENRE_RULES.get(target, {})
     whitelist = [w.lower() for w in rules.get("whitelist_artists", [])]
     boost = [b.lower() for b in rules.get("boost_artist_contains", [])]
 
-    whitelist_bonus = 1.5 if any(w in a for a in artists for w in whitelist) else 0.0
-    boost_bonus = 0.8 if any(b in a for a in artists for b in boost) else 0.0
+    whitelist_bonus = CONFIG['score_whitelist_bonus'] if any(w in a for a in artists for w in whitelist) else 0.0
+    boost_bonus = CONFIG['score_boost_bonus'] if any(b in a for a in artists for b in boost) else 0.0
 
+    # Popularity scoring with plateau function
     pop = float(t.get("popularity", 0))
-    pop_score = pop_component(pop, center=69.0, plateau=5.0, width=55.0, weight=0.5)
+    pop_score = pop_component(
+        pop,
+        center=CONFIG['pop_center'],
+        plateau=CONFIG['pop_plateau'],
+        width=CONFIG['pop_width'],
+        weight=CONFIG['pop_weight']
+    )
 
+    # Contamination from undesirable genres
     bad_tokens = {"dance pop", "pop", "electropop", "soundtrack"}
-    contam = -0.3 if any(any(bt in g for g in tags) for bt in bad_tokens) else 0.0
+    contam = CONFIG['score_contamination_penalty'] if any(any(bt in g for g in tags) for bt in bad_tokens) else 0.0
 
-    # --- new: reward depth of genre tag match ---
+    # Depth bonus: reward multiple matching tags
     allow = [a.lower() for a in rules.get("allow_artist_genres_any", [])]
     deny = [d.lower() for d in rules.get("deny_artist_genres_any", [])]
     match_bonus = min(1.2, 0.4 * sum(g in tags for g in allow))
     deny_penalty = -0.5 if any(d in tags for d in deny) else 0.0
 
-    return (
-        exact
-        + whitelist_bonus
-        + boost_bonus
-        + pop_score
-        + contam
-        + match_bonus
-        + deny_penalty
-        + random.random() * 0.05
-    )
+    # Small random noise for tiebreaking
+    noise = random.random() * CONFIG['score_random_noise']
+
+    return exact + whitelist_bonus + boost_bonus + pop_score + contam + match_bonus + deny_penalty + noise
 
 print(f"Processing {len(PLAYABLE_GENRES)} genres...", flush=True)
 processing_start = time.time()
@@ -1496,7 +1546,7 @@ for idx, genre in enumerate(PLAYABLE_GENRES, 1):
     # final pick with global de-dupe only
     top_k = []
     for t in unique:
-        if len(top_k) >= 5:
+        if len(top_k) >= CONFIG['seeds_per_genre']:
             break
         tid = t.get("uri") or t.get("id")
         artist = ((t.get("artists") or [""])[0] or "").strip().lower()
@@ -1675,7 +1725,7 @@ for k, vals in accum.items():
 
 manifest["global"] = {
     "feature_set": feature_set,
-    "tempo_norm": {"min_bpm": int(MIN_BPM), "max_bpm": int(MAX_BPM)},
+    "tempo_norm": {"min_bpm": int(CONFIG['min_bpm']), "max_bpm": int(CONFIG['max_bpm'])},
     "means": means,
     "stddevs": stddevs,
     "quantiles": quantiles,
@@ -1689,19 +1739,19 @@ manifest["global"] = {
 
 manifest["build"] = {
     "schema_version": "1",
-    "dataset_id": "prepped_v7_2025-11-04",
+    "dataset_id": CONFIG['dataset_id'],
     "track_count": len(tracks),
-    "sample_size_per_genre": 5,
+    "sample_size_per_genre": CONFIG['seeds_per_genre'],
     "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
 }
 
 print(f"Saving manifest to file...", flush=True)
-with open('genre_constellation_manifest.json', 'w', encoding='utf-8') as f:
+with open(CONFIG['output_file'], 'w', encoding='utf-8') as f:
     json.dump(manifest, f, indent=2, ensure_ascii=False)
 
 total_time = time.time() - start_time
 print("\n" + "=" * 60, flush=True)
-print(f"✓ SAVED: genre_constellation_manifest.json", flush=True)
+print(f"✓ SAVED: {CONFIG['output_file']}", flush=True)
 print(f"✓ Total execution time: {total_time:.1f}s", flush=True)
 print("=" * 60, flush=True)
 
@@ -1711,14 +1761,15 @@ print("=" * 60, flush=True)
 total_found = 0
 issues = []
 
+target_count = CONFIG['seeds_per_genre']
 for genre in PLAYABLE_GENRES:
     count = len(results.get(genre, []))
     total_found += count
-    status = "✓" if count == 5 else "⚠️" if count > 0 else "✗"
+    status = "✓" if count == target_count else "⚠️" if count > 0 else "✗"
     if count > 0:
         avg_pop = sum(t.get('popularity', 0) for t in results[genre]) / count
-        print(f"{status} {genre:<30} {count}/5 tracks (avg pop: {avg_pop:.0f})")
-    if 0 < count < 5:
+        print(f"{status} {genre:<30} {count}/{target_count} tracks (avg pop: {avg_pop:.0f})")
+    if 0 < count < target_count:
         issues.append((genre, count))
 
 print(f"\nTotal seed selections: {total_found}", flush=True)
