@@ -238,12 +238,9 @@ GENRE_TREE = {
             "metal": {
                 "_seeds": "metal",
                 "subgenres": {
-                    "stoner metal": {"_seeds": "stoner metal"},  # Changed from "doom & black metal" - matches actual Spotify tags
-                    "sludge metal": {"_seeds": "sludge metal"},
+                    "stoner metal": {"_seeds": "stoner metal"},
                     "death metal": {"_seeds": "death metal"},
-                    "progressive metal": {"_seeds": "progressive metal"},
                     "nu metal": {"_seeds": "nu metal"},
-                    #"thrash metal": {"_seeds": "thrash metal"},
                 }
             },
             "punk": {
@@ -281,12 +278,21 @@ GENRE_TREE = {
             "techno": { "_seeds": "techno" },
             "trance": { "_seeds": "trance" },
             "drum and bass": { "_seeds": "drum and bass" },
-            "jungle": { "_seeds": "jungle" },
             "uk garage": { "_seeds": "uk garage" },
             "dubstep": { "_seeds": "dubstep" },
             "synthwave": { "_seeds": "synthwave" },
             "ambient": { "_seeds": "ambient" },
             #"breakbeat": { "_seeds": "breakbeat" },
+        }
+    },
+
+    "pop": {
+        "_seeds": "pop",
+        "subgenres": {
+            "dance pop": {"_seeds": "dance pop"},
+            "indie pop": {"_seeds": "indie pop"},
+            "electropop": {"_seeds": "electropop"},
+            "k-pop": {"_seeds": "k-pop"},
         }
     },
 
@@ -326,13 +332,8 @@ GENRE_TREE = {
                     "neo soul": {"_seeds": "neo soul"}
                 }
             },
-            "funk": {
-                "_seeds": "funk",
-                "subgenres": {
-                    "boogie": {"_seeds": "boogie"},
-                    #"funk rock": {"_seeds": "funk rock"},
-                }
-            }
+            "funk": {"_seeds": "funk"},  # Merged with boogie - no subgenres
+            "blues": {"_seeds": "blues"}  # Added - foundation of R&B and soul
         }
     },
 
@@ -346,8 +347,6 @@ GENRE_TREE = {
             "jazz fusion": {"_seeds": "jazz fusion"},
             "smooth jazz": {"_seeds": "smooth jazz"},
             "nu jazz": {"_seeds": "nu jazz"},
-            "avant-garde jazz": {"_seeds": "avant-garde jazz"},
-            #"vocal jazz": {"_seeds": "vocal jazz"},
         }
     },
 
@@ -379,13 +378,12 @@ GENRE_TREE = {
         }
     },
 
-    "reggae": {
-        "_seeds": "reggae",
+    "Caribbean & African": {
         "subgenres": {
+            "reggae": {"_seeds": "reggae"},
             "dub": {"_seeds": "dub"},
             "ska": {"_seeds": "ska"},
             "dancehall": {"_seeds": "dancehall"},
-#            "soca": {"_seeds": "soca"},
             "afrobeat": {"_seeds": "afrobeat"},
             "afropop": {"_seeds": "afropop"},
             "amapiano": {"_seeds": "amapiano"}
@@ -778,32 +776,23 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
   },
 
   "funk": {
-    "require_artist_genres_any": ["funk", "p funk", "p-funk", "classic funk", "pfunk", "boogie", "modern funk"],
+    "require_artist_genres_any": ["funk", "p funk", "p-funk", "classic funk", "pfunk", "boogie", "post-disco", "modern funk"],  # Merged with boogie
     "deny_artist_genres_any": ["rap", "contemporary r&b", "quiet storm", "rock", "blues rock", "garage rock", "alternative rock", "indie rock"],
-    "whitelist_artists": ["Parliament", "Funkadelic", "George Clinton", "Bootsy Collins", "The Meters", "Ohio Players", "Kool & The Gang", "Zapp", "Cameo", "Con Funk Shun", "DāM-Funk", "Vulfpeck"],
+    "whitelist_artists": ["Parliament", "Funkadelic", "George Clinton", "Bootsy Collins", "The Meters", "Ohio Players", "Kool & The Gang", "Zapp", "Cameo", "Con Funk Shun", "DāM-Funk", "Vulfpeck", "Tim Maia", "Marcos Valle"],
     "boost_artist_contains": ["james brown", "sly stone", "graham central", "tower of power"],
     "min_year": 1967,
-    "max_year": 1988,
-    "popularity_min": 15,
+    "max_year": 1992,  # Extended to cover boogie era (1978-1990)
+    "popularity_min": 10,  # Lowered to allow more niche tracks
     "popularity_max": 85
   },
 
-  "funk rock": {
-    "require_artist_genres_any": ["funk rock", "alternative metal", "rap rock"],
-    "deny_artist_genres_any": ["new jack swing", "dance pop", "pop", "pop rock", "post-grunge"],
-    "min_year": 1985,
-    "max_year": 2005,
-    "popularity_min": 20,
-    "popularity_max": 85
-  },
-
-  "boogie": {
-    "require_artist_genres_any": ["boogie", "post-disco"],
-    "deny_artist_genres_any": ["soundtrack", "broadway", "film soundtrack", "show tunes"],
-    "min_year": 1978,
-    "max_year": 1990,
-    "popularity_min": 10,
-    "popularity_max": 80
+  "blues": {
+    "require_artist_genres_any": ["blues", "electric blues", "chicago blues", "delta blues", "blues rock", "modern blues"],
+    "deny_artist_genres_any": ["country blues", "bluegrass", "folk"],
+    "whitelist_artists": ["B.B. King", "Muddy Waters", "Howlin' Wolf", "Buddy Guy", "Stevie Ray Vaughan", "Gary Clark Jr.", "Joe Bonamassa"],
+    "boost_artist_contains": ["robert johnson", "john lee hooker", "albert king", "eric clapton"],
+    "deny_name_contains": ["remix", "edit", "radio edit"],
+    "min_year": 1950, "max_year": 2024, "popularity_min": 10, "popularity_max": 85
   },
 
   "neo soul": {
@@ -868,15 +857,7 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
     "popularity_max": 85
   },
 
-  "avant-garde jazz": {
-    "require_artist_genres_any": ["avant-garde jazz", "free jazz", "free improvisation", "spiritual jazz", "experimental jazz"],
-    "min_year": 1960,
-    "max_year": 2024,
-    "popularity_min": 5,
-    "popularity_max": 80
-  },
-
-  # ----- LATIN / REGGAE -----
+  # ----- LATIN / CARIBBEAN & AFRICAN -----
   "bossa nova": {
     "require_artist_genres_any": ["bossa nova"],
     "deny_artist_genres_any": ["samba", "latin pop", "reggaeton"],
@@ -1000,17 +981,6 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "popularity_max": 85
     },
 
-    "sludge metal": {
-        "require_artist_genres_any": ["sludge metal", "stoner metal", "stoner rock","southern metal","doom metal"],
-        "deny_artist_genres_any": ["black metal", "power metal", "symphonic metal"],  # Removed doom metal conflict
-        "whitelist_artists": ["Melvins", "Crowbar", "Eyehategod", "Corrosion Of Conformity", "Down", "Neurosis", "Sleep", "Mastodon"],
-        "deny_name_contains": ["remaster", "remastered", "live", "edit"],
-        "min_year": 1989,
-        "max_year": 2020,
-        "popularity_min": 10,
-        "popularity_max": 85
-    },
-
     "death metal": {
         "require_artist_genres_any": ["death metal", "brutal death metal", "technical death metal", "melodic death metal", "old school death metal", "swedish death metal", "florida death metal"],
         "deny_artist_genres_any": ["symphonic metal", "gothic metal", "black metal", "thrash metal", "metalcore"],
@@ -1022,20 +992,9 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "popularity_max": 80
     },
 
-    "progressive metal": {
-        "require_artist_genres_any": ["progressive metal","prog metal","djent","progressive rock"],
-        "deny_artist_genres_any": ["power metal", "symphonic metal"],
-        "whitelist_artists": ["Dream Theater", "Opeth", "Tool", "Porcupine Tree", "Queensrÿche", "Symphony X", "Fates Warning"],
-        "deny_name_contains": ["remaster", "remastered", "live", "edit"],
-        "min_year": 1988,
-        "max_year": 2015,
-        "popularity_min": 10,
-        "popularity_max": 85
-    },
-
     "nu metal": {
         "require_artist_genres_any": ["nu metal"],
-        "deny_artist_genres_any": ["death metal", "progressive metal", "drum and bass", "electronic", "industrial rock"],
+        "deny_artist_genres_any": ["death metal", "drum and bass", "electronic", "industrial rock"],
         "whitelist_artists": ["Korn", "Limp Bizkit", "Linkin Park", "Deftones", "Disturbed", "System of a Down", "Papa Roach", "P.O.D."],
         "deny_name_contains": ["remix", "radio edit", "edit", "live"],
         "min_year": 1996,
@@ -1116,17 +1075,10 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
     # ===== ELECTRONIC MISSING =====
     "drum and bass": {
         "require_artist_genres_any": ["drum and bass", "dnb", "liquid funk", "neurofunk", "jump up"],
-        "deny_artist_genres_any": ["jungle", "dubstep", "breakbeat", "uk garage"],
+        "deny_artist_genres_any": ["dubstep", "breakbeat", "uk garage"],
         "whitelist_artists": ["High Contrast", "LTJ Bukem", "Goldie", "Noisia", "Calibre", "Logistics", "Pendulum"],
         "deny_name_contains": ["radio edit", "remix", "vip", "edit", "live"],
         "min_year": 1995, "max_year": 2020, "popularity_min": 10, "popularity_max": 85
-    },
-    "jungle": {
-        "require_artist_genres_any": ["jungle", "ragga jungle", "oldschool jungle", "drum and bass"],  # Added dnb
-        "deny_artist_genres_any": ["dubstep", "uk garage", "house"],
-        "whitelist_artists": ["SHY FX", "DJ Hype", "Roni Size", "General Levy", "M-Beat", "Aphrodite", "Andy C"],
-        "deny_name_contains": ["radio edit", "remix", "vip", "edit", "live"],
-        "min_year": 1993, "max_year": 2015, "popularity_min": 5, "popularity_max": 80  # Relaxed year
     },
     "uk garage": {
         "require_artist_genres_any": ["uk garage", "ukg", "2-step", "speed garage"],
@@ -1148,6 +1100,47 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "whitelist_artists": ["Brian Eno", "Stars of the Lid", "William Basinski", "Harold Budd", "Marconi Union", "Aphex Twin"],
         "deny_name_contains": ["remix", "edit", "radio edit"],
         "min_year": 1975, "max_year": 2024, "popularity_min": 5, "popularity_max": 80
+    },
+
+    # ===== POP =====
+    "pop": {
+        "require_artist_genres_any": ["pop", "art pop", "baroque pop", "chamber pop"],
+        "deny_artist_genres_any": ["dance pop", "indie pop", "electropop", "k-pop", "pop rap", "trap", "hip hop", "r&b", "country pop", "latin pop", "reggaeton"],
+        "whitelist_artists": ["Taylor Swift", "Adele", "Ed Sheeran", "Sam Smith", "Coldplay"],
+        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "min_year": 2000, "max_year": 2024, "popularity_min": 50, "popularity_max": 100
+    },
+
+    "dance pop": {
+        "require_artist_genres_any": ["dance pop", "pop dance", "eurodance", "post-teen pop"],
+        "deny_artist_genres_any": ["indie pop", "art pop", "chamber pop", "k-pop", "j-pop", "hip hop", "trap", "edm"],
+        "whitelist_artists": ["Dua Lipa", "The Weeknd", "Ariana Grande", "Britney Spears", "Lady Gaga", "Kylie Minogue"],
+        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "min_year": 1995, "max_year": 2024, "popularity_min": 55, "popularity_max": 100
+    },
+
+    "indie pop": {
+        "require_artist_genres_any": ["indie pop", "bedroom pop", "indie poptimism", "alt z"],
+        "deny_artist_genres_any": ["dance pop", "k-pop", "electropop", "hip hop", "trap", "indie rock", "indie folk"],
+        "whitelist_artists": ["Clairo", "Rex Orange County", "Carly Rae Jepsen", "Lorde", "Vampire Weekend", "MGMT"],
+        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "min_year": 2005, "max_year": 2024, "popularity_min": 40, "popularity_max": 95
+    },
+
+    "electropop": {
+        "require_artist_genres_any": ["electropop", "synthpop", "new wave pop", "indietronica"],
+        "deny_artist_genres_any": ["dance pop", "indie pop", "k-pop", "edm", "house", "techno"],
+        "whitelist_artists": ["CHVRCHES", "Robyn", "Grimes", "Charli XCX", "Passion Pit", "M83"],
+        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "min_year": 2005, "max_year": 2024, "popularity_min": 40, "popularity_max": 90
+    },
+
+    "k-pop": {
+        "require_artist_genres_any": ["k-pop"],
+        "deny_artist_genres_any": ["j-pop", "dance pop", "indie pop", "mandopop"],
+        "whitelist_artists": ["BTS", "BLACKPINK", "EXO", "TWICE", "Red Velvet", "Stray Kids", "ITZY", "aespa"],
+        "deny_name_contains": ["remix", "instrumental"],
+        "min_year": 2010, "max_year": 2024, "popularity_min": 50, "popularity_max": 100
     },
 
     # ===== HIP HOP MISSING =====
