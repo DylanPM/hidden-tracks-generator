@@ -99,8 +99,7 @@
           "tempo_norm": 0.41
         },
         "subgenres": {
-          "doom & black metal": {},
-          "sludge metal": {
+          "stoner metal": {
             "seeds": [
               {
                 "uri": "spotify:track:3jagGO7eHHuaD53ibehkux",
@@ -124,6 +123,35 @@
                 "filename": "corrosion-of-conformity-clean-my-wounds.json"
               },
               {
+                "uri": "spotify:track:7cbfAGvFhqwlJw92d1e3u4",
+                "name": "Contagious",
+                "artist": "Mustasch",
+                "popularity": 57,
+                "filename": "mustasch-contagious.json"
+              },
+              {
+                "uri": "spotify:track:6qLgGLeawKyhMFJ848XtYD",
+                "name": "Dragonaut",
+                "artist": "Sleep",
+                "popularity": 54,
+                "filename": "sleep-dragonaut.json"
+              }
+            ],
+            "features": {
+              "danceability": 0.44,
+              "energy": 0.91,
+              "speechiness": 0.07,
+              "acousticness": 0.0,
+              "valence": 0.56,
+              "popularity": 57.0,
+              "instrumentalness": 0.01,
+              "tempo_bpm": 123.61,
+              "tempo_norm": 0.41
+            }
+          },
+          "sludge metal": {
+            "seeds": [
+              {
                 "uri": "spotify:track:5oABn2E9jiDrmhDdiNWbKS",
                 "name": "Honey Bucket",
                 "artist": "Melvins",
@@ -132,15 +160,15 @@
               }
             ],
             "features": {
-              "danceability": 0.43,
-              "energy": 0.91,
-              "speechiness": 0.06,
-              "acousticness": 0.01,
-              "valence": 0.57,
-              "popularity": 57.0,
-              "instrumentalness": 0.18,
-              "tempo_bpm": 99.58,
-              "tempo_norm": 0.23
+              "danceability": 0.41,
+              "energy": 0.89,
+              "speechiness": 0.05,
+              "acousticness": 0.0,
+              "valence": 0.59,
+              "popularity": 54.0,
+              "instrumentalness": 0.35,
+              "tempo_bpm": 88.06,
+              "tempo_norm": 0.14
             }
           },
           "death metal": {
@@ -160,18 +188,18 @@
                 "filename": "meshuggah-bleed.json"
               },
               {
-                "uri": "spotify:track:0sObxZUKqdPfgjG9ahSlP5",
-                "name": "The Pursuit Of Vikings",
-                "artist": "Amon Amarth",
-                "popularity": 58,
-                "filename": "amon-amarth-the-pursuit-of-vikings.json"
-              },
-              {
                 "uri": "spotify:track:27sTzAelgljD6Uxp88BqA3",
                 "name": "Nemesis",
                 "artist": "Arch Enemy",
                 "popularity": 59,
                 "filename": "arch-enemy-nemesis.json"
+              },
+              {
+                "uri": "spotify:track:0sObxZUKqdPfgjG9ahSlP5",
+                "name": "The Pursuit Of Vikings",
+                "artist": "Amon Amarth",
+                "popularity": 58,
+                "filename": "amon-amarth-the-pursuit-of-vikings.json"
               },
               {
                 "uri": "spotify:track:4uJSCrI7r0usNJ3aaHAuC6",
@@ -232,11 +260,18 @@
           "nu metal": {
             "seeds": [
               {
-                "uri": "spotify:track:1X4Ntw6Lbaa1ACgilCqMpr",
-                "name": "Alive - Chris Lord-Alge Mix",
-                "artist": "P.O.D.",
-                "popularity": 63,
-                "filename": "pod-alive-chris-lord-alge-mix.json"
+                "uri": "spotify:track:1TEZWG1FdjzDdercCguTwj",
+                "name": "Nookie",
+                "artist": "Limp Bizkit",
+                "popularity": 67,
+                "filename": "limp-bizkit-nookie.json"
+              },
+              {
+                "uri": "spotify:track:5NHTtXGCdO7ul16xr0q93w",
+                "name": "Here to Stay",
+                "artist": "Korn",
+                "popularity": 61,
+                "filename": "korn-here-to-stay.json"
               },
               {
                 "uri": "spotify:track:2Ll44WxlG2eiqL6NtEnf8M",
@@ -246,11 +281,11 @@
                 "filename": "papa-roach-blood-brothers.json"
               },
               {
-                "uri": "spotify:track:1TEZWG1FdjzDdercCguTwj",
-                "name": "Nookie",
-                "artist": "Limp Bizkit",
-                "popularity": 67,
-                "filename": "limp-bizkit-nookie.json"
+                "uri": "spotify:track:1X4Ntw6Lbaa1ACgilCqMpr",
+                "name": "Alive - Chris Lord-Alge Mix",
+                "artist": "P.O.D.",
+                "popularity": 63,
+                "filename": "pod-alive-chris-lord-alge-mix.json"
               },
               {
                 "uri": "spotify:track:0rPTPahzhGx9LSzI8XX5OM",
@@ -258,13 +293,6 @@
                 "artist": "Linkin Park",
                 "popularity": 59,
                 "filename": "linkin-park-figure09.json"
-              },
-              {
-                "uri": "spotify:track:5NHTtXGCdO7ul16xr0q93w",
-                "name": "Here to Stay",
-                "artist": "Korn",
-                "popularity": 61,
-                "filename": "korn-here-to-stay.json"
               }
             ],
             "features": {
@@ -284,11 +312,11 @@
       "punk": {
         "seeds": [
           {
-            "uri": "spotify:track:7G83ZwD2msTtFaBQExc8QB",
-            "name": "Institutionalized",
-            "artist": "Suicidal Tendencies",
-            "popularity": 60,
-            "filename": "suicidal-tendencies-institutionalized.json"
+            "uri": "spotify:track:7rSERmjAT38lC5QhJ8hnQc",
+            "name": "I'm Shipping Up To Boston",
+            "artist": "Dropkick Murphys",
+            "popularity": 72,
+            "filename": "dropkick-murphys-im-shipping-up-to-boston.json"
           },
           {
             "uri": "spotify:track:5moTxUGPZXgGmosl4rIELm",
@@ -298,55 +326,104 @@
             "filename": "sex-pistols-anarchy-in-the-uk.json"
           },
           {
-            "uri": "spotify:track:3B0Er8HRu24IbPKCi59N0b",
-            "name": "I Hope You Die",
-            "artist": "Bloodhound Gang",
-            "popularity": 58,
-            "filename": "bloodhound-gang-i-hope-you-die.json"
+            "uri": "spotify:track:7G83ZwD2msTtFaBQExc8QB",
+            "name": "Institutionalized",
+            "artist": "Suicidal Tendencies",
+            "popularity": 60,
+            "filename": "suicidal-tendencies-institutionalized.json"
           },
           {
-            "uri": "spotify:track:2ySclvHzUFOlgw5MHcvVe6",
-            "name": "Stop the Clocks",
-            "artist": "Donots",
-            "popularity": 57,
-            "filename": "donots-stop-the-clocks.json"
+            "uri": "spotify:track:39shmbIHICJ2Wxnk1fPSdz",
+            "name": "Should I Stay or Should I Go - Remastered",
+            "artist": "The Clash",
+            "popularity": 80,
+            "filename": "the-clash-should-i-stay-or-should-i-go-remastered.json"
           },
           {
-            "uri": "spotify:track:0S8LgLoseDB6W2HWd1ym6P",
-            "name": "Last Caress",
-            "artist": "Misfits",
-            "popularity": 58,
-            "filename": "misfits-last-caress.json"
+            "uri": "spotify:track:10UlU5E5RfydywnKmA1nFL",
+            "name": "Chip",
+            "artist": "The Real McKenzies",
+            "popularity": 62,
+            "filename": "the-real-mckenzies-chip.json"
           }
         ],
         "features": {
-          "danceability": 0.36,
-          "energy": 0.91,
+          "danceability": 0.43,
+          "energy": 0.89,
           "speechiness": 0.1,
-          "acousticness": 0.03,
+          "acousticness": 0.04,
           "valence": 0.62,
-          "popularity": 58.0,
+          "popularity": 62.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 134.12,
-          "tempo_norm": 0.49
+          "tempo_bpm": 129.19,
+          "tempo_norm": 0.46
         },
         "subgenres": {
-          "post-punk": {},
-          "emo": {
+          "post-punk": {
             "seeds": [
               {
-                "uri": "spotify:track:51R5mPcJjOnfv9lKY1u5sW",
-                "name": "Never Meant",
-                "artist": "American Football",
-                "popularity": 60,
-                "filename": "american-football-never-meant.json"
+                "uri": "spotify:track:5FFowl1Ve4S5OehL6OywSg",
+                "name": "Waiting Room",
+                "artist": "Fugazi",
+                "popularity": 65,
+                "filename": "fugazi-waiting-room.json"
               },
+              {
+                "uri": "spotify:track:34iOH7LY3vme5rQxsVILZ4",
+                "name": "Love Will Tear Us Apart - 2020 Remaster",
+                "artist": "Joy Division",
+                "popularity": 69,
+                "filename": "joy-division-love-will-tear-us-apart-2020-remaster.json"
+              },
+              {
+                "uri": "spotify:track:62uw0iWu8jLB4cYBQxjdcm",
+                "name": "Damaged Goods",
+                "artist": "Gang Of Four",
+                "popularity": 58,
+                "filename": "gang-of-four-damaged-goods.json"
+              },
+              {
+                "uri": "spotify:track:0ElRzK07sc9eszyk1ea9Ab",
+                "name": "Human Fly",
+                "artist": "The Cramps",
+                "popularity": 57,
+                "filename": "the-cramps-human-fly.json"
+              },
+              {
+                "uri": "spotify:track:2UayKZmrsYyjNj6T8frugJ",
+                "name": "I Was Dancing In The Lesbian Bar",
+                "artist": "Jonathan Richman",
+                "popularity": 55,
+                "filename": "jonathan-richman-i-was-dancing-in-the-lesbian-bar.json"
+              }
+            ],
+            "features": {
+              "danceability": 0.62,
+              "energy": 0.73,
+              "speechiness": 0.04,
+              "acousticness": 0.03,
+              "valence": 0.9,
+              "popularity": 58.0,
+              "instrumentalness": 0.05,
+              "tempo_bpm": 119.52,
+              "tempo_norm": 0.38
+            }
+          },
+          "emo": {
+            "seeds": [
               {
                 "uri": "spotify:track:3IlY76VbP31zwPY0S2EMjh",
                 "name": "The Quiet Things That No One Ever Knows",
                 "artist": "Brand New",
                 "popularity": 61,
                 "filename": "brand-new-the-quiet-things-that-no-one-ever-knows.json"
+              },
+              {
+                "uri": "spotify:track:51R5mPcJjOnfv9lKY1u5sW",
+                "name": "Never Meant",
+                "artist": "American Football",
+                "popularity": 60,
+                "filename": "american-football-never-meant.json"
               },
               {
                 "uri": "spotify:track:0SUClY63fA1awioMFtMYeE",
@@ -363,11 +440,11 @@
                 "filename": "taking-back-sunday-liar-it-takes-one-to-know-one.json"
               },
               {
-                "uri": "spotify:track:6yVSp9H2STyLeOs7pjy2w4",
-                "name": "Hands Down",
-                "artist": "Dashboard Confessional",
-                "popularity": 63,
-                "filename": "dashboard-confessional-hands-down.json"
+                "uri": "spotify:track:6QfnvcOKsdN4Q6exUWVuzn",
+                "name": "Ohio Is for Lovers",
+                "artist": "Hawthorne Heights",
+                "popularity": 65,
+                "filename": "hawthorne-heights-ohio-is-for-lovers.json"
               }
             ],
             "features": {
@@ -375,11 +452,11 @@
               "energy": 0.83,
               "speechiness": 0.07,
               "acousticness": 0.02,
-              "valence": 0.26,
+              "valence": 0.41,
               "popularity": 61.0,
               "instrumentalness": 0.0,
-              "tempo_bpm": 94.03,
-              "tempo_norm": 0.18
+              "tempo_bpm": 144.26,
+              "tempo_norm": 0.57
             }
           }
         }
@@ -465,20 +542,20 @@
             "filename": "tv-on-the-radio-wolf-like-me.json"
           },
           {
-            "uri": "spotify:track:5HLes17mwCwKt81mi0Tk35",
-            "name": "Archie, Marry Me",
-            "artist": "Alvvays",
-            "popularity": 63,
-            "filename": "alvvays-archie-marry-me.json"
+            "uri": "spotify:track:6dtPJwNdLuyVGPWyHOI6GP",
+            "name": "It's Only Sex",
+            "artist": "Car Seat Headrest",
+            "popularity": 60,
+            "filename": "car-seat-headrest-its-only-sex.json"
           }
         ],
         "features": {
-          "danceability": 0.4,
-          "energy": 0.83,
+          "danceability": 0.56,
+          "energy": 0.79,
           "speechiness": 0.04,
           "acousticness": 0.0,
           "valence": 0.65,
-          "popularity": 62.0,
+          "popularity": 60.0,
           "instrumentalness": 0.09,
           "tempo_bpm": 125.12,
           "tempo_norm": 0.42
@@ -487,18 +564,18 @@
       "shoegaze": {
         "seeds": [
           {
-            "uri": "spotify:track:0oxYB9GoOIDrdzniNdKC44",
-            "name": "When the Sun Hits",
-            "artist": "Slowdive",
-            "popularity": 63,
-            "filename": "slowdive-when-the-sun-hits.json"
-          },
-          {
             "uri": "spotify:track:0AxZUYeQ9bZwSdt1LmZuok",
             "name": "Heaven or Las Vegas",
             "artist": "Cocteau Twins",
             "popularity": 64,
             "filename": "cocteau-twins-heaven-or-las-vegas.json"
+          },
+          {
+            "uri": "spotify:track:0oxYB9GoOIDrdzniNdKC44",
+            "name": "When the Sun Hits",
+            "artist": "Slowdive",
+            "popularity": 63,
+            "filename": "slowdive-when-the-sun-hits.json"
           },
           {
             "uri": "spotify:track:1KKuoYESWoUGsau6YYoEMl",
@@ -537,18 +614,18 @@
       "post-rock": {
         "seeds": [
           {
-            "uri": "spotify:track:5NdxiycRi3nP2v7RJoAJIT",
-            "name": "Your Hand In Mine",
-            "artist": "Explosions In The Sky",
-            "popularity": 55,
-            "filename": "explosions-in-the-sky-your-hand-in-mine.json"
-          },
-          {
             "uri": "spotify:track:3s2MZsEfiMe7ZjiRtun6wv",
             "name": "Take Me Somewhere Nice",
             "artist": "Mogwai",
             "popularity": 55,
             "filename": "mogwai-take-me-somewhere-nice.json"
+          },
+          {
+            "uri": "spotify:track:5NdxiycRi3nP2v7RJoAJIT",
+            "name": "Your Hand In Mine",
+            "artist": "Explosions In The Sky",
+            "popularity": 55,
+            "filename": "explosions-in-the-sky-your-hand-in-mine.json"
           },
           {
             "uri": "spotify:track:78kPi2sLwSmILgJXz7wQxg",
@@ -558,18 +635,18 @@
             "filename": "jon-hopkins-small-memory.json"
           },
           {
-            "uri": "spotify:track:3L0fPX8biELkH57fF3Exkd",
-            "name": "What You Love You Must Love Now",
-            "artist": "The Six Parts Seven",
-            "popularity": 59,
-            "filename": "the-six-parts-seven-what-you-love-you-must-love-now.json"
-          },
-          {
             "uri": "spotify:track:5cWSpmTfItDuppACMrE3I9",
             "name": "You Are a Memory",
             "artist": "Message To Bears",
             "popularity": 58,
             "filename": "message-to-bears-you-are-a-memory.json"
+          },
+          {
+            "uri": "spotify:track:3L0fPX8biELkH57fF3Exkd",
+            "name": "What You Love You Must Love Now",
+            "artist": "The Six Parts Seven",
+            "popularity": 59,
+            "filename": "the-six-parts-seven-what-you-love-you-must-love-now.json"
           }
         ],
         "features": {
@@ -587,11 +664,32 @@
       "classic rock": {
         "seeds": [
           {
-            "uri": "spotify:track:3cg0dJfrQB66Qf2YthPb6G",
-            "name": "The Thrill Is Gone",
-            "artist": "B.B. King",
-            "popularity": 65,
-            "filename": "bb-king-the-thrill-is-gone.json"
+            "uri": "spotify:track:6ZAwEE4kTdtvyE66iRhFxR",
+            "name": "Real Wild Child (Wild One)",
+            "artist": "Iggy Pop",
+            "popularity": 64,
+            "filename": "iggy-pop-real-wild-child-wild-one.json"
+          },
+          {
+            "uri": "spotify:track:2yBVeksU2EtrPJbTu4ZslK",
+            "name": "What a Fool Believes",
+            "artist": "The Doobie Brothers",
+            "popularity": 72,
+            "filename": "the-doobie-brothers-what-a-fool-believes.json"
+          },
+          {
+            "uri": "spotify:track:1rHMg7t3LICgfTl2OsDn46",
+            "name": "The Wind",
+            "artist": "Yusuf / Cat Stevens",
+            "popularity": 67,
+            "filename": "yusuf-cat-stevens-the-wind.json"
+          },
+          {
+            "uri": "spotify:track:1prZ0pr6XoRCxcrC3MCL0M",
+            "name": "Everywhere",
+            "artist": "Fleetwood Mac",
+            "popularity": 64,
+            "filename": "fleetwood-mac-everywhere.json"
           },
           {
             "uri": "spotify:track:1nmZ8yqKkfooOuYvtFctDp",
@@ -599,50 +697,22 @@
             "artist": "Asia",
             "popularity": 70,
             "filename": "asia-heat-of-the-moment.json"
-          },
-          {
-            "uri": "spotify:track:46MX86XQqYCZRvwPpeq4Gi",
-            "name": "Lake Shore Drive",
-            "artist": "Aliotta Haynes Jeremiah",
-            "popularity": 68,
-            "filename": "aliotta-haynes-jeremiah-lake-shore-drive.json"
-          },
-          {
-            "uri": "spotify:track:6J0AjzrYsPZrQtw6IjErhy",
-            "name": "Run Through The Jungle",
-            "artist": "Creedence Clearwater Revival",
-            "popularity": 68,
-            "filename": "creedence-clearwater-revival-run-through-the-jungle.json"
-          },
-          {
-            "uri": "spotify:track:5qFxuUIAwJlzO60vqOiL7y",
-            "name": "Rainbow In The Dark",
-            "artist": "Dio",
-            "popularity": 65,
-            "filename": "dio-rainbow-in-the-dark.json"
           }
         ],
         "features": {
-          "danceability": 0.51,
-          "energy": 0.84,
+          "danceability": 0.69,
+          "energy": 0.54,
           "speechiness": 0.04,
-          "acousticness": 0.09,
-          "valence": 0.68,
-          "popularity": 68.0,
-          "instrumentalness": 0.0,
-          "tempo_bpm": 117.58,
-          "tempo_norm": 0.37
+          "acousticness": 0.28,
+          "valence": 0.78,
+          "popularity": 67.0,
+          "instrumentalness": 0.01,
+          "tempo_bpm": 120.74,
+          "tempo_norm": 0.39
         }
       },
       "garage rock": {
         "seeds": [
-          {
-            "uri": "spotify:track:2uXkW8uJcOIhlbUatEPLPs",
-            "name": "Have Love Will Travel",
-            "artist": "The Sonics",
-            "popularity": 59,
-            "filename": "the-sonics-have-love-will-travel.json"
-          },
           {
             "uri": "spotify:track:7xl2ZaOnKAxJyrkIQe2S43",
             "name": "Tick Tick Boom",
@@ -658,11 +728,11 @@
             "filename": "the-stooges-i-wanna-be-your-dog-2019-remaster.json"
           },
           {
-            "uri": "spotify:track:0ElRzK07sc9eszyk1ea9Ab",
-            "name": "Human Fly",
-            "artist": "The Cramps",
-            "popularity": 57,
-            "filename": "the-cramps-human-fly.json"
+            "uri": "spotify:track:2uXkW8uJcOIhlbUatEPLPs",
+            "name": "Have Love Will Travel",
+            "artist": "The Sonics",
+            "popularity": 59,
+            "filename": "the-sonics-have-love-will-travel.json"
           },
           {
             "uri": "spotify:track:0A0RBBTrgfq9eClnw6ZXT7",
@@ -670,15 +740,22 @@
             "artist": "The Kills",
             "popularity": 56,
             "filename": "the-kills-future-starts-slow.json"
+          },
+          {
+            "uri": "spotify:track:3dPQuX8Gs42Y7b454ybpMR",
+            "name": "Seven Nation Army",
+            "artist": "The White Stripes",
+            "popularity": 84,
+            "filename": "the-white-stripes-seven-nation-army.json"
           }
         ],
         "features": {
-          "danceability": 0.53,
-          "energy": 0.85,
-          "speechiness": 0.1,
-          "acousticness": 0.04,
+          "danceability": 0.56,
+          "energy": 0.83,
+          "speechiness": 0.08,
+          "acousticness": 0.01,
           "valence": 0.47,
-          "popularity": 58.0,
+          "popularity": 59.0,
           "instrumentalness": 0.0,
           "tempo_bpm": 127.97,
           "tempo_norm": 0.45
@@ -687,11 +764,11 @@
       "psychedelic rock": {
         "seeds": [
           {
-            "uri": "spotify:track:67HxeUADW4H3ERfaPW59ma",
-            "name": "Love Me Two Times",
-            "artist": "The Doors",
-            "popularity": 64,
-            "filename": "the-doors-love-me-two-times.json"
+            "uri": "spotify:track:4uGIJG1jYFonGc4LGp5uQL",
+            "name": "Somebody to Love",
+            "artist": "Jefferson Airplane",
+            "popularity": 74,
+            "filename": "jefferson-airplane-somebody-to-love.json"
           },
           {
             "uri": "spotify:track:3xGJuHvSxFJxxYlHj5BIoT",
@@ -701,11 +778,11 @@
             "filename": "pink-floyd-young-lust.json"
           },
           {
-            "uri": "spotify:track:4uGIJG1jYFonGc4LGp5uQL",
-            "name": "Somebody to Love",
-            "artist": "Jefferson Airplane",
-            "popularity": 74,
-            "filename": "jefferson-airplane-somebody-to-love.json"
+            "uri": "spotify:track:67HxeUADW4H3ERfaPW59ma",
+            "name": "Love Me Two Times",
+            "artist": "The Doors",
+            "popularity": 64,
+            "filename": "the-doors-love-me-two-times.json"
           },
           {
             "uri": "spotify:track:3ET8TZWF5sP4SPfJK1lKun",
@@ -737,13 +814,6 @@
       "hard rock": {
         "seeds": [
           {
-            "uri": "spotify:track:43GS3mtezoIFiuIZCLLiDY",
-            "name": "Every Rose Has Its Thorn - Remastered 2003",
-            "artist": "Poison",
-            "popularity": 73,
-            "filename": "poison-every-rose-has-its-thorn-remastered-2003.json"
-          },
-          {
             "uri": "spotify:track:0qgrrDnUUhyxpxbBznUnzg",
             "name": "18 and Life",
             "artist": "Skid Row",
@@ -756,6 +826,13 @@
             "artist": "Def Leppard",
             "popularity": 75,
             "filename": "def-leppard-pour-some-sugar-on-me-remastered-2017.json"
+          },
+          {
+            "uri": "spotify:track:43GS3mtezoIFiuIZCLLiDY",
+            "name": "Every Rose Has Its Thorn - Remastered 2003",
+            "artist": "Poison",
+            "popularity": 73,
+            "filename": "poison-every-rose-has-its-thorn-remastered-2003.json"
           },
           {
             "uri": "spotify:track:3U6sjwor2GyL9gwiolSi1Q",
@@ -796,54 +873,68 @@
         "filename": "obskr-bayside-radio-edit.json"
       },
       {
-        "uri": "spotify:track:53qhh1kdcX4gRBShoW4LK8",
-        "name": "Sing It Back - Boris Dlugosch Mix",
-        "artist": "Moloko",
-        "popularity": 65,
-        "filename": "moloko-sing-it-back-boris-dlugosch-mix.json"
+        "uri": "spotify:track:19guFw87TvSkoxnC9EBu2Y",
+        "name": "Колхозник",
+        "artist": "Mnogoznaal",
+        "popularity": 64,
+        "filename": "mnogoznaal-.json"
       },
       {
-        "uri": "spotify:track:0ZnwzjB40zdTZrEwPvaRqG",
-        "name": "Babel",
-        "artist": "Otnicka",
-        "popularity": 65,
-        "filename": "otnicka-babel.json"
+        "uri": "spotify:track:6ZT3coOj97F6CVvruPtnox",
+        "name": "Your Soul",
+        "artist": "Hippie Sabotage",
+        "popularity": 66,
+        "filename": "hippie-sabotage-your-soul.json"
       },
       {
-        "uri": "spotify:track:38MbUy2C0FLv6exayPlImu",
-        "name": "Midnight (The Hanging Tree)",
-        "artist": "HOSH",
-        "popularity": 67,
-        "filename": "hosh-midnight-the-hanging-tree.json"
+        "uri": "spotify:track:2MZSXhq4XDJWu6coGoXX1V",
+        "name": "Avril 14th",
+        "artist": "Aphex Twin",
+        "popularity": 66,
+        "filename": "aphex-twin-avril-14th.json"
       },
       {
-        "uri": "spotify:track:6qINThmTDYBm8twguFRueG",
-        "name": "Cumbia del Olvido",
-        "artist": "Nicola Cruz",
-        "popularity": 63,
-        "filename": "nicola-cruz-cumbia-del-olvido.json"
+        "uri": "spotify:track:5soMJpcVhSrGrB4prvPL6P",
+        "name": "Rip & Tear",
+        "artist": "Mick Gordon",
+        "popularity": 68,
+        "filename": "mick-gordon-rip-tear.json"
       }
     ],
     "features": {
-      "danceability": 0.71,
-      "energy": 0.78,
+      "danceability": 0.56,
+      "energy": 0.71,
       "speechiness": 0.07,
       "acousticness": 0.03,
-      "valence": 0.54,
-      "popularity": 65.0,
-      "instrumentalness": 0.01,
-      "tempo_bpm": 123.29,
-      "tempo_norm": 0.41
+      "valence": 0.37,
+      "popularity": 66.0,
+      "instrumentalness": 0.04,
+      "tempo_bpm": 107.99,
+      "tempo_norm": 0.29
     },
     "subgenres": {
       "house": {
         "seeds": [
           {
-            "uri": "spotify:track:14fIlfcmFPlj4V2IazeJ25",
-            "name": "Take It",
-            "artist": "Dom Dolla",
-            "popularity": 66,
-            "filename": "dom-dolla-take-it.json"
+            "uri": "spotify:track:2nHBfIdQ4ndFNaWilLdBUN",
+            "name": "Ecstasy (Over & Over)",
+            "artist": "Prospa",
+            "popularity": 63,
+            "filename": "prospa-ecstasy-over-over.json"
+          },
+          {
+            "uri": "spotify:track:6ho0GyrWZN3mhi9zVRW7xi",
+            "name": "Losing It",
+            "artist": "FISHER",
+            "popularity": 77,
+            "filename": "fisher-losing-it.json"
+          },
+          {
+            "uri": "spotify:track:01fVbxyW9y2oKdXvg56uE5",
+            "name": "Soul Sacrifice",
+            "artist": "Dombresky",
+            "popularity": 61,
+            "filename": "dombresky-soul-sacrifice.json"
           },
           {
             "uri": "spotify:track:4FEcEwbE2vsqhxbTPtiNTL",
@@ -853,35 +944,21 @@
             "filename": "noizu-summer-91-looking-back.json"
           },
           {
-            "uri": "spotify:track:5mAh5J4w6BEZkajB1M7XrB",
-            "name": "Lola's Theme",
-            "artist": "The Shapeshifters",
-            "popularity": 68,
-            "filename": "the-shapeshifters-lolas-theme.json"
-          },
-          {
-            "uri": "spotify:track:3qqEFTIFcZuWJYBtshrxca",
-            "name": "Techno Disco Tool - Radio Edit",
-            "artist": "Mella Dee",
-            "popularity": 59,
-            "filename": "mella-dee-techno-disco-tool-radio-edit.json"
-          },
-          {
-            "uri": "spotify:track:2nHBfIdQ4ndFNaWilLdBUN",
-            "name": "Ecstasy (Over & Over)",
-            "artist": "Prospa",
-            "popularity": 63,
-            "filename": "prospa-ecstasy-over-over.json"
+            "uri": "spotify:track:14fIlfcmFPlj4V2IazeJ25",
+            "name": "Take It",
+            "artist": "Dom Dolla",
+            "popularity": 66,
+            "filename": "dom-dolla-take-it.json"
           }
         ],
         "features": {
           "danceability": 0.76,
-          "energy": 0.84,
+          "energy": 0.93,
           "speechiness": 0.04,
           "acousticness": 0.01,
-          "valence": 0.66,
+          "valence": 0.64,
           "popularity": 66.0,
-          "instrumentalness": 0.05,
+          "instrumentalness": 0.42,
           "tempo_bpm": 125.02,
           "tempo_norm": 0.42
         },
@@ -889,32 +966,32 @@
           "deep house": {
             "seeds": [
               {
-                "uri": "spotify:track:5sJiLlgQKBL81QCTOkoLB5",
-                "name": "Good Life",
-                "artist": "Inner City",
-                "popularity": 61,
-                "filename": "inner-city-good-life.json"
+                "uri": "spotify:track:5mAh5J4w6BEZkajB1M7XrB",
+                "name": "Lola's Theme",
+                "artist": "The Shapeshifters",
+                "popularity": 68,
+                "filename": "the-shapeshifters-lolas-theme.json"
               },
               {
-                "uri": "spotify:track:2owws8NRqfPUdIn3Uag7Yp",
-                "name": "Joys",
-                "artist": "Roberto Surace",
-                "popularity": 60,
-                "filename": "roberto-surace-joys.json"
+                "uri": "spotify:track:3uvALUobqjZvTGAh6737Mb",
+                "name": "Stumble",
+                "artist": "Kraak & Smaak",
+                "popularity": 59,
+                "filename": "kraak-smaak-stumble.json"
               },
               {
-                "uri": "spotify:track:5RJc9Ex116Dx1zHGUOZGgX",
-                "name": "Benediction",
-                "artist": "Hot Natured",
+                "uri": "spotify:track:1tRLXy4R5YDnwATpNIkz1R",
+                "name": "I Want You (Forever) - Josh Butler Remix - Radio Edit",
+                "artist": "Carl Cox",
+                "popularity": 59,
+                "filename": "carl-cox-i-want-you-forever-josh-butler-remix-radio-edit.json"
+              },
+              {
+                "uri": "spotify:track:1BeZ3neH8aQioMKccVHdS9",
+                "name": "Finally",
+                "artist": "Kings Of Tomorrow",
                 "popularity": 58,
-                "filename": "hot-natured-benediction.json"
-              },
-              {
-                "uri": "spotify:track:6MKKPQjpfFxQdbnzM384eK",
-                "name": "Heartbreaker",
-                "artist": "Crazy P",
-                "popularity": 60,
-                "filename": "crazy-p-heartbreaker.json"
+                "filename": "kings-of-tomorrow-finally.json"
               },
               {
                 "uri": "spotify:track:0dc6CJ6BsiKxyPvW4yABLo",
@@ -925,15 +1002,15 @@
               }
             ],
             "features": {
-              "danceability": 0.81,
-              "energy": 0.77,
-              "speechiness": 0.04,
-              "acousticness": 0.01,
-              "valence": 0.74,
-              "popularity": 60.0,
-              "instrumentalness": 0.09,
-              "tempo_bpm": 121.31,
-              "tempo_norm": 0.39
+              "danceability": 0.76,
+              "energy": 0.66,
+              "speechiness": 0.05,
+              "acousticness": 0.0,
+              "valence": 0.66,
+              "popularity": 59.0,
+              "instrumentalness": 0.0,
+              "tempo_bpm": 124.97,
+              "tempo_norm": 0.42
             }
           },
           "tech house": {
@@ -953,37 +1030,37 @@
                 "filename": "boris-brejcha-purple-noise.json"
               },
               {
-                "uri": "spotify:track:4gve8Gz2iNDnOIfqQK2dAI",
-                "name": "We Do What We Want",
-                "artist": "Alan Fitzpatrick",
-                "popularity": 57,
-                "filename": "alan-fitzpatrick-we-do-what-we-want.json"
-              },
-              {
-                "uri": "spotify:track:0V2GX0aukyZMt6nSMxfOJk",
-                "name": "Hypnotized",
-                "artist": "Oliver Koletzki",
-                "popularity": 59,
-                "filename": "oliver-koletzki-hypnotized.json"
-              },
-              {
                 "uri": "spotify:track:5qA35ZZWFOqynheP5x8rty",
                 "name": "Around - Solomun Vox",
                 "artist": "Noir",
                 "popularity": 59,
                 "filename": "noir-around-solomun-vox.json"
+              },
+              {
+                "uri": "spotify:track:1IbNYr8ByXsgwGbmOxLBXP",
+                "name": "Friends",
+                "artist": "Solomun",
+                "popularity": 57,
+                "filename": "solomun-friends.json"
+              },
+              {
+                "uri": "spotify:track:0RMQgXHIBTsAVcaS7qahLq",
+                "name": "What To Do - &ME Remix",
+                "artist": "Guy Gerber",
+                "popularity": 56,
+                "filename": "guy-gerber-what-to-do-me-remix.json"
               }
             ],
             "features": {
-              "danceability": 0.87,
-              "energy": 0.48,
-              "speechiness": 0.05,
-              "acousticness": 0.02,
-              "valence": 0.3,
+              "danceability": 0.88,
+              "energy": 0.51,
+              "speechiness": 0.06,
+              "acousticness": 0.01,
+              "valence": 0.41,
               "popularity": 59.0,
-              "instrumentalness": 0.67,
-              "tempo_bpm": 125.0,
-              "tempo_norm": 0.42
+              "instrumentalness": 0.63,
+              "tempo_bpm": 122.0,
+              "tempo_norm": 0.4
             }
           },
           "progressive house": {
@@ -1010,18 +1087,18 @@
                 "filename": "aura-panic-room.json"
               },
               {
-                "uri": "spotify:track:5QYKmxfPsl69GgeZKDAVSx",
-                "name": "House Arrest",
-                "artist": "Sofi Tukker",
-                "popularity": 67,
-                "filename": "sofi-tukker-house-arrest.json"
-              },
-              {
                 "uri": "spotify:track:6wp5tGVNQYpKJPo1s3WUEY",
                 "name": "Liquid Spirit - Claptone Remix",
                 "artist": "Gregory Porter",
                 "popularity": 62,
                 "filename": "gregory-porter-liquid-spirit-claptone-remix.json"
+              },
+              {
+                "uri": "spotify:track:5QYKmxfPsl69GgeZKDAVSx",
+                "name": "House Arrest",
+                "artist": "Sofi Tukker",
+                "popularity": 67,
+                "filename": "sofi-tukker-house-arrest.json"
               }
             ],
             "features": {
@@ -1041,13 +1118,6 @@
       "techno": {
         "seeds": [
           {
-            "uri": "spotify:track:7g8cjrj0sXScNE727685JE",
-            "name": "Kernkra00 - DJ Gius Mix, Radio Edit",
-            "artist": "Zombie Nation",
-            "popularity": 64,
-            "filename": "zombie-nation-kernkra00-dj-gius-mix-radio-edit.json"
-          },
-          {
             "uri": "spotify:track:79CUrU5o2KAVDTNm4x3eGU",
             "name": "Firestarter",
             "artist": "The Prodigy",
@@ -1055,11 +1125,18 @@
             "filename": "the-prodigy-firestarter.json"
           },
           {
-            "uri": "spotify:track:4wil8JATEZTC8GmVCpP3oJ",
-            "name": "Disco Pogo",
-            "artist": "Die Atzen",
-            "popularity": 59,
-            "filename": "die-atzen-disco-pogo.json"
+            "uri": "spotify:track:7g8cjrj0sXScNE727685JE",
+            "name": "Kernkra00 - DJ Gius Mix, Radio Edit",
+            "artist": "Zombie Nation",
+            "popularity": 64,
+            "filename": "zombie-nation-kernkra00-dj-gius-mix-radio-edit.json"
+          },
+          {
+            "uri": "spotify:track:1fmoCZ6mtMiqA5GHWPcZz9",
+            "name": "A New Error",
+            "artist": "Moderat",
+            "popularity": 64,
+            "filename": "moderat-a-new-error.json"
           },
           {
             "uri": "spotify:track:4tM13V5qVHM6nKTx7aMWVj",
@@ -1069,27 +1146,34 @@
             "filename": "jebroer-kind-van-de-duivel.json"
           },
           {
-            "uri": "spotify:track:2PVqPbRv7mlCp2JYzDeMsc",
-            "name": "Rainbow In The Sky - K & A's Radio Blast",
-            "artist": "Paul Elstak",
-            "popularity": 56,
-            "filename": "paul-elstak-rainbow-in-the-sky-k-as-radio-blast.json"
+            "uri": "spotify:track:0xKmZG7V6F5ejJckXgJx6O",
+            "name": "Waterfall",
+            "artist": "Neelix",
+            "popularity": 58,
+            "filename": "neelix-waterfall.json"
           }
         ],
         "features": {
-          "danceability": 0.64,
-          "energy": 0.91,
+          "danceability": 0.71,
+          "energy": 0.6,
           "speechiness": 0.07,
-          "acousticness": 0.0,
-          "valence": 0.3,
-          "popularity": 59.0,
-          "instrumentalness": 0.01,
-          "tempo_bpm": 139.98,
-          "tempo_norm": 0.54
+          "acousticness": 0.03,
+          "valence": 0.35,
+          "popularity": 64.0,
+          "instrumentalness": 0.36,
+          "tempo_bpm": 138.04,
+          "tempo_norm": 0.52
         }
       },
       "trance": {
         "seeds": [
+          {
+            "uri": "spotify:track:1xWsg53VIHw0iTTDAGHJ4Q",
+            "name": "For An Angel - Radio Edit",
+            "artist": "Paul van Dyk",
+            "popularity": 57,
+            "filename": "paul-van-dyk-for-an-angel-radio-edit.json"
+          },
           {
             "uri": "spotify:track:44utuWc4EefJyNOmeyeppV",
             "name": "Komodo",
@@ -1098,11 +1182,11 @@
             "filename": "mauro-picotto-komodo.json"
           },
           {
-            "uri": "spotify:track:0ygoI3HcoGScxt879A23Uk",
-            "name": "Don't Stop",
-            "artist": "ATB",
-            "popularity": 58,
-            "filename": "atb-dont-stop.json"
+            "uri": "spotify:track:0TZL4krCFcuTlYZ8J9kcBX",
+            "name": "Greece 2000",
+            "artist": "Three Drives On A Vinyl",
+            "popularity": 55,
+            "filename": "three-drives-on-a-vinyl-greece-2000.json"
           },
           {
             "uri": "spotify:track:0EcH1iItB5rVIZaaiQMbsG",
@@ -1112,28 +1196,21 @@
             "filename": "4-strings-take-me-away-into-the-night-vocal-radio-mix.json"
           },
           {
-            "uri": "spotify:track:1xWsg53VIHw0iTTDAGHJ4Q",
-            "name": "For An Angel - Radio Edit",
-            "artist": "Paul van Dyk",
-            "popularity": 57,
-            "filename": "paul-van-dyk-for-an-angel-radio-edit.json"
-          },
-          {
-            "uri": "spotify:track:0TZL4krCFcuTlYZ8J9kcBX",
-            "name": "Greece 2000",
-            "artist": "Three Drives On A Vinyl",
-            "popularity": 55,
-            "filename": "three-drives-on-a-vinyl-greece-2000.json"
+            "uri": "spotify:track:6uEmDZoJcc7Oqrute8BA2N",
+            "name": "As The Rush Comes",
+            "artist": "Motorcycle",
+            "popularity": 54,
+            "filename": "motorcycle-as-the-rush-comes.json"
           }
         ],
         "features": {
-          "danceability": 0.69,
-          "energy": 0.84,
+          "danceability": 0.62,
+          "energy": 0.83,
           "speechiness": 0.04,
           "acousticness": 0.03,
-          "valence": 0.57,
-          "popularity": 58.0,
-          "instrumentalness": 0.76,
+          "valence": 0.59,
+          "popularity": 57.0,
+          "instrumentalness": 0.61,
           "tempo_bpm": 137.7,
           "tempo_norm": 0.52
         }
@@ -1141,18 +1218,18 @@
       "drum and bass": {
         "seeds": [
           {
-            "uri": "spotify:track:4Y2glvLjQGOb4dXnwm1hQf",
-            "name": "Witchcraft",
-            "artist": "Pendulum",
-            "popularity": 62,
-            "filename": "pendulum-witchcraft.json"
-          },
-          {
             "uri": "spotify:track:2QUVsQu7ESIXqOuLTE4r0A",
             "name": "If We Ever - Unglued Remix",
             "artist": "High Contrast",
             "popularity": 60,
             "filename": "high-contrast-if-we-ever-unglued-remix.json"
+          },
+          {
+            "uri": "spotify:track:4Y2glvLjQGOb4dXnwm1hQf",
+            "name": "Witchcraft",
+            "artist": "Pendulum",
+            "popularity": 62,
+            "filename": "pendulum-witchcraft.json"
           },
           {
             "uri": "spotify:track:13rtgTDK9w1clbgXpGuW3y",
@@ -1162,18 +1239,18 @@
             "filename": "netsky-let-me-hold-you.json"
           },
           {
-            "uri": "spotify:track:1bKLxdg9QOkwcOy3PYv7Fk",
-            "name": "Full Send",
-            "artist": "1991",
-            "popularity": 60,
-            "filename": "1991-full-send.json"
-          },
-          {
             "uri": "spotify:track:04OxTCLGgDKfO0MMA2lcxv",
             "name": "Blind Faith",
             "artist": "Chase & Status",
             "popularity": 62,
             "filename": "chase-status-blind-faith.json"
+          },
+          {
+            "uri": "spotify:track:1bKLxdg9QOkwcOy3PYv7Fk",
+            "name": "Full Send",
+            "artist": "1991",
+            "popularity": 60,
+            "filename": "1991-full-send.json"
           }
         ],
         "features": {
@@ -1188,7 +1265,28 @@
           "tempo_norm": 0.79
         }
       },
-      "jungle": {},
+      "jungle": {
+        "seeds": [
+          {
+            "uri": "spotify:track:5PuJ00qKGWqbGeeWbt8WJb",
+            "name": "Heartbeat Loud",
+            "artist": "Andy C",
+            "popularity": 54,
+            "filename": "andy-c-heartbeat-loud.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.42,
+          "energy": 0.96,
+          "speechiness": 0.04,
+          "acousticness": 0.0,
+          "valence": 0.5,
+          "popularity": 54.0,
+          "instrumentalness": 0.0,
+          "tempo_bpm": 174.05,
+          "tempo_norm": 0.8
+        }
+      },
       "uk garage": {
         "seeds": [
           {
@@ -1239,23 +1337,51 @@
           "tempo_norm": 0.48
         }
       },
-      "dubstep": {},
-      "synthwave": {
+      "dubstep": {
         "seeds": [
           {
-            "uri": "spotify:track:20ztml2STRF7Sq1UaBB6ox",
-            "name": "Future Club",
-            "artist": "Perturbator",
-            "popularity": 58,
-            "filename": "perturbator-future-club.json"
+            "uri": "spotify:track:08z6EsebfUH0Q6J0Wf3eWf",
+            "name": "My Heart",
+            "artist": "Different Heaven",
+            "popularity": 62,
+            "filename": "different-heaven-my-heart.json"
           },
           {
-            "uri": "spotify:track:7oxnK2wg8qFv8EXyyxKDJ4",
-            "name": "Roller Mobster",
-            "artist": "Carpenter Brut",
-            "popularity": 59,
-            "filename": "carpenter-brut-roller-mobster.json"
+            "uri": "spotify:track:5zrJNZeC9Fs2hudgynhdvB",
+            "name": "We Are",
+            "artist": "Jo Cohen",
+            "popularity": 60,
+            "filename": "jo-cohen-we-are.json"
           },
+          {
+            "uri": "spotify:track:2eFjKl5cyPPYElDByCh6Tb",
+            "name": "First Time",
+            "artist": "ILLENIUM",
+            "popularity": 76,
+            "filename": "illenium-first-time.json"
+          },
+          {
+            "uri": "spotify:track:3g0mEQx3NTanacLseoP0Gw",
+            "name": "Takeaway",
+            "artist": "The Chainsmokers",
+            "popularity": 78,
+            "filename": "the-chainsmokers-takeaway.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.53,
+          "energy": 0.73,
+          "speechiness": 0.04,
+          "acousticness": 0.09,
+          "valence": 0.3,
+          "popularity": 69.0,
+          "instrumentalness": 0.0,
+          "tempo_bpm": 127.59,
+          "tempo_norm": 0.44
+        }
+      },
+      "synthwave": {
+        "seeds": [
           {
             "uri": "spotify:track:38rMZCtAPuRgOuV3pyFDmF",
             "name": "Hydrogen",
@@ -1269,6 +1395,20 @@
             "artist": "Magic Sword",
             "popularity": 57,
             "filename": "magic-sword-in-the-face-of-evil.json"
+          },
+          {
+            "uri": "spotify:track:7oxnK2wg8qFv8EXyyxKDJ4",
+            "name": "Roller Mobster",
+            "artist": "Carpenter Brut",
+            "popularity": 59,
+            "filename": "carpenter-brut-roller-mobster.json"
+          },
+          {
+            "uri": "spotify:track:20ztml2STRF7Sq1UaBB6ox",
+            "name": "Future Club",
+            "artist": "Perturbator",
+            "popularity": 58,
+            "filename": "perturbator-future-club.json"
           },
           {
             "uri": "spotify:track:02gySWUFk5JT4gMguGAhdO",
@@ -1292,13 +1432,6 @@
       },
       "ambient": {
         "seeds": [
-          {
-            "uri": "spotify:track:2MZSXhq4XDJWu6coGoXX1V",
-            "name": "Avril 14th",
-            "artist": "Aphex Twin",
-            "popularity": 66,
-            "filename": "aphex-twin-avril-14th.json"
-          },
           {
             "uri": "spotify:track:1Mua0g96hUldJWj00GDsel",
             "name": "Weightless Part 6",
@@ -1326,14 +1459,21 @@
             "artist": "Goldmund",
             "popularity": 57,
             "filename": "goldmund-threnody.json"
+          },
+          {
+            "uri": "spotify:track:4Y2W4zKa3q72ztbkA0r8Va",
+            "name": "Dayvan Cowboy",
+            "artist": "Boards of Canada",
+            "popularity": 56,
+            "filename": "boards-of-canada-dayvan-cowboy.json"
           }
         ],
         "features": {
           "danceability": 0.27,
           "energy": 0.02,
           "speechiness": 0.04,
-          "acousticness": 0.99,
-          "valence": 0.17,
+          "acousticness": 0.96,
+          "valence": 0.09,
           "popularity": 55.0,
           "instrumentalness": 0.92,
           "tempo_bpm": 85.28,
@@ -1345,75 +1485,61 @@
   "hip hop": {
     "seeds": [
       {
-        "uri": "spotify:track:564oa00vY05d1uYnTEAAmE",
-        "name": "Herside Story",
-        "artist": "GoldLink",
+        "uri": "spotify:track:22WV03i2lBbwNVCE1g671p",
+        "name": "151 Rum",
+        "artist": "JID",
         "popularity": 68,
-        "filename": "goldlink-herside-story.json"
+        "filename": "jid-151-rum.json"
       },
       {
-        "uri": "spotify:track:6bTAz3pg5ywBeZHCQoleJB",
-        "name": "Doorman",
-        "artist": "slowthai",
+        "uri": "spotify:track:3DlgDXIYtnWtJKiB8bZQMv",
+        "name": "Photosynthesis",
+        "artist": "Saba",
+        "popularity": 69,
+        "filename": "saba-photosynthesis.json"
+      },
+      {
+        "uri": "spotify:track:694vvR5o19xHPhhJ5QdLN7",
+        "name": "NO HALO",
+        "artist": "BROCKHAMPTON",
+        "popularity": 68,
+        "filename": "brockhampton-no-halo.json"
+      },
+      {
+        "uri": "spotify:track:27AHAtAirQapVldIm4c9ZX",
+        "name": "Jump",
+        "artist": "Kris Kross",
+        "popularity": 68,
+        "filename": "kris-kross-jump.json"
+      },
+      {
+        "uri": "spotify:track:6gSw5vz7dcafda23VqMrnl",
+        "name": "Empty",
+        "artist": "Kevin Abstract",
         "popularity": 65,
-        "filename": "slowthai-doorman.json"
-      },
-      {
-        "uri": "spotify:track:49lrrlWBTkVEIuHkjnf7tI",
-        "name": "Easter In Miami",
-        "artist": "Kodak Black",
-        "popularity": 64,
-        "filename": "kodak-black-easter-in-miami.json"
-      },
-      {
-        "uri": "spotify:track:2A9rFFPwsnhusCh8ZMBvYY",
-        "name": "Nobody Speak",
-        "artist": "DJ Shadow",
-        "popularity": 66,
-        "filename": "dj-shadow-nobody-speak.json"
-      },
-      {
-        "uri": "spotify:track:4IOYk6epkzXT38U4ShauZ6",
-        "name": "Kolors",
-        "artist": "Monte Booker",
-        "popularity": 65,
-        "filename": "monte-booker-kolors.json"
+        "filename": "kevin-abstract-empty.json"
       }
     ],
     "features": {
-      "danceability": 0.72,
-      "energy": 0.81,
-      "speechiness": 0.24,
-      "acousticness": 0.19,
-      "valence": 0.64,
-      "popularity": 65.0,
+      "danceability": 0.75,
+      "energy": 0.66,
+      "speechiness": 0.16,
+      "acousticness": 0.16,
+      "valence": 0.5,
+      "popularity": 68.0,
       "instrumentalness": 0.0,
-      "tempo_bpm": 129.58,
-      "tempo_norm": 0.46
+      "tempo_bpm": 111.13,
+      "tempo_norm": 0.32
     },
     "subgenres": {
       "rap": {
         "seeds": [
           {
-            "uri": "spotify:track:3sKz6Sd72K0ofPWcJPPk6H",
-            "name": "Said Sum",
-            "artist": "Moneybagg Yo",
-            "popularity": 73,
-            "filename": "moneybagg-yo-said-sum.json"
-          },
-          {
-            "uri": "spotify:track:6j8lAie0mdUNreql5d5Ejz",
-            "name": "Bobby Bitch",
-            "artist": "Bobby Shmurda",
-            "popularity": 68,
-            "filename": "bobby-shmurda-bobby-bitch.json"
-          },
-          {
-            "uri": "spotify:track:1SAkL1mYNJlaqnBQxVZrRl",
-            "name": "Baby Got Back",
-            "artist": "Sir Mix-A-Lot",
-            "popularity": 69,
-            "filename": "sir-mix-a-lot-baby-got-back.json"
+            "uri": "spotify:track:4QaEs6elipvDmcBVEVGrAH",
+            "name": "Got It All",
+            "artist": "Blxst",
+            "popularity": 64,
+            "filename": "blxst-got-it-all.json"
           },
           {
             "uri": "spotify:track:1B4gJRq61xTs6r1O0Uq2iY",
@@ -1423,83 +1549,97 @@
             "filename": "takeoff-casper.json"
           },
           {
-            "uri": "spotify:track:6eSU1exzDvBEXmBRxspeh5",
-            "name": "Shots",
-            "artist": "Lil Tecca",
-            "popularity": 67,
-            "filename": "lil-tecca-shots.json"
+            "uri": "spotify:track:3aBL75wBGHJnskegE9jyhb",
+            "name": "Boom Boom Room",
+            "artist": "Roddy Ricch",
+            "popularity": 68,
+            "filename": "roddy-ricch-boom-boom-room.json"
+          },
+          {
+            "uri": "spotify:track:5yJzkdwbrQCwua2dIC3K6A",
+            "name": "White Girl",
+            "artist": "Shy Glizzy",
+            "popularity": 69,
+            "filename": "shy-glizzy-white-girl.json"
+          },
+          {
+            "uri": "spotify:track:3Vj8RQkFwOmDvUrwu6MtQZ",
+            "name": "Yo Love - From \"Queen & Slim: The Soundtrack\"",
+            "artist": "Vince Staples",
+            "popularity": 70,
+            "filename": "vince-staples-yo-love-from-queen-slim-the-soundtrack.json"
           }
         ],
         "features": {
-          "danceability": 0.92,
-          "energy": 0.61,
-          "speechiness": 0.3,
-          "acousticness": 0.02,
-          "valence": 0.64,
+          "danceability": 0.7,
+          "energy": 0.58,
+          "speechiness": 0.1,
+          "acousticness": 0.45,
+          "valence": 0.49,
           "popularity": 68.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 128.46,
-          "tempo_norm": 0.45
+          "tempo_bpm": 129.95,
+          "tempo_norm": 0.46
         }
       },
       "trap": {
         "seeds": [
           {
-            "uri": "spotify:track:4S8d14HvHb70ImctNgVzQQ",
-            "name": "I Love It (& Lil Pump)",
-            "artist": "Kanye West",
+            "uri": "spotify:track:2QbGvQssb0VLLS4x5NOmyJ",
+            "name": "RICKY",
+            "artist": "Denzel Curry",
+            "popularity": 70,
+            "filename": "denzel-curry-ricky.json"
+          },
+          {
+            "uri": "spotify:track:6MHwbVY6LkFvmEnUla0Hzj",
+            "name": "Toxic Punk",
+            "artist": "YoungBoy Never Broke Again",
             "popularity": 74,
-            "filename": "kanye-west-i-love-it-lil-pump.json"
+            "filename": "youngboy-never-broke-again-toxic-punk.json"
           },
-          {
-            "uri": "spotify:track:6ZthdsKjWtiCxnxbhs74vF",
-            "name": "Drip or Drown",
-            "artist": "Gunna",
-            "popularity": 71,
-            "filename": "gunna-drip-or-drown.json"
-          },
-          {
-            "uri": "spotify:track:0Li1OuXXfi7950ilZUFGkF",
-            "name": "Cardigan",
-            "artist": "Don Toliver",
-            "popularity": 73,
-            "filename": "don-toliver-cardigan.json"
-          },
-          {
-            "uri": "spotify:track:0qp8MuZNKelOGTK2HPlXBA",
-            "name": "Kids Turned Out Fine",
-            "artist": "A$AP Rocky",
-            "popularity": 64,
-            "filename": "aap-rocky-kids-turned-out-fine.json"
-          },
-          {
-            "uri": "spotify:track:6tarvNiKnEjYMj1VZhlDqR",
-            "name": "66",
-            "artist": "Lil Yachty",
-            "popularity": 64,
-            "filename": "lil-yachty-66.json"
-          }
-        ],
-        "features": {
-          "danceability": 0.75,
-          "energy": 0.52,
-          "speechiness": 0.27,
-          "acousticness": 0.25,
-          "valence": 0.25,
-          "popularity": 71.0,
-          "instrumentalness": 0.0,
-          "tempo_bpm": 142.05,
-          "tempo_norm": 0.55
-        }
-      },
-      "drill": {
-        "seeds": [
           {
             "uri": "spotify:track:53tv6ZbyeAwfAUwFaxYbfO",
             "name": "Hellcats & Trackhawks",
             "artist": "Only The Family",
             "popularity": 74,
             "filename": "only-the-family-hellcats-trackhawks.json"
+          },
+          {
+            "uri": "spotify:track:1zuGHW5axtzu3NNrEr4vvY",
+            "name": "She Belongs to the Game",
+            "artist": "Troy Ave",
+            "popularity": 65,
+            "filename": "troy-ave-she-belongs-to-the-game.json"
+          },
+          {
+            "uri": "spotify:track:2DnyKpPcFpC460wLJeGzOs",
+            "name": "23 Island",
+            "artist": "JayDaYoungan",
+            "popularity": 73,
+            "filename": "jaydayoungan-23-island.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.78,
+          "energy": 0.53,
+          "speechiness": 0.36,
+          "acousticness": 0.04,
+          "valence": 0.52,
+          "popularity": 73.0,
+          "instrumentalness": 0.0,
+          "tempo_bpm": 155.11,
+          "tempo_norm": 0.65
+        }
+      },
+      "drill": {
+        "seeds": [
+          {
+            "uri": "spotify:track:0mmmP5zNeLS6wRvo0MRVwJ",
+            "name": "Semi On Em",
+            "artist": "Gucci Mane",
+            "popularity": 64,
+            "filename": "gucci-mane-semi-on-em.json"
           },
           {
             "uri": "spotify:track:3SuzCeGoNOWmbWOoDMou0B",
@@ -1516,47 +1656,47 @@
             "filename": "coi-leray-no-more-parties-remix.json"
           },
           {
-            "uri": "spotify:track:0mmmP5zNeLS6wRvo0MRVwJ",
-            "name": "Semi On Em",
-            "artist": "Gucci Mane",
-            "popularity": 64,
-            "filename": "gucci-mane-semi-on-em.json"
+            "uri": "spotify:track:5PTG6rrL6EPFD9E2QMI2pl",
+            "name": "JAPAN",
+            "artist": "Famous Dex",
+            "popularity": 73,
+            "filename": "famous-dex-japan.json"
           },
           {
-            "uri": "spotify:track:2QbGvQssb0VLLS4x5NOmyJ",
-            "name": "RICKY",
-            "artist": "Denzel Curry",
-            "popularity": 70,
-            "filename": "denzel-curry-ricky.json"
+            "uri": "spotify:track:2mx4wF6IW1mfZmWtENDBUU",
+            "name": "Treat Me Like Somebody",
+            "artist": "Tink",
+            "popularity": 66,
+            "filename": "tink-treat-me-like-somebody.json"
           }
         ],
         "features": {
-          "danceability": 0.83,
-          "energy": 0.5,
+          "danceability": 0.82,
+          "energy": 0.47,
           "speechiness": 0.36,
-          "acousticness": 0.03,
-          "valence": 0.52,
-          "popularity": 70.0,
+          "acousticness": 0.12,
+          "valence": 0.55,
+          "popularity": 69.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 157.0,
-          "tempo_norm": 0.67
+          "tempo_bpm": 135.02,
+          "tempo_norm": 0.5
         }
       },
       "gangsta rap": {
         "seeds": [
+          {
+            "uri": "spotify:track:5IONrCRMaQomlgoKpIoI8O",
+            "name": "Ge upp igen",
+            "artist": "Miriam Bryant",
+            "popularity": 70,
+            "filename": "miriam-bryant-ge-upp-igen.json"
+          },
           {
             "uri": "spotify:track:6T5FJhpJcY7lH2PLO1Htg0",
             "name": "COMMANDO",
             "artist": "SINAN",
             "popularity": 65,
             "filename": "sinan-commando.json"
-          },
-          {
-            "uri": "spotify:track:43cM4eJO1So9iyNy8nfnpc",
-            "name": "BARA OM NI VISSTE",
-            "artist": "Dizzy",
-            "popularity": 66,
-            "filename": "dizzy-bara-om-ni-visste.json"
           },
           {
             "uri": "spotify:track:1OamekRfbvahxhtMmojfbK",
@@ -1566,30 +1706,30 @@
             "filename": "jamaika-nascar-jamaika-x-branco-x-dree-low.json"
           },
           {
-            "uri": "spotify:track:5IONrCRMaQomlgoKpIoI8O",
-            "name": "Ge upp igen",
-            "artist": "Miriam Bryant",
-            "popularity": 70,
-            "filename": "miriam-bryant-ge-upp-igen.json"
+            "uri": "spotify:track:43cM4eJO1So9iyNy8nfnpc",
+            "name": "BARA OM NI VISSTE",
+            "artist": "Dizzy",
+            "popularity": 66,
+            "filename": "dizzy-bara-om-ni-visste.json"
           },
           {
-            "uri": "spotify:track:0SobxwXrtsbqRv9jnrMeWa",
-            "name": "VET ATT DU HÖR",
-            "artist": "Ivory",
+            "uri": "spotify:track:4LZi20EAgNBhTR3OBWLzdr",
+            "name": "TESLA",
+            "artist": "Macky",
             "popularity": 59,
-            "filename": "ivory-vet-att-du-hr.json"
+            "filename": "macky-tesla.json"
           }
         ],
         "features": {
-          "danceability": 0.7,
+          "danceability": 0.77,
           "energy": 0.69,
           "speechiness": 0.17,
           "acousticness": 0.55,
-          "valence": 0.8,
+          "valence": 0.79,
           "popularity": 65.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 127.95,
-          "tempo_norm": 0.45
+          "tempo_bpm": 129.77,
+          "tempo_norm": 0.46
         }
       },
       "east coast hip hop": {
@@ -1645,20 +1785,6 @@
       "west coast rap": {
         "seeds": [
           {
-            "uri": "spotify:track:3LklW07tvdx2AHsgfi1Mng",
-            "name": "I Wish",
-            "artist": "Skee-Lo",
-            "popularity": 63,
-            "filename": "skee-lo-i-wish.json"
-          },
-          {
-            "uri": "spotify:track:7y9yjpRtZajYzVpXHRjwGz",
-            "name": "No More ?'s",
-            "artist": "Eazy-E",
-            "popularity": 66,
-            "filename": "eazy-e-no-more-s.json"
-          },
-          {
             "uri": "spotify:track:1oTHteQbmJw15rPxPVXUTv",
             "name": "Insane in the Brain",
             "artist": "Cypress Hill",
@@ -1666,41 +1792,48 @@
             "filename": "cypress-hill-insane-in-the-brain.json"
           },
           {
-            "uri": "spotify:track:3TZwjdclvWt7iPJUnMpgcs",
-            "name": "Jump Around",
-            "artist": "House Of Pain",
-            "popularity": 75,
-            "filename": "house-of-pain-jump-around.json"
+            "uri": "spotify:track:3LklW07tvdx2AHsgfi1Mng",
+            "name": "I Wish",
+            "artist": "Skee-Lo",
+            "popularity": 63,
+            "filename": "skee-lo-i-wish.json"
           },
           {
-            "uri": "spotify:track:4IYKjN1DrYzxKXt0umJqsG",
-            "name": "I Got 5 On It",
-            "artist": "Luniz",
-            "popularity": 75,
-            "filename": "luniz-i-got-5-on-it.json"
+            "uri": "spotify:track:0XgpiStoxq1IJncYlPrvZ5",
+            "name": "Runnin'",
+            "artist": "The Pharcyde",
+            "popularity": 64,
+            "filename": "the-pharcyde-runnin.json"
+          },
+          {
+            "uri": "spotify:track:7iXF2W9vKmDoGAhlHdpyIa",
+            "name": "Forgot About Dre",
+            "artist": "Dr. Dre",
+            "popularity": 77,
+            "filename": "dr-dre-forgot-about-dre.json"
+          },
+          {
+            "uri": "spotify:track:3OcQkcvTcohs8vO8Rd3sKF",
+            "name": "The Humpty Dance",
+            "artist": "Digital Underground",
+            "popularity": 65,
+            "filename": "digital-underground-the-humpty-dance.json"
           }
         ],
         "features": {
-          "danceability": 0.85,
-          "energy": 0.71,
-          "speechiness": 0.21,
-          "acousticness": 0.01,
+          "danceability": 0.81,
+          "energy": 0.74,
+          "speechiness": 0.18,
+          "acousticness": 0.03,
           "valence": 0.62,
-          "popularity": 73.0,
+          "popularity": 65.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 105.64,
-          "tempo_norm": 0.27
+          "tempo_bpm": 102.31,
+          "tempo_norm": 0.25
         }
       },
       "southern hip hop": {
         "seeds": [
-          {
-            "uri": "spotify:track:5wvxRlpUTSX9CE52yFZsIY",
-            "name": "Cell Therapy",
-            "artist": "Goodie Mob",
-            "popularity": 59,
-            "filename": "goodie-mob-cell-therapy.json"
-          },
           {
             "uri": "spotify:track:1RXEb6UTxJ05RffnAWfUOE",
             "name": "Player's Ball",
@@ -1709,11 +1842,18 @@
             "filename": "outkast-players-ball.json"
           },
           {
-            "uri": "spotify:track:5qPkEnq2wSbnLJTK31mZy4",
-            "name": "On My Block",
-            "artist": "Scarface",
+            "uri": "spotify:track:5wvxRlpUTSX9CE52yFZsIY",
+            "name": "Cell Therapy",
+            "artist": "Goodie Mob",
+            "popularity": 59,
+            "filename": "goodie-mob-cell-therapy.json"
+          },
+          {
+            "uri": "spotify:track:6js4GbrJjNU0Kp5ipDQ9vc",
+            "name": "G Code",
+            "artist": "Geto Boys",
             "popularity": 55,
-            "filename": "scarface-on-my-block.json"
+            "filename": "geto-boys-g-code.json"
           },
           {
             "uri": "spotify:track:7y5A3Ge2GixgSTwCU6fu5p",
@@ -1723,11 +1863,11 @@
             "filename": "lil-keke-chunk-up-the-deuce.json"
           },
           {
-            "uri": "spotify:track:6js4GbrJjNU0Kp5ipDQ9vc",
-            "name": "G Code",
-            "artist": "Geto Boys",
+            "uri": "spotify:track:5qPkEnq2wSbnLJTK31mZy4",
+            "name": "On My Block",
+            "artist": "Scarface",
             "popularity": 55,
-            "filename": "geto-boys-g-code.json"
+            "filename": "scarface-on-my-block.json"
           }
         ],
         "features": {
@@ -1752,18 +1892,11 @@
             "filename": "mac-miller-fight-the-feeling.json"
           },
           {
-            "uri": "spotify:track:4tQcyj5488alHT1ZgFduzn",
-            "name": "How Much A Dollar Cost",
-            "artist": "Kendrick Lamar",
+            "uri": "spotify:track:6CTG85NJI1Wm60pxTSRNwL",
+            "name": "Never Catch Me",
+            "artist": "Flying Lotus",
             "popularity": 60,
-            "filename": "kendrick-lamar-how-much-a-dollar-cost.json"
-          },
-          {
-            "uri": "spotify:track:1Bsl6Jw7bJtQ4pc7OQREog",
-            "name": "Hey Baby",
-            "artist": "Stephen Marley",
-            "popularity": 60,
-            "filename": "stephen-marley-hey-baby.json"
+            "filename": "flying-lotus-never-catch-me.json"
           },
           {
             "uri": "spotify:track:5Ru9OjtEw5htfnVKpYsIcv",
@@ -1771,6 +1904,13 @@
             "artist": "Mos Def",
             "popularity": 59,
             "filename": "mos-def-umi-says.json"
+          },
+          {
+            "uri": "spotify:track:1Bsl6Jw7bJtQ4pc7OQREog",
+            "name": "Hey Baby",
+            "artist": "Stephen Marley",
+            "popularity": 60,
+            "filename": "stephen-marley-hey-baby.json"
           },
           {
             "uri": "spotify:track:7dZAPeA3Of5j5Vaef0DQ6M",
@@ -1783,7 +1923,7 @@
         "features": {
           "danceability": 0.72,
           "energy": 0.71,
-          "speechiness": 0.2,
+          "speechiness": 0.26,
           "acousticness": 0.24,
           "valence": 0.57,
           "popularity": 60.0,
@@ -1795,25 +1935,18 @@
       "underground hip hop": {
         "seeds": [
           {
-            "uri": "spotify:track:22WV03i2lBbwNVCE1g671p",
-            "name": "151 Rum",
-            "artist": "JID",
-            "popularity": 68,
-            "filename": "jid-151-rum.json"
-          },
-          {
-            "uri": "spotify:track:6Z1KNUrW7f6oo97w8BNom7",
-            "name": "Girls",
-            "artist": "Lil Peep",
-            "popularity": 66,
-            "filename": "lil-peep-girls.json"
-          },
-          {
             "uri": "spotify:track:0GRmh4ZlobfhvDE9L4CbOs",
             "name": "Off the Wall!",
             "artist": "XXXTENTACION",
             "popularity": 67,
             "filename": "xxxtentacion-off-the-wall.json"
+          },
+          {
+            "uri": "spotify:track:4MAADpR6MjelkaZqe3Mgnv",
+            "name": "Elastic",
+            "artist": "Joey Purp",
+            "popularity": 67,
+            "filename": "joey-purp-elastic.json"
           },
           {
             "uri": "spotify:track:6plT7nFGiXKSBP9HFSI4ef",
@@ -1828,17 +1961,24 @@
             "artist": "Jalen Santoy",
             "popularity": 66,
             "filename": "jalen-santoy-foreplay.json"
+          },
+          {
+            "uri": "spotify:track:5FX89IUKm9QJT9ymrmyK4k",
+            "name": "Free Lunch",
+            "artist": "Isaiah Rashad",
+            "popularity": 63,
+            "filename": "isaiah-rashad-free-lunch.json"
           }
         ],
         "features": {
-          "danceability": 0.73,
-          "energy": 0.5,
-          "speechiness": 0.16,
+          "danceability": 0.83,
+          "energy": 0.43,
+          "speechiness": 0.24,
           "acousticness": 0.12,
-          "valence": 0.51,
+          "valence": 0.55,
           "popularity": 66.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 129.98,
+          "tempo_bpm": 130.01,
           "tempo_norm": 0.46
         }
       },
@@ -1852,13 +1992,6 @@
             "filename": "killstation-homecoming.json"
           },
           {
-            "uri": "spotify:track:3PHt7AdVhjIMS5Yw5RIZKU",
-            "name": "Wtf U Mean",
-            "artist": "Haarper",
-            "popularity": 68,
-            "filename": "haarper-wtf-u-mean.json"
-          },
-          {
             "uri": "spotify:track:4yyX0nJqMpqaubcGdGsxx9",
             "name": "Odium",
             "artist": "LXST CXNTURY",
@@ -1866,11 +1999,11 @@
             "filename": "lxst-cxntury-odium.json"
           },
           {
-            "uri": "spotify:track:7jVH8CXr0MSpGheHOjN4NA",
-            "name": "SUICIDE YEAR",
-            "artist": "WEEDMANE",
-            "popularity": 67,
-            "filename": "weedmane-suicide-year.json"
+            "uri": "spotify:track:2qOfyyZc41LfQ63U9p3GVV",
+            "name": "Killin' On Demand",
+            "artist": "Freddie Dredd",
+            "popularity": 63,
+            "filename": "freddie-dredd-killin-on-demand.json"
           },
           {
             "uri": "spotify:track:6PQ53jwemx1BgRIefyBVD6",
@@ -1878,15 +2011,22 @@
             "artist": "Ghostface Playa",
             "popularity": 63,
             "filename": "ghostface-playa-i-dont-give-a-fuck.json"
+          },
+          {
+            "uri": "spotify:track:3PHt7AdVhjIMS5Yw5RIZKU",
+            "name": "Wtf U Mean",
+            "artist": "Haarper",
+            "popularity": 68,
+            "filename": "haarper-wtf-u-mean.json"
           }
         ],
         "features": {
           "danceability": 0.74,
-          "energy": 0.81,
-          "speechiness": 0.05,
-          "acousticness": 0.08,
-          "valence": 0.28,
-          "popularity": 66.0,
+          "energy": 0.78,
+          "speechiness": 0.06,
+          "acousticness": 0.0,
+          "valence": 0.34,
+          "popularity": 63.0,
           "instrumentalness": 0.32,
           "tempo_bpm": 105.04,
           "tempo_norm": 0.27
@@ -1902,44 +2042,44 @@
             "filename": "luciano-fendi-drip.json"
           },
           {
+            "uri": "spotify:track:2J0adlQth373uw9y0yqWAz",
+            "name": "SKRR",
+            "artist": "KALIM",
+            "popularity": 64,
+            "filename": "kalim-skrr.json"
+          },
+          {
+            "uri": "spotify:track:6ChnGkBwnq2HUJD24YhMhW",
+            "name": "Living Life, In The Night",
+            "artist": "Cheriimoya",
+            "popularity": 72,
+            "filename": "cheriimoya-living-life-in-the-night.json"
+          },
+          {
+            "uri": "spotify:track:6WusSsncC0Oo9sFHKwQii6",
+            "name": "Dior 2001",
+            "artist": "RIN",
+            "popularity": 67,
+            "filename": "rin-dior-2001.json"
+          },
+          {
             "uri": "spotify:track:3cOK7STaGJNeQseiu1ogKn",
             "name": "Gift",
             "artist": "Schmyt",
             "popularity": 69,
             "filename": "schmyt-gift.json"
-          },
-          {
-            "uri": "spotify:track:50mQStZYV5QFgyGK9GOVZg",
-            "name": "Neymar",
-            "artist": "Capital Bra",
-            "popularity": 66,
-            "filename": "capital-bra-neymar.json"
-          },
-          {
-            "uri": "spotify:track:1fAmxNqcMIv10kxqlJsLyu",
-            "name": "Irgendwie egal",
-            "artist": "Takt32",
-            "popularity": 64,
-            "filename": "takt32-irgendwie-egal.json"
-          },
-          {
-            "uri": "spotify:track:0Jh40A8WJdGXwkEDgxhaKo",
-            "name": "Ayo Technology",
-            "artist": "Kynda Gray",
-            "popularity": 64,
-            "filename": "kynda-gray-ayo-technology.json"
           }
         ],
         "features": {
-          "danceability": 0.78,
-          "energy": 0.66,
-          "speechiness": 0.24,
+          "danceability": 0.8,
+          "energy": 0.65,
+          "speechiness": 0.13,
           "acousticness": 0.14,
-          "valence": 0.53,
-          "popularity": 64.0,
+          "valence": 0.58,
+          "popularity": 67.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 123.95,
-          "tempo_norm": 0.41
+          "tempo_bpm": 125.04,
+          "tempo_norm": 0.42
         }
       }
     }
@@ -1947,39 +2087,18 @@
   "r&b / soul / funk": {
     "features": {
       "danceability": 0.72,
-      "energy": 0.52,
-      "speechiness": 0.05,
+      "energy": 0.55,
+      "speechiness": 0.06,
       "acousticness": 0.32,
-      "valence": 0.8,
-      "popularity": 66.0,
+      "valence": 0.65,
+      "popularity": 64.0,
       "instrumentalness": 0.0,
-      "tempo_bpm": 107.71,
-      "tempo_norm": 0.29
+      "tempo_bpm": 102.08,
+      "tempo_norm": 0.25
     },
     "subgenres": {
       "r&b": {
         "seeds": [
-          {
-            "uri": "spotify:track:7t4ihBlcMdkyUeO6W1DfYH",
-            "name": "Baby Powder",
-            "artist": "Jenevieve",
-            "popularity": 71,
-            "filename": "jenevieve-baby-powder.json"
-          },
-          {
-            "uri": "spotify:track:3tZm76otWH20xzJC7icHCk",
-            "name": "Wish I Didn't Miss You",
-            "artist": "Angie Stone",
-            "popularity": 65,
-            "filename": "angie-stone-wish-i-didnt-miss-you.json"
-          },
-          {
-            "uri": "spotify:track:7JKEA8xYDoFp4q0QBW2PGg",
-            "name": "Shackles (Praise You)",
-            "artist": "Mary Mary",
-            "popularity": 64,
-            "filename": "mary-mary-shackles-praise-you.json"
-          },
           {
             "uri": "spotify:track:2lp8xjq0WTm3HZKHuDEweg",
             "name": "Tell Me",
@@ -1993,18 +2112,39 @@
             "artist": "Sonder",
             "popularity": 70,
             "filename": "sonder-what-you-heard.json"
+          },
+          {
+            "uri": "spotify:track:3tZm76otWH20xzJC7icHCk",
+            "name": "Wish I Didn't Miss You",
+            "artist": "Angie Stone",
+            "popularity": 65,
+            "filename": "angie-stone-wish-i-didnt-miss-you.json"
+          },
+          {
+            "uri": "spotify:track:3l3xTXsUXeWlkPqzMs7mPD",
+            "name": "End Of The Road",
+            "artist": "Boyz II Men",
+            "popularity": 72,
+            "filename": "boyz-ii-men-end-of-the-road.json"
+          },
+          {
+            "uri": "spotify:track:7t4ihBlcMdkyUeO6W1DfYH",
+            "name": "Baby Powder",
+            "artist": "Jenevieve",
+            "popularity": 71,
+            "filename": "jenevieve-baby-powder.json"
           }
         ],
         "features": {
           "danceability": 0.78,
-          "energy": 0.52,
-          "speechiness": 0.05,
+          "energy": 0.43,
+          "speechiness": 0.03,
           "acousticness": 0.32,
-          "valence": 0.8,
-          "popularity": 66.0,
+          "valence": 0.68,
+          "popularity": 70.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 100.46,
-          "tempo_norm": 0.23
+          "tempo_bpm": 123.88,
+          "tempo_norm": 0.41
         },
         "subgenres": {
           "contemporary r&b": {
@@ -2024,11 +2164,11 @@
                 "filename": "jungle-busy-earnin.json"
               },
               {
-                "uri": "spotify:track:6AcFiVsHvDtat3rmHNK2Nf",
-                "name": "Early",
-                "artist": "Joy Crookes",
-                "popularity": 62,
-                "filename": "joy-crookes-early.json"
+                "uri": "spotify:track:5yYV7pSaVaMdCOtx8fksc1",
+                "name": "Intro (Real Love)",
+                "artist": "Brandz",
+                "popularity": 66,
+                "filename": "brandz-intro-real-love.json"
               },
               {
                 "uri": "spotify:track:0i6c86ntKJoZpKk8aCHL3c",
@@ -2038,19 +2178,19 @@
                 "filename": "arlo-parks-cola.json"
               },
               {
-                "uri": "spotify:track:5yYV7pSaVaMdCOtx8fksc1",
-                "name": "Intro (Real Love)",
-                "artist": "Brandz",
-                "popularity": 66,
-                "filename": "brandz-intro-real-love.json"
+                "uri": "spotify:track:4kIRyUnl8elQFStSL8866M",
+                "name": "Shade",
+                "artist": "IAMDDB",
+                "popularity": 62,
+                "filename": "iamddb-shade.json"
               }
             ],
             "features": {
               "danceability": 0.76,
-              "energy": 0.65,
-              "speechiness": 0.15,
+              "energy": 0.68,
+              "speechiness": 0.04,
               "acousticness": 0.21,
-              "valence": 0.59,
+              "valence": 0.41,
               "popularity": 65.0,
               "instrumentalness": 0.0,
               "tempo_bpm": 99.97,
@@ -2060,6 +2200,13 @@
           "quiet storm": {
             "seeds": [
               {
+                "uri": "spotify:track:28285KFbyCq8sJofn58qlD",
+                "name": "Love Train",
+                "artist": "The O'Jays",
+                "popularity": 70,
+                "filename": "the-ojays-love-train.json"
+              },
+              {
                 "uri": "spotify:track:3eBBbAEBQdr6tkUUd8gyuQ",
                 "name": "Thugz Mansion - 7 Remix",
                 "artist": "2Pac",
@@ -2067,25 +2214,11 @@
                 "filename": "2pac-thugz-mansion-7-remix.json"
               },
               {
-                "uri": "spotify:track:39l1UORIhuHvUWfxG53tRZ",
-                "name": "Let's Get It On",
-                "artist": "Marvin Gaye",
-                "popularity": 70,
-                "filename": "marvin-gaye-lets-get-it-on.json"
-              },
-              {
-                "uri": "spotify:track:4TIkesxpN5caX6XpsiirnH",
-                "name": "If Ever You're in My Arms Again",
-                "artist": "Peabo Bryson",
-                "popularity": 63,
-                "filename": "peabo-bryson-if-ever-youre-in-my-arms-again.json"
-              },
-              {
-                "uri": "spotify:track:2M2WJ7gBlcKNxdhyfPp9zY",
-                "name": "Best of My Love",
-                "artist": "The Emotions",
-                "popularity": 69,
-                "filename": "the-emotions-best-of-my-love.json"
+                "uri": "spotify:track:3MFa9idQuY4iJLWsZl3tIQ",
+                "name": "Young Hearts Run Free",
+                "artist": "Candi Staton",
+                "popularity": 67,
+                "filename": "candi-staton-young-hearts-run-free.json"
               },
               {
                 "uri": "spotify:track:1tL5a9jowsWMtn3wkFYsG9",
@@ -2093,18 +2226,25 @@
                 "artist": "The Isley Brothers",
                 "popularity": 64,
                 "filename": "the-isley-brothers-footsteps-in-the-dark-pts-1-2.json"
+              },
+              {
+                "uri": "spotify:track:00CCi9yHJh7NjXcNT565Ja",
+                "name": "You Make Me Feel Brand New",
+                "artist": "The Stylistics",
+                "popularity": 64,
+                "filename": "the-stylistics-you-make-me-feel-brand-new.json"
               }
             ],
             "features": {
               "danceability": 0.68,
-              "energy": 0.6,
+              "energy": 0.57,
               "speechiness": 0.05,
-              "acousticness": 0.4,
-              "valence": 0.87,
+              "acousticness": 0.3,
+              "valence": 0.85,
               "popularity": 64.0,
               "instrumentalness": 0.0,
-              "tempo_bpm": 96.21,
-              "tempo_norm": 0.2
+              "tempo_bpm": 87.91,
+              "tempo_norm": 0.14
             }
           }
         }
@@ -2112,75 +2252,75 @@
       "soul": {
         "seeds": [
           {
-            "uri": "spotify:track:74JdR9aXE6I74oS1BVRsvb",
-            "name": "O-o-h Child",
-            "artist": "The Five Stairsteps",
+            "uri": "spotify:track:65GbQI9VDTs7vo6MJL2iJA",
+            "name": "Coming Home",
+            "artist": "Leon Bridges",
+            "popularity": 69,
+            "filename": "leon-bridges-coming-home.json"
+          },
+          {
+            "uri": "spotify:track:0OwvrdjaJOypNsNQHyBWE5",
+            "name": "California Soul",
+            "artist": "Marlena Shaw",
             "popularity": 66,
-            "filename": "the-five-stairsteps-o-o-h-child.json"
+            "filename": "marlena-shaw-california-soul.json"
           },
           {
-            "uri": "spotify:track:5haXbSJqjjM0TCJ5XkfEaC",
-            "name": "I Got You (I Feel Good)",
-            "artist": "James Brown & The Famous Flames",
-            "popularity": 71,
-            "filename": "james-brown-the-famous-flames-i-got-you-i-feel-good.json"
-          },
-          {
-            "uri": "spotify:track:3MFa9idQuY4iJLWsZl3tIQ",
-            "name": "Young Hearts Run Free",
-            "artist": "Candi Staton",
-            "popularity": 67,
-            "filename": "candi-staton-young-hearts-run-free.json"
-          },
-          {
-            "uri": "spotify:track:3M8FzayQWtkvOhqMn2V4T2",
-            "name": "Lean on Me",
-            "artist": "Bill Withers",
-            "popularity": 73,
-            "filename": "bill-withers-lean-on-me.json"
-          },
-          {
-            "uri": "spotify:track:7f6AAixCrVar1ZY7RPHDfM",
-            "name": "Cry Me A River",
-            "artist": "Julie London",
+            "uri": "spotify:track:5fBjPtOxhgdpU6LNWLyVHv",
+            "name": "Mad About You",
+            "artist": "Son Little",
             "popularity": 63,
-            "filename": "julie-london-cry-me-a-river.json"
+            "filename": "son-little-mad-about-you.json"
+          },
+          {
+            "uri": "spotify:track:7FXuCkl1kfxwS5icDjTwbM",
+            "name": "Hard to Handle",
+            "artist": "Otis Redding",
+            "popularity": 64,
+            "filename": "otis-redding-hard-to-handle.json"
+          },
+          {
+            "uri": "spotify:track:5TUs6T93fNFvgQov6MlYkP",
+            "name": "Your Song",
+            "artist": "Billy Paul",
+            "popularity": 64,
+            "filename": "billy-paul-your-song.json"
           }
         ],
         "features": {
-          "danceability": 0.61,
-          "energy": 0.49,
-          "speechiness": 0.05,
-          "acousticness": 0.41,
-          "valence": 0.66,
-          "popularity": 67.0,
+          "danceability": 0.51,
+          "energy": 0.55,
+          "speechiness": 0.06,
+          "acousticness": 0.46,
+          "valence": 0.54,
+          "popularity": 64.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 115.39,
-          "tempo_norm": 0.35
+          "tempo_bpm": 95.55,
+          "tempo_norm": 0.2
         },
         "subgenres": {
           "motown": {
             "seeds": [
+              {
+                "uri": "spotify:track:5haXbSJqjjM0TCJ5XkfEaC",
+                "name": "I Got You (I Feel Good)",
+                "artist": "James Brown & The Famous Flames",
+                "popularity": 71,
+                "filename": "james-brown-the-famous-flames-i-got-you-i-feel-good.json"
+              },
+              {
+                "uri": "spotify:track:74JdR9aXE6I74oS1BVRsvb",
+                "name": "O-o-h Child",
+                "artist": "The Five Stairsteps",
+                "popularity": 66,
+                "filename": "the-five-stairsteps-o-o-h-child.json"
+              },
               {
                 "uri": "spotify:track:4vju55Ag7apDL2CfotuE7Q",
                 "name": "Sunny",
                 "artist": "Bobby Hebb",
                 "popularity": 66,
                 "filename": "bobby-hebb-sunny.json"
-              },
-              {
-                "uri": "spotify:track:6pMHMzwTsWIxLigr54GGVm",
-                "name": "Rock Your Baby",
-                "artist": "George McCrae",
-                "popularity": 62,
-                "filename": "george-mccrae-rock-your-baby.json"
-              },
-              {
-                "uri": "spotify:track:7qQzkUWsbvoTDbNpW3FHQu",
-                "name": "Heaven Must Be Missing An Angel - Pt. 1",
-                "artist": "Tavares",
-                "popularity": 59,
-                "filename": "tavares-heaven-must-be-missing-an-angel-pt-1.json"
               },
               {
                 "uri": "spotify:track:3tSi6iFO9yLGIYIqMEgjC9",
@@ -2190,23 +2330,23 @@
                 "filename": "the-jackson-5-i-want-you-back.json"
               },
               {
-                "uri": "spotify:track:4Af8yzidDPc520TFd4TmkE",
-                "name": "Don't Leave Me This Way",
-                "artist": "Thelma Houston",
-                "popularity": 58,
-                "filename": "thelma-houston-dont-leave-me-this-way.json"
+                "uri": "spotify:track:6pMHMzwTsWIxLigr54GGVm",
+                "name": "Rock Your Baby",
+                "artist": "George McCrae",
+                "popularity": 62,
+                "filename": "george-mccrae-rock-your-baby.json"
               }
             ],
             "features": {
-              "danceability": 0.6,
-              "energy": 0.84,
+              "danceability": 0.61,
+              "energy": 0.58,
               "speechiness": 0.05,
-              "acousticness": 0.17,
-              "valence": 0.89,
-              "popularity": 62.0,
+              "acousticness": 0.41,
+              "valence": 0.7,
+              "popularity": 66.0,
               "instrumentalness": 0.0,
-              "tempo_bpm": 117.18,
-              "tempo_norm": 0.36
+              "tempo_bpm": 104.41,
+              "tempo_norm": 0.26
             }
           },
           "disco": {
@@ -2226,6 +2366,13 @@
                 "filename": "the-trammps-disco-inferno.json"
               },
               {
+                "uri": "spotify:track:1TSehAcbBAcmZlSNMjmf6U",
+                "name": "Emotion",
+                "artist": "Samantha Sang",
+                "popularity": 57,
+                "filename": "samantha-sang-emotion.json"
+              },
+              {
                 "uri": "spotify:track:4zK1pYVKMB13es6Bim0muF",
                 "name": "Run To Me",
                 "artist": "Bee Gees",
@@ -2233,30 +2380,23 @@
                 "filename": "bee-gees-run-to-me.json"
               },
               {
-                "uri": "spotify:track:4sIkDCqNjTubfb5UVs8lEA",
-                "name": "Touch Me In The Morning",
-                "artist": "Diana Ross",
-                "popularity": 54,
-                "filename": "diana-ross-touch-me-in-the-morning.json"
-              },
-              {
-                "uri": "spotify:track:1TSehAcbBAcmZlSNMjmf6U",
-                "name": "Emotion",
-                "artist": "Samantha Sang",
-                "popularity": 57,
-                "filename": "samantha-sang-emotion.json"
+                "uri": "spotify:track:2Rr4ZOnKXUrzjhMPkmkRjK",
+                "name": "Soup for One",
+                "artist": "CHIC",
+                "popularity": 55,
+                "filename": "chic-soup-for-one.json"
               }
             ],
             "features": {
-              "danceability": 0.52,
-              "energy": 0.61,
-              "speechiness": 0.03,
-              "acousticness": 0.45,
-              "valence": 0.72,
+              "danceability": 0.63,
+              "energy": 0.51,
+              "speechiness": 0.04,
+              "acousticness": 0.21,
+              "valence": 0.8,
               "popularity": 57.0,
-              "instrumentalness": 0.0,
-              "tempo_bpm": 137.19,
-              "tempo_norm": 0.52
+              "instrumentalness": 0.07,
+              "tempo_bpm": 130.7,
+              "tempo_norm": 0.47
             }
           },
           "neo soul": {
@@ -2342,23 +2482,23 @@
             "filename": "james-brown-try-me.json"
           },
           {
-            "uri": "spotify:track:0sDeU2murnLh4yVHQ5IV70",
-            "name": "Cry to Me",
-            "artist": "Solomon Burke",
-            "popularity": 65,
-            "filename": "solomon-burke-cry-to-me.json"
+            "uri": "spotify:track:1iMOlA78LDd12ZHhuBNDh6",
+            "name": "Thinking of You",
+            "artist": "Lord Echo",
+            "popularity": 64,
+            "filename": "lord-echo-thinking-of-you.json"
           }
         ],
         "features": {
           "danceability": 0.72,
           "energy": 0.61,
           "speechiness": 0.06,
-          "acousticness": 0.15,
-          "valence": 0.83,
+          "acousticness": 0.14,
+          "valence": 0.65,
           "popularity": 55.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 107.71,
-          "tempo_norm": 0.29
+          "tempo_bpm": 102.08,
+          "tempo_norm": 0.25
         },
         "subgenres": {
           "boogie": {
@@ -2404,6 +2544,20 @@
   "jazz": {
     "seeds": [
       {
+        "uri": "spotify:track:6yKkA8HzwWTZ5taIMaG4Nm",
+        "name": "My Foolish Heart",
+        "artist": "Bill Evans Trio",
+        "popularity": 65,
+        "filename": "bill-evans-trio-my-foolish-heart.json"
+      },
+      {
+        "uri": "spotify:track:7Imv2O9gkwpZJcjKEcSqZ1",
+        "name": "You've Changed",
+        "artist": "Keith Jarrett Trio",
+        "popularity": 62,
+        "filename": "keith-jarrett-trio-youve-changed.json"
+      },
+      {
         "uri": "spotify:track:1cpANF6zMBoFoxkoIjZHjv",
         "name": "Skating In Central Park",
         "artist": "Bill Evans",
@@ -2418,25 +2572,11 @@
         "filename": "chet-baker-my-funny-valentine.json"
       },
       {
-        "uri": "spotify:track:7Imv2O9gkwpZJcjKEcSqZ1",
-        "name": "You've Changed",
-        "artist": "Keith Jarrett Trio",
-        "popularity": 62,
-        "filename": "keith-jarrett-trio-youve-changed.json"
-      },
-      {
         "uri": "spotify:track:5b7OgznPJJr1vHNYGyvxau",
         "name": "Fly Me To The Moon (In Other Words)",
         "artist": "Frank Sinatra",
         "popularity": 74,
         "filename": "frank-sinatra-fly-me-to-the-moon-in-other-words.json"
-      },
-      {
-        "uri": "spotify:track:6yKkA8HzwWTZ5taIMaG4Nm",
-        "name": "My Foolish Heart",
-        "artist": "Bill Evans Trio",
-        "popularity": 65,
-        "filename": "bill-evans-trio-my-foolish-heart.json"
       }
     ],
     "features": {
@@ -2451,9 +2591,156 @@
       "tempo_norm": 0.38
     },
     "subgenres": {
-      "bebop": {},
-      "cool jazz": {},
-      "hard bop": {},
+      "bebop": {
+        "seeds": [
+          {
+            "uri": "spotify:track:7yzM0pEseQUpb6BMViOPEA",
+            "name": "Love Theme From Spartacus - Remastered",
+            "artist": "Yusef Lateef",
+            "popularity": 57,
+            "filename": "yusef-lateef-love-theme-from-spartacus-remastered.json"
+          },
+          {
+            "uri": "spotify:track:2kF9Ijd7I2Kk2P4bYqUmzG",
+            "name": "Midnight Blue - Remastered",
+            "artist": "Kenny Burrell",
+            "popularity": 56,
+            "filename": "kenny-burrell-midnight-blue-remastered.json"
+          },
+          {
+            "uri": "spotify:track:6QlkHjQmo2YncQN5MQXgPZ",
+            "name": "It Never Entered My Mind",
+            "artist": "Miles Davis Quintet",
+            "popularity": 58,
+            "filename": "miles-davis-quintet-it-never-entered-my-mind.json"
+          },
+          {
+            "uri": "spotify:track:3PJMsxg6rz9FOo6xNiASXz",
+            "name": "Goodbye Pork Pie Hat",
+            "artist": "Charles Mingus",
+            "popularity": 59,
+            "filename": "charles-mingus-goodbye-pork-pie-hat.json"
+          },
+          {
+            "uri": "spotify:track:6TAW00MAPvS59yEoIgtOEI",
+            "name": "All Alone",
+            "artist": "Mal Waldron",
+            "popularity": 56,
+            "filename": "mal-waldron-all-alone.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.49,
+          "energy": 0.22,
+          "speechiness": 0.04,
+          "acousticness": 0.89,
+          "valence": 0.28,
+          "popularity": 57.0,
+          "instrumentalness": 0.1,
+          "tempo_bpm": 128.31,
+          "tempo_norm": 0.45
+        }
+      },
+      "cool jazz": {
+        "seeds": [
+          {
+            "uri": "spotify:track:1J9iVCaEriyoMXpj2XszhU",
+            "name": "When Sunny Gets Blue",
+            "artist": "McCoy Tyner",
+            "popularity": 62,
+            "filename": "mccoy-tyner-when-sunny-gets-blue.json"
+          },
+          {
+            "uri": "spotify:track:5F8rPLt2c52p0SK7kiH26b",
+            "name": "Crystal Silence",
+            "artist": "Chick Corea",
+            "popularity": 58,
+            "filename": "chick-corea-crystal-silence.json"
+          },
+          {
+            "uri": "spotify:track:3GOZbK2epuHzCt5YvvVFHO",
+            "name": "Alone Together - Rudy Van Gelder Remaster",
+            "artist": "Kenny Dorham",
+            "popularity": 56,
+            "filename": "kenny-dorham-alone-together-rudy-van-gelder-remaster.json"
+          },
+          {
+            "uri": "spotify:track:2VUo8O3ymKRYNgj97ZG2kM",
+            "name": "Unsquare Dance",
+            "artist": "The Dave Brubeck Quartet",
+            "popularity": 55,
+            "filename": "the-dave-brubeck-quartet-unsquare-dance.json"
+          },
+          {
+            "uri": "spotify:track:1yegDiVa8d94H07ga1SLOt",
+            "name": "Days Of Wine And Roses",
+            "artist": "Wes Montgomery",
+            "popularity": 55,
+            "filename": "wes-montgomery-days-of-wine-and-roses.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.43,
+          "energy": 0.06,
+          "speechiness": 0.04,
+          "acousticness": 0.98,
+          "valence": 0.18,
+          "popularity": 56.0,
+          "instrumentalness": 0.88,
+          "tempo_bpm": 76.59,
+          "tempo_norm": 0.05
+        }
+      },
+      "hard bop": {
+        "seeds": [
+          {
+            "uri": "spotify:track:4Vkk3iD1VrENHJEACNddvt",
+            "name": "Moanin' - Remastered",
+            "artist": "Art Blakey",
+            "popularity": 56,
+            "filename": "art-blakey-moanin-remastered.json"
+          },
+          {
+            "uri": "spotify:track:3hY3MPL9hAITPgVfiVlL5K",
+            "name": "Stella By Starlight",
+            "artist": "Joe Lovano",
+            "popularity": 54,
+            "filename": "joe-lovano-stella-by-starlight.json"
+          },
+          {
+            "uri": "spotify:track:08lUeu1CxXvAoaKkemoEk8",
+            "name": "Over The Rainbow",
+            "artist": "Lou Donaldson",
+            "popularity": 54,
+            "filename": "lou-donaldson-over-the-rainbow.json"
+          },
+          {
+            "uri": "spotify:track:3I1LsXYKMeWbdgJgADH8yY",
+            "name": "Générique - BOF \"Ascenseur pour l'échafaud\"",
+            "artist": "Miles Davis",
+            "popularity": 55,
+            "filename": "miles-davis-gnrique-bof-ascenseur-pour-lchafaud.json"
+          },
+          {
+            "uri": "spotify:track:6oWhUfePc5h9r5pfw7wvPN",
+            "name": "Midnight Special - Rudy Van Gelder Digital Remaster/2007",
+            "artist": "Jimmy Smith",
+            "popularity": 55,
+            "filename": "jimmy-smith-midnight-special-rudy-van-gelder-digital-remaster2007.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.58,
+          "energy": 0.16,
+          "speechiness": 0.04,
+          "acousticness": 0.93,
+          "valence": 0.32,
+          "popularity": 55.0,
+          "instrumentalness": 0.76,
+          "tempo_bpm": 90.38,
+          "tempo_norm": 0.16
+        }
+      },
       "swing": {
         "seeds": [
           {
@@ -2464,20 +2751,6 @@
             "filename": "louis-armstrong-la-vie-en-rose-single-version.json"
           },
           {
-            "uri": "spotify:track:52XDumqYDUXX16R7FM5fpV",
-            "name": "It's Been a Long, Long Time",
-            "artist": "Harry James",
-            "popularity": 62,
-            "filename": "harry-james-its-been-a-long-long-time.json"
-          },
-          {
-            "uri": "spotify:track:71tjsDvB4EMJqNG8EMmFnb",
-            "name": "Comin' Home Baby",
-            "artist": "Mel Tormé",
-            "popularity": 61,
-            "filename": "mel-torm-comin-home-baby.json"
-          },
-          {
             "uri": "spotify:track:1V4NaFlrUCK49MXcdOcVeS",
             "name": "They Can't Take That Away From Me",
             "artist": "Ella Fitzgerald",
@@ -2485,23 +2758,37 @@
             "filename": "ella-fitzgerald-they-cant-take-that-away-from-me.json"
           },
           {
-            "uri": "spotify:track:6oSm3mBWFxJHEnjE2IqhmA",
-            "name": "There Will Never Be Another You",
-            "artist": "Lester Young",
-            "popularity": 60,
-            "filename": "lester-young-there-will-never-be-another-you.json"
+            "uri": "spotify:track:4rmCI9VWrwrJTJ8XQ80BMN",
+            "name": "My Little Brown Book",
+            "artist": "Duke Ellington",
+            "popularity": 61,
+            "filename": "duke-ellington-my-little-brown-book.json"
+          },
+          {
+            "uri": "spotify:track:7f6AAixCrVar1ZY7RPHDfM",
+            "name": "Cry Me A River",
+            "artist": "Julie London",
+            "popularity": 63,
+            "filename": "julie-london-cry-me-a-river.json"
+          },
+          {
+            "uri": "spotify:track:52XDumqYDUXX16R7FM5fpV",
+            "name": "It's Been a Long, Long Time",
+            "artist": "Harry James",
+            "popularity": 62,
+            "filename": "harry-james-its-been-a-long-long-time.json"
           }
         ],
         "features": {
-          "danceability": 0.56,
+          "danceability": 0.5,
           "energy": 0.14,
-          "speechiness": 0.06,
-          "acousticness": 0.87,
-          "valence": 0.37,
-          "popularity": 62.0,
+          "speechiness": 0.05,
+          "acousticness": 0.94,
+          "valence": 0.33,
+          "popularity": 63.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 83.4,
-          "tempo_norm": 0.1
+          "tempo_bpm": 74.7,
+          "tempo_norm": 0.04
         }
       },
       "jazz fusion": {
@@ -2514,6 +2801,13 @@
             "filename": "jan-hammer-crocketts-theme-from-miami-vice-ii-soundtrack.json"
           },
           {
+            "uri": "spotify:track:6Llr9PVC1cirKUwu7Fle83",
+            "name": "Street Life - Single Edit",
+            "artist": "The Crusaders",
+            "popularity": 57,
+            "filename": "the-crusaders-street-life-single-edit.json"
+          },
+          {
             "uri": "spotify:track:4tSTpnw8UYNlroCEo774tm",
             "name": "Bobby Brown Goes Down",
             "artist": "Frank Zappa",
@@ -2521,18 +2815,11 @@
             "filename": "frank-zappa-bobby-brown-goes-down.json"
           },
           {
-            "uri": "spotify:track:4JWfPMjVEh4SusNs8V3gt5",
-            "name": "From Gagarin's Point of View",
-            "artist": "Esbjörn Svensson Trio",
-            "popularity": 56,
-            "filename": "esbjrn-svensson-trio-from-gagarins-point-of-view.json"
-          },
-          {
-            "uri": "spotify:track:6Llr9PVC1cirKUwu7Fle83",
-            "name": "Street Life - Single Edit",
-            "artist": "The Crusaders",
-            "popularity": 57,
-            "filename": "the-crusaders-street-life-single-edit.json"
+            "uri": "spotify:track:4QbpagjMCqSECj6IimTL2n",
+            "name": "I Talk To The Wind",
+            "artist": "King Crimson",
+            "popularity": 55,
+            "filename": "king-crimson-i-talk-to-the-wind.json"
           },
           {
             "uri": "spotify:track:46tPGzCXCI2oKsemztDA9u",
@@ -2543,19 +2830,33 @@
           }
         ],
         "features": {
-          "danceability": 0.51,
+          "danceability": 0.41,
           "energy": 0.39,
           "speechiness": 0.05,
           "acousticness": 0.54,
           "valence": 0.4,
           "popularity": 57.0,
-          "instrumentalness": 0.83,
+          "instrumentalness": 0.64,
           "tempo_bpm": 128.97,
           "tempo_norm": 0.45
         }
       },
       "smooth jazz": {
         "seeds": [
+          {
+            "uri": "spotify:track:6UkHSbQcqBwWZr98OSELoL",
+            "name": "That's The Way Love Goes",
+            "artist": "Norman Brown",
+            "popularity": 54,
+            "filename": "norman-brown-thats-the-way-love-goes.json"
+          },
+          {
+            "uri": "spotify:track:13cpOnmccZGVGFngLxYN4I",
+            "name": "Forever in Love",
+            "artist": "Kenny G",
+            "popularity": 54,
+            "filename": "kenny-g-forever-in-love.json"
+          },
           {
             "uri": "spotify:track:7esAUabV6rHcj76syr32Uf",
             "name": "Piano In The Dark",
@@ -2564,44 +2865,30 @@
             "filename": "brenda-russell-piano-in-the-dark.json"
           },
           {
+            "uri": "spotify:track:3TRexXc7XRFVZA1WZPkOGY",
+            "name": "It Might Be You (Theme from Tootsie)",
+            "artist": "Dave Grusin",
+            "popularity": 55,
+            "filename": "dave-grusin-it-might-be-you-theme-from-tootsie.json"
+          },
+          {
             "uri": "spotify:track:38705PDjZZVeWxfTRsTlJr",
             "name": "Sweet Baby",
             "artist": "Stanley Clarke",
             "popularity": 56,
             "filename": "stanley-clarke-sweet-baby.json"
-          },
-          {
-            "uri": "spotify:track:24Wg5AQK6AaNyZBTpL1unQ",
-            "name": "Stop, Look, Listen (To Your Heart)",
-            "artist": "Boney James",
-            "popularity": 55,
-            "filename": "boney-james-stop-look-listen-to-your-heart.json"
-          },
-          {
-            "uri": "spotify:track:4nGThHUqKDfFsQ7XRZ6IhK",
-            "name": "Is It You?",
-            "artist": "Lee Ritenour",
-            "popularity": 54,
-            "filename": "lee-ritenour-is-it-you.json"
-          },
-          {
-            "uri": "spotify:track:6UkHSbQcqBwWZr98OSELoL",
-            "name": "That's The Way Love Goes",
-            "artist": "Norman Brown",
-            "popularity": 54,
-            "filename": "norman-brown-thats-the-way-love-goes.json"
           }
         ],
         "features": {
-          "danceability": 0.63,
-          "energy": 0.43,
+          "danceability": 0.62,
+          "energy": 0.37,
           "speechiness": 0.03,
-          "acousticness": 0.39,
-          "valence": 0.4,
+          "acousticness": 0.34,
+          "valence": 0.27,
           "popularity": 55.0,
-          "instrumentalness": 0.01,
-          "tempo_bpm": 84.91,
-          "tempo_norm": 0.11
+          "instrumentalness": 0.0,
+          "tempo_bpm": 97.92,
+          "tempo_norm": 0.21
         }
       },
       "nu jazz": {
@@ -2635,73 +2922,52 @@
             "filename": "tlpopmusik-breathe.json"
           },
           {
-            "uri": "spotify:track:6lsumzVFKP9SnfKcuGwqVp",
-            "name": "Rome Wasn't Built in a Day",
-            "artist": "Morcheeba",
-            "popularity": 61,
-            "filename": "morcheeba-rome-wasnt-built-in-a-day.json"
+            "uri": "spotify:track:3sMleqdCDalZ6xsAQe8xuY",
+            "name": "Booty Swing",
+            "artist": "Parov Stelar",
+            "popularity": 64,
+            "filename": "parov-stelar-booty-swing.json"
           }
         ],
         "features": {
-          "danceability": 0.61,
-          "energy": 0.68,
-          "speechiness": 0.03,
+          "danceability": 0.62,
+          "energy": 0.67,
+          "speechiness": 0.04,
           "acousticness": 0.39,
           "valence": 0.56,
           "popularity": 59.0,
-          "instrumentalness": 0.17,
-          "tempo_bpm": 112.03,
-          "tempo_norm": 0.32
+          "instrumentalness": 0.27,
+          "tempo_bpm": 112.97,
+          "tempo_norm": 0.33
         }
       },
       "avant-garde jazz": {
         "seeds": [
           {
-            "uri": "spotify:track:1J9iVCaEriyoMXpj2XszhU",
-            "name": "When Sunny Gets Blue",
-            "artist": "McCoy Tyner",
-            "popularity": 62,
-            "filename": "mccoy-tyner-when-sunny-gets-blue.json"
+            "uri": "spotify:track:0Dt1B5dNfajRczQKZA87aL",
+            "name": "So Tender",
+            "artist": "Keith Jarrett",
+            "popularity": 55,
+            "filename": "keith-jarrett-so-tender.json"
           },
           {
-            "uri": "spotify:track:3PJMsxg6rz9FOo6xNiASXz",
-            "name": "Goodbye Pork Pie Hat",
-            "artist": "Charles Mingus",
-            "popularity": 59,
-            "filename": "charles-mingus-goodbye-pork-pie-hat.json"
-          },
-          {
-            "uri": "spotify:track:7yzM0pEseQUpb6BMViOPEA",
-            "name": "Love Theme From Spartacus - Remastered",
-            "artist": "Yusef Lateef",
-            "popularity": 57,
-            "filename": "yusef-lateef-love-theme-from-spartacus-remastered.json"
-          },
-          {
-            "uri": "spotify:track:3GOZbK2epuHzCt5YvvVFHO",
-            "name": "Alone Together - Rudy Van Gelder Remaster",
-            "artist": "Kenny Dorham",
-            "popularity": 56,
-            "filename": "kenny-dorham-alone-together-rudy-van-gelder-remaster.json"
-          },
-          {
-            "uri": "spotify:track:6TAW00MAPvS59yEoIgtOEI",
-            "name": "All Alone",
-            "artist": "Mal Waldron",
-            "popularity": 56,
-            "filename": "mal-waldron-all-alone.json"
+            "uri": "spotify:track:4WU6x0MauVlAkpV6aTX4FM",
+            "name": "Mirrors - Remastered 2004",
+            "artist": "Freddie Hubbard",
+            "popularity": 55,
+            "filename": "freddie-hubbard-mirrors-remastered-2004.json"
           }
         ],
         "features": {
-          "danceability": 0.43,
-          "energy": 0.11,
+          "danceability": 0.39,
+          "energy": 0.26,
           "speechiness": 0.04,
-          "acousticness": 0.96,
-          "valence": 0.2,
-          "popularity": 57.0,
-          "instrumentalness": 0.89,
-          "tempo_bpm": 86.67,
-          "tempo_norm": 0.13
+          "acousticness": 0.89,
+          "valence": 0.32,
+          "popularity": 55.0,
+          "instrumentalness": 0.88,
+          "tempo_bpm": 94.85,
+          "tempo_norm": 0.19
         }
       }
     }
@@ -2709,62 +2975,118 @@
   "country": {
     "seeds": [
       {
-        "uri": "spotify:track:5AnSllIrgGsCZzZJkVnApx",
-        "name": "Eyes On You",
-        "artist": "Chase Rice",
-        "popularity": 73,
-        "filename": "chase-rice-eyes-on-you.json"
+        "uri": "spotify:track:51FVpJr3WL7vvdfCa7j2jr",
+        "name": "Momma’s House",
+        "artist": "Dustin Lynch",
+        "popularity": 74,
+        "filename": "dustin-lynch-mommas-house.json"
       },
       {
-        "uri": "spotify:track:4l8u5h7OjkZo2UmyUoeKYJ",
-        "name": "She's Got It All",
-        "artist": "Kenny Chesney",
+        "uri": "spotify:track:5s7m2xNZWgz5FqVSIvJcGA",
+        "name": "Save a Horse (Ride a Cowboy)",
+        "artist": "Big & Rich",
+        "popularity": 70,
+        "filename": "big-rich-save-a-horse-ride-a-cowboy.json"
+      },
+      {
+        "uri": "spotify:track:2ZXsvL9DO2MPv43Ay1IxgR",
+        "name": "John Deere Green",
+        "artist": "Joe Diffie",
         "popularity": 64,
-        "filename": "kenny-chesney-shes-got-it-all.json"
+        "filename": "joe-diffie-john-deere-green.json"
       },
       {
-        "uri": "spotify:track:3EUl8M6SzxZl03NPkB8mUd",
-        "name": "Neon Moon",
-        "artist": "Brooks & Dunn",
-        "popularity": 72,
-        "filename": "brooks-dunn-neon-moon.json"
+        "uri": "spotify:track:4u26EevCNXMhlvE1xFBJwX",
+        "name": "If I Die Young",
+        "artist": "The Band Perry",
+        "popularity": 69,
+        "filename": "the-band-perry-if-i-die-young.json"
       },
       {
-        "uri": "spotify:track:2EoIt9vdgFRNW03u5IvFsQ",
-        "name": "Achy Breaky Heart",
-        "artist": "Billy Ray Cyrus",
+        "uri": "spotify:track:6aNwDe5YH5YUPlpHkku52w",
+        "name": "Sunshine & Whiskey",
+        "artist": "Frankie Ballard",
         "popularity": 66,
-        "filename": "billy-ray-cyrus-achy-breaky-heart.json"
-      },
-      {
-        "uri": "spotify:track:74CEfiZthUGX5yUNNUM4bj",
-        "name": "This Is It",
-        "artist": "Scotty McCreery",
-        "popularity": 68,
-        "filename": "scotty-mccreery-this-is-it.json"
+        "filename": "frankie-ballard-sunshine-whiskey.json"
       }
     ],
     "features": {
-      "danceability": 0.7,
-      "energy": 0.63,
-      "speechiness": 0.03,
-      "acousticness": 0.25,
-      "valence": 0.59,
-      "popularity": 68.0,
+      "danceability": 0.67,
+      "energy": 0.82,
+      "speechiness": 0.04,
+      "acousticness": 0.22,
+      "valence": 0.75,
+      "popularity": 69.0,
       "instrumentalness": 0.0,
-      "tempo_bpm": 102.41,
-      "tempo_norm": 0.25
+      "tempo_bpm": 120.0,
+      "tempo_norm": 0.38
     },
     "subgenres": {
-      "classic country": {},
+      "classic country": {
+        "seeds": [
+          {
+            "uri": "spotify:track:6oizwmD5yHvlQUw0xvirrY",
+            "name": "There Was Jesus",
+            "artist": "Zach Williams",
+            "popularity": 65,
+            "filename": "zach-williams-there-was-jesus.json"
+          },
+          {
+            "uri": "spotify:track:7jWbXvrgdbkajU8L28ahn5",
+            "name": "Highwayman",
+            "artist": "The Highwaymen",
+            "popularity": 70,
+            "filename": "the-highwaymen-highwayman.json"
+          },
+          {
+            "uri": "spotify:track:2hckAvL66faAcR0Fk64hj6",
+            "name": "Pancho and Lefty",
+            "artist": "Merle Haggard",
+            "popularity": 61,
+            "filename": "merle-haggard-pancho-and-lefty.json"
+          },
+          {
+            "uri": "spotify:track:27876bQcDNkZhWqvF0zfFN",
+            "name": "Wildflowers - 2015 Remaster",
+            "artist": "Dolly Parton",
+            "popularity": 59,
+            "filename": "dolly-parton-wildflowers-2015-remaster.json"
+          },
+          {
+            "uri": "spotify:track:4yzFhsULEg65lbA7wjKaAQ",
+            "name": "Creepin' In",
+            "artist": "Norah Jones",
+            "popularity": 55,
+            "filename": "norah-jones-creepin-in.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.67,
+          "energy": 0.45,
+          "speechiness": 0.04,
+          "acousticness": 0.75,
+          "valence": 0.54,
+          "popularity": 61.0,
+          "instrumentalness": 0.0,
+          "tempo_bpm": 113.11,
+          "tempo_norm": 0.33
+        }
+      },
       "outlaw country": {
         "seeds": [
           {
-            "uri": "spotify:track:3nKLfeoq3YedJIZqvRW3Qz",
-            "name": "I Don't Need Your Rockin' Chair - Version w/special guests",
-            "artist": "Mark Chesnutt",
-            "popularity": 64,
-            "filename": "mark-chesnutt-i-dont-need-your-rockin-chair-version-wspecial-guests.json"
+            "uri": "spotify:track:0VU5k3vCrpqDgUygMjiFYj",
+            "name": "Copperhead Road",
+            "artist": "Steve Earle",
+            "popularity": 67,
+            "filename": "steve-earle-copperhead-road.json"
+          },
+          {
+            "uri": "spotify:track:3Ozx6IrGdoQyAworJzvBDE",
+            "name": "Sleeping on the Blacktop",
+            "artist": "Colter Wall",
+            "popularity": 71,
+            "filename": "colter-wall-sleeping-on-the-blacktop.json"
           },
           {
             "uri": "spotify:track:0fbR95FEaJUxiQYaqZZukv",
@@ -2774,54 +3096,47 @@
             "filename": "tyler-childers-whitehouse-road.json"
           },
           {
-            "uri": "spotify:track:0VU5k3vCrpqDgUygMjiFYj",
-            "name": "Copperhead Road",
-            "artist": "Steve Earle",
+            "uri": "spotify:track:68JS5SFTnW5Yv9Vzw81Jf0",
+            "name": "Millionaire",
+            "artist": "Chris Stapleton",
+            "popularity": 70,
+            "filename": "chris-stapleton-millionaire.json"
+          },
+          {
+            "uri": "spotify:track:4K1imZQQ0yKtJ40vGmUajS",
+            "name": "Girl from the North Country",
+            "artist": "Bob Dylan",
             "popularity": 67,
-            "filename": "steve-earle-copperhead-road.json"
-          },
-          {
-            "uri": "spotify:track:6aLl1AjRbo4ddJZh7Hzazx",
-            "name": "Southside Of Heaven",
-            "artist": "Ryan Bingham",
-            "popularity": 65,
-            "filename": "ryan-bingham-southside-of-heaven.json"
-          },
-          {
-            "uri": "spotify:track:2mV4xg3mvO5aXPLMoD7WrR",
-            "name": "You Never Even Called Me by My Name",
-            "artist": "David Allan Coe",
-            "popularity": 62,
-            "filename": "david-allan-coe-you-never-even-called-me-by-my-name.json"
+            "filename": "bob-dylan-girl-from-the-north-country.json"
           }
         ],
         "features": {
           "danceability": 0.61,
-          "energy": 0.59,
-          "speechiness": 0.03,
-          "acousticness": 0.11,
-          "valence": 0.7,
-          "popularity": 65.0,
+          "energy": 0.47,
+          "speechiness": 0.04,
+          "acousticness": 0.19,
+          "valence": 0.49,
+          "popularity": 70.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 105.25,
-          "tempo_norm": 0.27
+          "tempo_bpm": 118.87,
+          "tempo_norm": 0.38
         }
       },
       "bluegrass": {
         "seeds": [
+          {
+            "uri": "spotify:track:46LI9mnlQ8fJHH47ioBubg",
+            "name": "When You Say Nothing At All",
+            "artist": "Alison Krauss & Union Station",
+            "popularity": 67,
+            "filename": "alison-krauss-union-station-when-you-say-nothing-at-all.json"
+          },
           {
             "uri": "spotify:track:7lJbTVbDEMa3w7NFamrwdq",
             "name": "Fishin' in the Dark",
             "artist": "Nitty Gritty Dirt Band",
             "popularity": 70,
             "filename": "nitty-gritty-dirt-band-fishin-in-the-dark.json"
-          },
-          {
-            "uri": "spotify:track:0YwNdeDFbGP6AGwsQrtzdY",
-            "name": "I Am A Man Of Constant Sorrow - Radio Edit",
-            "artist": "The Soggy Bottom Boys",
-            "popularity": 62,
-            "filename": "the-soggy-bottom-boys-i-am-a-man-of-constant-sorrow-radio-edit.json"
           },
           {
             "uri": "spotify:track:359krpyCKcFF8SFvqWES9L",
@@ -2831,47 +3146,61 @@
             "filename": "old-crow-medicine-show-wagon-wheel.json"
           },
           {
-            "uri": "spotify:track:46LI9mnlQ8fJHH47ioBubg",
-            "name": "When You Say Nothing At All",
-            "artist": "Alison Krauss & Union Station",
-            "popularity": 67,
-            "filename": "alison-krauss-union-station-when-you-say-nothing-at-all.json"
+            "uri": "spotify:track:0YwNdeDFbGP6AGwsQrtzdY",
+            "name": "I Am A Man Of Constant Sorrow - Radio Edit",
+            "artist": "The Soggy Bottom Boys",
+            "popularity": 62,
+            "filename": "the-soggy-bottom-boys-i-am-a-man-of-constant-sorrow-radio-edit.json"
           },
           {
-            "uri": "spotify:track:4rJtUMlnhJzlzlnxyoc3tb",
-            "name": "I'll Fly Away",
-            "artist": "Gillian Welch",
-            "popularity": 59,
-            "filename": "gillian-welch-ill-fly-away.json"
+            "uri": "spotify:track:1QesQ27kCWYTYuXJi8SApS",
+            "name": "Wait so Long",
+            "artist": "Trampled by Turtles",
+            "popularity": 58,
+            "filename": "trampled-by-turtles-wait-so-long.json"
           }
         ],
         "features": {
-          "danceability": 0.62,
-          "energy": 0.28,
-          "speechiness": 0.03,
-          "acousticness": 0.67,
+          "danceability": 0.56,
+          "energy": 0.33,
+          "speechiness": 0.04,
+          "acousticness": 0.58,
           "valence": 0.63,
           "popularity": 67.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 102.94,
-          "tempo_norm": 0.25
+          "tempo_bpm": 145.52,
+          "tempo_norm": 0.58
         }
       },
       "country rock": {
         "seeds": [
           {
-            "uri": "spotify:track:64sn7wgJfeQKY3Jisnl59w",
-            "name": "Tuesday's Gone",
-            "artist": "Lynyrd Skynyrd",
-            "popularity": 65,
-            "filename": "lynyrd-skynyrd-tuesdays-gone.json"
+            "uri": "spotify:track:7lUE02KHkZM44BZgjCaWRO",
+            "name": "Meet In the Middle",
+            "artist": "Diamond Rio",
+            "popularity": 68,
+            "filename": "diamond-rio-meet-in-the-middle.json"
           },
           {
-            "uri": "spotify:track:38llcrfX1arUqrEe0DRRzW",
-            "name": "I Got a Name - Stereo Version",
-            "artist": "Jim Croce",
+            "uri": "spotify:track:4MYb7NWLwXNDB7bYs3HeX8",
+            "name": "Slow Ride",
+            "artist": "Foghat",
+            "popularity": 67,
+            "filename": "foghat-slow-ride.json"
+          },
+          {
+            "uri": "spotify:track:7riuy1t0Kt3SRgMtFxX0FR",
+            "name": "That Ain't My Truck",
+            "artist": "Rhett Akins",
             "popularity": 64,
-            "filename": "jim-croce-i-got-a-name-stereo-version.json"
+            "filename": "rhett-akins-that-aint-my-truck.json"
+          },
+          {
+            "uri": "spotify:track:2PuUFT13yCzUOZun94WOXv",
+            "name": "Suite: Judy Blue Eyes - 2005 Remaster",
+            "artist": "Crosby, Stills & Nash",
+            "popularity": 64,
+            "filename": "crosby-stills-nash-suite-judy-blue-eyes-2005-remaster.json"
           },
           {
             "uri": "spotify:track:4vO9dmzNRqDhFY3jD1a3P7",
@@ -2879,42 +3208,28 @@
             "artist": "Mountain",
             "popularity": 70,
             "filename": "mountain-mississippi-queen.json"
-          },
-          {
-            "uri": "spotify:track:2zI3bUYn2pcF27of6i2oqK",
-            "name": "Jet Airliner",
-            "artist": "Steve Miller Band",
-            "popularity": 68,
-            "filename": "steve-miller-band-jet-airliner.json"
-          },
-          {
-            "uri": "spotify:track:63OFKbMaZSDZ4wtesuuq6f",
-            "name": "Born To Be Wild",
-            "artist": "Steppenwolf",
-            "popularity": 74,
-            "filename": "steppenwolf-born-to-be-wild.json"
           }
         ],
         "features": {
-          "danceability": 0.55,
-          "energy": 0.65,
+          "danceability": 0.58,
+          "energy": 0.59,
           "speechiness": 0.04,
-          "acousticness": 0.1,
+          "acousticness": 0.23,
           "valence": 0.64,
-          "popularity": 68.0,
+          "popularity": 67.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 139.71,
-          "tempo_norm": 0.54
+          "tempo_bpm": 128.96,
+          "tempo_norm": 0.45
         }
       },
       "southern rock": {
         "seeds": [
           {
-            "uri": "spotify:track:2wvMC5EyaaYQwBfiwwY2xE",
-            "name": "Life's Been Good",
-            "artist": "Joe Walsh",
-            "popularity": 70,
-            "filename": "joe-walsh-lifes-been-good.json"
+            "uri": "spotify:track:6J0AjzrYsPZrQtw6IjErhy",
+            "name": "Run Through The Jungle",
+            "artist": "Creedence Clearwater Revival",
+            "popularity": 68,
+            "filename": "creedence-clearwater-revival-run-through-the-jungle.json"
           },
           {
             "uri": "spotify:track:1hHGUdFaiJHw9hVZGJWYO2",
@@ -2924,25 +3239,25 @@
             "filename": "allman-brothers-band-midnight-rider.json"
           },
           {
-            "uri": "spotify:track:5tORtBzHUAnNrIw5Ql3kHZ",
-            "name": "Keep Your Hands to Yourself",
-            "artist": "The Georgia Satellites",
-            "popularity": 62,
-            "filename": "the-georgia-satellites-keep-your-hands-to-yourself.json"
+            "uri": "spotify:track:2wvMC5EyaaYQwBfiwwY2xE",
+            "name": "Life's Been Good",
+            "artist": "Joe Walsh",
+            "popularity": 70,
+            "filename": "joe-walsh-lifes-been-good.json"
           },
           {
-            "uri": "spotify:track:0MnI39P9Dze0PSUjetb8Va",
-            "name": "Black Betty",
-            "artist": "Ram Jam",
-            "popularity": 60,
-            "filename": "ram-jam-black-betty.json"
+            "uri": "spotify:track:4O7sDupv5V7qEBk96qOZyi",
+            "name": "Simple Man",
+            "artist": "The Charlie Daniels Band",
+            "popularity": 61,
+            "filename": "the-charlie-daniels-band-simple-man.json"
           },
           {
-            "uri": "spotify:track:3Sm5TYFgMXyXwgAcY2xweX",
-            "name": "So Into You",
-            "artist": "Atlanta Rhythm Section",
-            "popularity": 60,
-            "filename": "atlanta-rhythm-section-so-into-you.json"
+            "uri": "spotify:track:64sn7wgJfeQKY3Jisnl59w",
+            "name": "Tuesday's Gone",
+            "artist": "Lynyrd Skynyrd",
+            "popularity": 65,
+            "filename": "lynyrd-skynyrd-tuesdays-gone.json"
           }
         ],
         "features": {
@@ -2950,8 +3265,8 @@
           "energy": 0.53,
           "speechiness": 0.04,
           "acousticness": 0.21,
-          "valence": 0.79,
-          "popularity": 62.0,
+          "valence": 0.54,
+          "popularity": 68.0,
           "instrumentalness": 0.01,
           "tempo_bpm": 99.31,
           "tempo_norm": 0.23
@@ -2960,32 +3275,18 @@
       "roots rock": {
         "seeds": [
           {
-            "uri": "spotify:track:0prVUHQu2xr6pI5iEbKtxo",
-            "name": "Beautiful Strangers",
-            "artist": "Kevin Morby",
-            "popularity": 65,
-            "filename": "kevin-morby-beautiful-strangers.json"
+            "uri": "spotify:track:2hitsKa8SthKhRJBXUHbIv",
+            "name": "Our House",
+            "artist": "Crosby, Stills, Nash & Young",
+            "popularity": 70,
+            "filename": "crosby-stills-nash-young-our-house.json"
           },
           {
-            "uri": "spotify:track:1u7J5sEfgOVRt5bkfU2oGV",
-            "name": "Keep The Wolves Away",
-            "artist": "Uncle Lucius",
+            "uri": "spotify:track:2zI3bUYn2pcF27of6i2oqK",
+            "name": "Jet Airliner",
+            "artist": "Steve Miller Band",
             "popularity": 68,
-            "filename": "uncle-lucius-keep-the-wolves-away.json"
-          },
-          {
-            "uri": "spotify:track:1PC5GV3OaoXx5em8ttQOMI",
-            "name": "After Midnight",
-            "artist": "J.J. Cale",
-            "popularity": 66,
-            "filename": "jj-cale-after-midnight.json"
-          },
-          {
-            "uri": "spotify:track:0uMMLry3hzWGn3q3loqMkm",
-            "name": "La Bamba",
-            "artist": "Los Lobos",
-            "popularity": 65,
-            "filename": "los-lobos-la-bamba.json"
+            "filename": "steve-miller-band-jet-airliner.json"
           },
           {
             "uri": "spotify:track:47cNDW1xyM03mT2kseO41a",
@@ -2993,45 +3294,94 @@
             "artist": "Kurt Vile",
             "popularity": 64,
             "filename": "kurt-vile-pretty-pimpin.json"
+          },
+          {
+            "uri": "spotify:track:6BD1X1PeV5UzYUdiVaD2yL",
+            "name": "Show Me The Way",
+            "artist": "Peter Frampton",
+            "popularity": 68,
+            "filename": "peter-frampton-show-me-the-way.json"
+          },
+          {
+            "uri": "spotify:track:0prVUHQu2xr6pI5iEbKtxo",
+            "name": "Beautiful Strangers",
+            "artist": "Kevin Morby",
+            "popularity": 65,
+            "filename": "kevin-morby-beautiful-strangers.json"
           }
         ],
         "features": {
-          "danceability": 0.68,
-          "energy": 0.42,
-          "speechiness": 0.04,
-          "acousticness": 0.17,
+          "danceability": 0.59,
+          "energy": 0.66,
+          "speechiness": 0.03,
+          "acousticness": 0.43,
           "valence": 0.76,
-          "popularity": 65.0,
-          "instrumentalness": 0.07,
-          "tempo_bpm": 100.04,
-          "tempo_norm": 0.23
+          "popularity": 68.0,
+          "instrumentalness": 0.0,
+          "tempo_bpm": 122.96,
+          "tempo_norm": 0.41
         }
       },
-      "americana folk": {}
+      "indie folk": {
+        "seeds": [
+          {
+            "uri": "spotify:track:7qUoDTmVj07qUf6ZBDhWKl",
+            "name": "Blood Bank",
+            "artist": "Bon Iver",
+            "popularity": 65,
+            "filename": "bon-iver-blood-bank.json"
+          },
+          {
+            "uri": "spotify:track:0TLAptKgYxe7F0KewWH6X6",
+            "name": "I Need A Forest Fire",
+            "artist": "James Blake",
+            "popularity": 62,
+            "filename": "james-blake-i-need-a-forest-fire.json"
+          },
+          {
+            "uri": "spotify:track:7trx783SvnHhKkmgSSTIFJ",
+            "name": "First Class",
+            "artist": "Rainbow Kitten Surprise",
+            "popularity": 64,
+            "filename": "rainbow-kitten-surprise-first-class.json"
+          },
+          {
+            "uri": "spotify:track:5Z1U0knfYnsfvZycgDeOiC",
+            "name": "Big Jet Plane",
+            "artist": "Angus & Julia Stone",
+            "popularity": 65,
+            "filename": "angus-julia-stone-big-jet-plane.json"
+          },
+          {
+            "uri": "spotify:track:6255IIBwKySv6RYrOeHfQh",
+            "name": "All the Debts I Owe",
+            "artist": "Caamp",
+            "popularity": 66,
+            "filename": "caamp-all-the-debts-i-owe.json"
+          }
+        ],
+        "features": {
+          "danceability": 0.49,
+          "energy": 0.37,
+          "speechiness": 0.04,
+          "acousticness": 0.7,
+          "valence": 0.25,
+          "popularity": 65.0,
+          "instrumentalness": 0.01,
+          "tempo_bpm": 109.96,
+          "tempo_norm": 0.31
+        }
+      }
     }
   },
   "latin": {
     "seeds": [
       {
-        "uri": "spotify:track:1bra22ihn1UyVyilRRcpy2",
-        "name": "Candela",
-        "artist": "Super Yei",
-        "popularity": 71,
-        "filename": "super-yei-candela.json"
-      },
-      {
-        "uri": "spotify:track:7KKh0ujp8agIiCrkiJhf81",
-        "name": "Jangueo",
-        "artist": "Anuel AA",
-        "popularity": 69,
-        "filename": "anuel-aa-jangueo.json"
-      },
-      {
-        "uri": "spotify:track:4MZSqgwlE71CWZ6qQ3gkKm",
-        "name": "<3",
-        "artist": "Bad Bunny",
-        "popularity": 72,
-        "filename": "bad-bunny-3.json"
+        "uri": "spotify:track:2naJy8SKJ27gj6ZhRPDKaz",
+        "name": "Si Tu Lo Dejas",
+        "artist": "Rvssian",
+        "popularity": 64,
+        "filename": "rvssian-si-tu-lo-dejas.json"
       },
       {
         "uri": "spotify:track:0dUkdZ8oXfdDhSFGJOQz5v",
@@ -3041,40 +3391,47 @@
         "filename": "vico-c-la-vecinita.json"
       },
       {
-        "uri": "spotify:track:0GmiGIxXDNrePrHBpijYDp",
-        "name": "Sigue Bailandome",
-        "artist": "Yannc",
-        "popularity": 74,
-        "filename": "yannc-sigue-bailandome.json"
+        "uri": "spotify:track:5YRhQ7h8w2cMCY2teyjax6",
+        "name": "Y Que",
+        "artist": "Inspector",
+        "popularity": 66,
+        "filename": "inspector-y-que.json"
+      },
+      {
+        "uri": "spotify:track:1bra22ihn1UyVyilRRcpy2",
+        "name": "Candela",
+        "artist": "Super Yei",
+        "popularity": 71,
+        "filename": "super-yei-candela.json"
+      },
+      {
+        "uri": "spotify:track:4kdMfObhCkNZ47gsl63uXP",
+        "name": "BURBERRY",
+        "artist": "Myke Towers",
+        "popularity": 68,
+        "filename": "myke-towers-burberry.json"
       }
     ],
     "features": {
-      "danceability": 0.8,
-      "energy": 0.69,
+      "danceability": 0.75,
+      "energy": 0.64,
       "speechiness": 0.1,
-      "acousticness": 0.28,
+      "acousticness": 0.16,
       "valence": 0.68,
-      "popularity": 71.0,
+      "popularity": 66.0,
       "instrumentalness": 0.0,
-      "tempo_bpm": 94.01,
-      "tempo_norm": 0.18
+      "tempo_bpm": 130.91,
+      "tempo_norm": 0.47
     },
     "subgenres": {
       "reggaeton": {
         "seeds": [
           {
-            "uri": "spotify:track:3FhiU60cxfN2j4jRy5Y40w",
-            "name": "Lloras - Remix",
-            "artist": "Cauty",
-            "popularity": 71,
-            "filename": "cauty-lloras-remix.json"
-          },
-          {
-            "uri": "spotify:track:0Rj2yNpEvXOl8yn9UOuIRs",
-            "name": "Gyal You A Party Animal - Remix",
-            "artist": "Charly Black",
-            "popularity": 67,
-            "filename": "charly-black-gyal-you-a-party-animal-remix.json"
+            "uri": "spotify:track:7KKh0ujp8agIiCrkiJhf81",
+            "name": "Jangueo",
+            "artist": "Anuel AA",
+            "popularity": 69,
+            "filename": "anuel-aa-jangueo.json"
           },
           {
             "uri": "spotify:track:1MfqPCs3Y722VK6zkWZ98Z",
@@ -3091,47 +3448,40 @@
             "filename": "big-boy-mis-ojos-lloran-por-ti.json"
           },
           {
-            "uri": "spotify:track:5KFx45L84KmBINWLh6TEiL",
-            "name": "Demasiado Tarde",
-            "artist": "Micro TDH",
-            "popularity": 64,
-            "filename": "micro-tdh-demasiado-tarde.json"
+            "uri": "spotify:track:1kMUGCt7XLDc5Q64Vl0H8S",
+            "name": "Bellacoso",
+            "artist": "Residente",
+            "popularity": 69,
+            "filename": "residente-bellacoso.json"
+          },
+          {
+            "uri": "spotify:track:0GmiGIxXDNrePrHBpijYDp",
+            "name": "Sigue Bailandome",
+            "artist": "Yannc",
+            "popularity": 74,
+            "filename": "yannc-sigue-bailandome.json"
           }
         ],
         "features": {
           "danceability": 0.8,
           "energy": 0.82,
-          "speechiness": 0.08,
+          "speechiness": 0.1,
           "acousticness": 0.1,
-          "valence": 0.56,
+          "valence": 0.65,
           "popularity": 70.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 101.05,
-          "tempo_norm": 0.24
+          "tempo_bpm": 106.03,
+          "tempo_norm": 0.28
         }
       },
       "latin pop": {
         "seeds": [
-          {
-            "uri": "spotify:track:1N3dZ7TTWO6VcD4Y3hHYLZ",
-            "name": "Try Everything",
-            "artist": "Shakira",
-            "popularity": 70,
-            "filename": "shakira-try-everything.json"
-          },
           {
             "uri": "spotify:track:4S1bYWrLOC8smuy8kJzxKQ",
             "name": "Te Extraño, Te Olvido, Te Amo",
             "artist": "Ricky Martin",
             "popularity": 65,
             "filename": "ricky-martin-te-extrao-te-olvido-te-amo.json"
-          },
-          {
-            "uri": "spotify:track:5aLELbBB0Pa7TlGJJyBJo9",
-            "name": "Oye Mujer",
-            "artist": "Raymix",
-            "popularity": 63,
-            "filename": "raymix-oye-mujer.json"
           },
           {
             "uri": "spotify:track:2EM9zpAc7PVeoAydmbfVIL",
@@ -3141,11 +3491,25 @@
             "filename": "juanes-la-camisa-negra.json"
           },
           {
+            "uri": "spotify:track:5aLELbBB0Pa7TlGJJyBJo9",
+            "name": "Oye Mujer",
+            "artist": "Raymix",
+            "popularity": 63,
+            "filename": "raymix-oye-mujer.json"
+          },
+          {
             "uri": "spotify:track:2HWWNoWEEEECwZhAiLg7ib",
             "name": "Beautiful Liar",
             "artist": "Beyoncé",
             "popularity": 64,
             "filename": "beyonc-beautiful-liar.json"
+          },
+          {
+            "uri": "spotify:track:1N3dZ7TTWO6VcD4Y3hHYLZ",
+            "name": "Try Everything",
+            "artist": "Shakira",
+            "popularity": 70,
+            "filename": "shakira-try-everything.json"
           }
         ],
         "features": {
@@ -3163,13 +3527,6 @@
       "salsa": {
         "seeds": [
           {
-            "uri": "spotify:track:5mg6sU732O35VMfCYk3lmX",
-            "name": "Ven Devórame Otra Vez",
-            "artist": "Lalo Rodriguez",
-            "popularity": 64,
-            "filename": "lalo-rodriguez-ven-devrame-otra-vez.json"
-          },
-          {
             "uri": "spotify:track:17Sfr3T1chYPGcmM4VlhCh",
             "name": "Oiga, Mire, Vea",
             "artist": "Guayacán Orquesta",
@@ -3177,33 +3534,40 @@
             "filename": "guayacn-orquesta-oiga-mire-vea.json"
           },
           {
-            "uri": "spotify:track:5bkWgrKyNhMcriQP3CrHEA",
-            "name": "Fabricando Fantasías - Salsa Version",
-            "artist": "Tito Nieves",
-            "popularity": 66,
-            "filename": "tito-nieves-fabricando-fantasas-salsa-version.json"
-          },
-          {
-            "uri": "spotify:track:4ZWksPVZdma0A5GiSCStIK",
-            "name": "Detalles",
-            "artist": "Oscar D'León",
-            "popularity": 63,
-            "filename": "oscar-dlen-detalles.json"
-          },
-          {
             "uri": "spotify:track:64QyipABOzDwoUFqaEnCvU",
             "name": "Mi Media Mitad",
             "artist": "Rey Ruiz",
             "popularity": 66,
             "filename": "rey-ruiz-mi-media-mitad.json"
+          },
+          {
+            "uri": "spotify:track:2vHNqDJe1qvt1sroQfNHSI",
+            "name": "Aquel Lugar",
+            "artist": "Adolescent's Orquesta",
+            "popularity": 69,
+            "filename": "adolescents-orquesta-aquel-lugar.json"
+          },
+          {
+            "uri": "spotify:track:6ydEhrdfzhI29D2NBAqUY1",
+            "name": "Quimbara",
+            "artist": "Johnny Pacheco",
+            "popularity": 64,
+            "filename": "johnny-pacheco-quimbara.json"
+          },
+          {
+            "uri": "spotify:track:6F3YJ3vWzatHA3nz6GwDoA",
+            "name": "Regálame una Noche",
+            "artist": "Maelo Ruiz",
+            "popularity": 65,
+            "filename": "maelo-ruiz-reglame-una-noche.json"
           }
         ],
         "features": {
-          "danceability": 0.72,
-          "energy": 0.77,
-          "speechiness": 0.04,
+          "danceability": 0.63,
+          "energy": 0.67,
+          "speechiness": 0.05,
           "acousticness": 0.4,
-          "valence": 0.93,
+          "valence": 0.83,
           "popularity": 65.0,
           "instrumentalness": 0.0,
           "tempo_bpm": 154.17,
@@ -3213,6 +3577,13 @@
       "cumbia": {
         "seeds": [
           {
+            "uri": "spotify:track:0NLSsL8sIElmNuTySSb3s6",
+            "name": "Las Mujeres No Se Acaban",
+            "artist": "Grupo Kual?",
+            "popularity": 62,
+            "filename": "grupo-kual-las-mujeres-no-se-acaban.json"
+          },
+          {
             "uri": "spotify:track:1layZXCAmJ84fi21OmnTt5",
             "name": "Los Caminos De La Vida",
             "artist": "La Tropa Vallenata",
@@ -3220,18 +3591,11 @@
             "filename": "la-tropa-vallenata-los-caminos-de-la-vida.json"
           },
           {
-            "uri": "spotify:track:3A4awt6Y9DwHBRuFDoRX5S",
-            "name": "El Diario De Un Borracho",
-            "artist": "Aniceto Molina",
-            "popularity": 61,
-            "filename": "aniceto-molina-el-diario-de-un-borracho.json"
-          },
-          {
-            "uri": "spotify:track:0NLSsL8sIElmNuTySSb3s6",
-            "name": "Las Mujeres No Se Acaban",
-            "artist": "Grupo Kual?",
-            "popularity": 62,
-            "filename": "grupo-kual-las-mujeres-no-se-acaban.json"
+            "uri": "spotify:track:1DFDbSWdESvzWHHAe6BCQ3",
+            "name": "Inocente",
+            "artist": "La Delio Valdez",
+            "popularity": 64,
+            "filename": "la-delio-valdez-inocente.json"
           },
           {
             "uri": "spotify:track:4AwgFDiynuu52p5xtpRlNG",
@@ -3241,11 +3605,11 @@
             "filename": "la-luz-roja-de-san-marcos-cumbia-sampuesana.json"
           },
           {
-            "uri": "spotify:track:1DFDbSWdESvzWHHAe6BCQ3",
-            "name": "Inocente",
-            "artist": "La Delio Valdez",
-            "popularity": 64,
-            "filename": "la-delio-valdez-inocente.json"
+            "uri": "spotify:track:3A4awt6Y9DwHBRuFDoRX5S",
+            "name": "El Diario De Un Borracho",
+            "artist": "Aniceto Molina",
+            "popularity": 61,
+            "filename": "aniceto-molina-el-diario-de-un-borracho.json"
           }
         ],
         "features": {
@@ -3270,13 +3634,6 @@
             "filename": "alex-bueno-que-vuelva.json"
           },
           {
-            "uri": "spotify:track:2XESoQVXG9ssxyjxXSrmxo",
-            "name": "El Baile del Perrito",
-            "artist": "Wilfrido Vargas",
-            "popularity": 56,
-            "filename": "wilfrido-vargas-el-baile-del-perrito.json"
-          },
-          {
             "uri": "spotify:track:7neWp4incUBLP1XQTNWmP0",
             "name": "La Vaca",
             "artist": "Mala Fe",
@@ -3289,6 +3646,13 @@
             "artist": "Oro Solido",
             "popularity": 55,
             "filename": "oro-solido-el-baile-del-beeper-version-mexico.json"
+          },
+          {
+            "uri": "spotify:track:2XESoQVXG9ssxyjxXSrmxo",
+            "name": "El Baile del Perrito",
+            "artist": "Wilfrido Vargas",
+            "popularity": 56,
+            "filename": "wilfrido-vargas-el-baile-del-perrito.json"
           },
           {
             "uri": "spotify:track:1X2FA15vCCik0fcowxawDA",
@@ -3313,51 +3677,51 @@
       "tropical": {
         "seeds": [
           {
+            "uri": "spotify:track:1DseLejlPOK5qrzArl7b8A",
+            "name": "Sobredosis",
+            "artist": "Los Titanes",
+            "popularity": 64,
+            "filename": "los-titanes-sobredosis.json"
+          },
+          {
+            "uri": "spotify:track:588fZDQv1c7F3iP68Pp3My",
+            "name": "Como Te Hago Entender",
+            "artist": "Roberto Roena Y Su Apollo Sound",
+            "popularity": 64,
+            "filename": "roberto-roena-y-su-apollo-sound-como-te-hago-entender.json"
+          },
+          {
+            "uri": "spotify:track:3rsVX2Pd8UkjqF2MAZqeif",
+            "name": "La Quiero A Morir",
+            "artist": "DLG",
+            "popularity": 66,
+            "filename": "dlg-la-quiero-a-morir.json"
+          },
+          {
+            "uri": "spotify:track:5bkWgrKyNhMcriQP3CrHEA",
+            "name": "Fabricando Fantasías - Salsa Version",
+            "artist": "Tito Nieves",
+            "popularity": 66,
+            "filename": "tito-nieves-fabricando-fantasas-salsa-version.json"
+          },
+          {
             "uri": "spotify:track:5uRd1tmUAvfFGSPR5266Xp",
             "name": "Tu Cariñito",
             "artist": "Puerto Rican Power",
             "popularity": 69,
             "filename": "puerto-rican-power-tu-cariito.json"
-          },
-          {
-            "uri": "spotify:track:00Ro1lnV3V6i87aY4t8Q43",
-            "name": "La rebelion",
-            "artist": "Joe Arroyo",
-            "popularity": 69,
-            "filename": "joe-arroyo-la-rebelion.json"
-          },
-          {
-            "uri": "spotify:track:6ydEhrdfzhI29D2NBAqUY1",
-            "name": "Quimbara",
-            "artist": "Johnny Pacheco",
-            "popularity": 64,
-            "filename": "johnny-pacheco-quimbara.json"
-          },
-          {
-            "uri": "spotify:track:2vHNqDJe1qvt1sroQfNHSI",
-            "name": "Aquel Lugar",
-            "artist": "Adolescent's Orquesta",
-            "popularity": 69,
-            "filename": "adolescents-orquesta-aquel-lugar.json"
-          },
-          {
-            "uri": "spotify:track:3lfWaQLyg71Uar9gAgFVWV",
-            "name": "Casi Te Envidio",
-            "artist": "Andy Montañez",
-            "popularity": 63,
-            "filename": "andy-montaez-casi-te-envidio.json"
           }
         ],
         "features": {
-          "danceability": 0.67,
-          "energy": 0.63,
-          "speechiness": 0.07,
-          "acousticness": 0.36,
-          "valence": 0.88,
-          "popularity": 69.0,
+          "danceability": 0.72,
+          "energy": 0.86,
+          "speechiness": 0.05,
+          "acousticness": 0.34,
+          "valence": 0.92,
+          "popularity": 66.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 107.95,
-          "tempo_norm": 0.29
+          "tempo_bpm": 99.67,
+          "tempo_norm": 0.23
         }
       },
       "mambo": {
@@ -3377,13 +3741,6 @@
             "filename": "sonora-poncea-fuego-en-el-23.json"
           },
           {
-            "uri": "spotify:track:1m3paVx65imhvCjPx505Oy",
-            "name": "Micaela",
-            "artist": "Sonora Carruseles",
-            "popularity": 56,
-            "filename": "sonora-carruseles-micaela.json"
-          },
-          {
             "uri": "spotify:track:2uzCfFYh6tSNFdz14ZIf3N",
             "name": "La Negra Tiene Tumbao",
             "artist": "Celia Cruz",
@@ -3396,6 +3753,13 @@
             "artist": "La Sonora Matancera",
             "popularity": 55,
             "filename": "la-sonora-matancera-mala-jujer.json"
+          },
+          {
+            "uri": "spotify:track:1m3paVx65imhvCjPx505Oy",
+            "name": "Micaela",
+            "artist": "Sonora Carruseles",
+            "popularity": 56,
+            "filename": "sonora-carruseles-micaela.json"
           }
         ],
         "features": {
@@ -3427,6 +3791,13 @@
             "filename": "tribalistas-j-sei-namorar-2004-digital-remaster.json"
           },
           {
+            "uri": "spotify:track:4SpqtLElDsO6KGbd4ub96Z",
+            "name": "Pela Luz dos Olhos Teus - Bonus Track",
+            "artist": "Miúcha",
+            "popularity": 61,
+            "filename": "micha-pela-luz-dos-olhos-teus-bonus-track.json"
+          },
+          {
             "uri": "spotify:track:5sz2LrG6jY6u7U0g2k7kws",
             "name": "Devolva-Me (Ao Vivo)",
             "artist": "Adriana Calcanhotto",
@@ -3439,38 +3810,24 @@
             "artist": "Zélia Duncan",
             "popularity": 59,
             "filename": "zlia-duncan-catedral.json"
-          },
-          {
-            "uri": "spotify:track:5nwT95l5rMdQPaydjGh32q",
-            "name": "Amor I Love You / Citação: Trecho da Obra Intitulada \"Primo Basilio\" De Eça de Queiroz Declamado por Arnaldo Antunes",
-            "artist": "Marisa Monte",
-            "popularity": 59,
-            "filename": "marisa-monte-amor-i-love-you-citao-trecho-da-obra-intitulada-primo-basilio-de-ea-de-queiroz-declamado-por-arnaldo-antunes.json"
           }
         ],
         "features": {
           "danceability": 0.62,
-          "energy": 0.3,
-          "speechiness": 0.03,
+          "energy": 0.28,
+          "speechiness": 0.04,
           "acousticness": 0.75,
           "valence": 0.22,
           "popularity": 61.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 113.26,
-          "tempo_norm": 0.33
+          "tempo_bpm": 116.83,
+          "tempo_norm": 0.36
         }
       }
     }
   },
   "reggae": {
     "seeds": [
-      {
-        "uri": "spotify:track:4z62783TED1Rz0XOpBLOV7",
-        "name": "So Much Things To Say",
-        "artist": "Bob Marley & The Wailers",
-        "popularity": 57,
-        "filename": "bob-marley-the-wailers-so-much-things-to-say.json"
-      },
       {
         "uri": "spotify:track:4llIZen1Cn4mi3DJm2Lqlz",
         "name": "Cool Down The Pace",
@@ -3479,11 +3836,11 @@
         "filename": "gregory-isaacs-cool-down-the-pace.json"
       },
       {
-        "uri": "spotify:track:4aCsgwFhbZ8CmYAotK7W2B",
-        "name": "Let Down",
-        "artist": "Easy Star All-Stars",
-        "popularity": 56,
-        "filename": "easy-star-all-stars-let-down.json"
+        "uri": "spotify:track:4z62783TED1Rz0XOpBLOV7",
+        "name": "So Much Things To Say",
+        "artist": "Bob Marley & The Wailers",
+        "popularity": 57,
+        "filename": "bob-marley-the-wailers-so-much-things-to-say.json"
       },
       {
         "uri": "spotify:track:30ELPvO4DH57Rq2kgj7a8e",
@@ -3498,18 +3855,25 @@
         "artist": "Third World",
         "popularity": 55,
         "filename": "third-world-1865-96-in-the-shade.json"
+      },
+      {
+        "uri": "spotify:track:389R9arpxdfl0JA450Qn9m",
+        "name": "Take Me Home, Country Roads",
+        "artist": "Toots & The Maytals",
+        "popularity": 56,
+        "filename": "toots-the-maytals-take-me-home-country-roads.json"
       }
     ],
     "features": {
       "danceability": 0.81,
       "energy": 0.39,
       "speechiness": 0.15,
-      "acousticness": 0.12,
+      "acousticness": 0.13,
       "valence": 0.8,
       "popularity": 57.0,
       "instrumentalness": 0.0,
-      "tempo_bpm": 113.06,
-      "tempo_norm": 0.33
+      "tempo_bpm": 91.56,
+      "tempo_norm": 0.17
     },
     "subgenres": {
       "dub": {
@@ -3536,30 +3900,30 @@
             "filename": "chaka-demus-pliers-murder-she-wrote-original-mix.json"
           },
           {
-            "uri": "spotify:track:6IvCfEDx144Whfy0RWUdO3",
-            "name": "Handsworth Revolution",
-            "artist": "Steel Pulse",
-            "popularity": 55,
-            "filename": "steel-pulse-handsworth-revolution.json"
-          },
-          {
             "uri": "spotify:track:2vDUqLZsaEEYmREcRo9gnn",
             "name": "(You Gotta Walk) Don't Look Back - 2002 Remaster",
             "artist": "Peter Tosh",
             "popularity": 54,
             "filename": "peter-tosh-you-gotta-walk-dont-look-back-2002-remaster.json"
+          },
+          {
+            "uri": "spotify:track:7578oiL9J6tFHXEjfCXFAS",
+            "name": "Wa-Do-Dem",
+            "artist": "Eek-A-Mouse",
+            "popularity": 55,
+            "filename": "eek-a-mouse-wa-do-dem.json"
           }
         ],
         "features": {
-          "danceability": 0.87,
-          "energy": 0.52,
-          "speechiness": 0.12,
-          "acousticness": 0.13,
+          "danceability": 0.85,
+          "energy": 0.6,
+          "speechiness": 0.06,
+          "acousticness": 0.38,
           "valence": 0.81,
           "popularity": 55.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 95.1,
-          "tempo_norm": 0.19
+          "tempo_bpm": 91.05,
+          "tempo_norm": 0.16
         }
       },
       "ska": {
@@ -3579,18 +3943,18 @@
             "filename": "the-specials-ghost-town.json"
           },
           {
+            "uri": "spotify:track:4aCsgwFhbZ8CmYAotK7W2B",
+            "name": "Let Down",
+            "artist": "Easy Star All-Stars",
+            "popularity": 56,
+            "filename": "easy-star-all-stars-let-down.json"
+          },
+          {
             "uri": "spotify:track:6gyKNejreOJfwfeQQ7fNVw",
             "name": "Swing Easy",
             "artist": "The Skatalites",
             "popularity": 58,
             "filename": "the-skatalites-swing-easy.json"
-          },
-          {
-            "uri": "spotify:track:389R9arpxdfl0JA450Qn9m",
-            "name": "Take Me Home, Country Roads",
-            "artist": "Toots & The Maytals",
-            "popularity": 56,
-            "filename": "toots-the-maytals-take-me-home-country-roads.json"
           },
           {
             "uri": "spotify:track:6KGggJ08SRmMuJojRYM4Lv",
@@ -3603,8 +3967,8 @@
         "features": {
           "danceability": 0.67,
           "energy": 0.62,
-          "speechiness": 0.06,
-          "acousticness": 0.14,
+          "speechiness": 0.05,
+          "acousticness": 0.12,
           "valence": 0.91,
           "popularity": 62.0,
           "instrumentalness": 0.0,
@@ -3615,11 +3979,25 @@
       "dancehall": {
         "seeds": [
           {
-            "uri": "spotify:track:2169IKAivSUUFGcedGASXc",
-            "name": "16 Shots",
-            "artist": "Stefflon Don",
-            "popularity": 73,
-            "filename": "stefflon-don-16-shots.json"
+            "uri": "spotify:track:4E0teOQQQwagLVvQ7VfYm1",
+            "name": "Drogba (Joanna)",
+            "artist": "Afro B",
+            "popularity": 66,
+            "filename": "afro-b-drogba-joanna.json"
+          },
+          {
+            "uri": "spotify:track:0FBgQ1eevuO0NP8Nm4wjiy",
+            "name": "Paper Loving",
+            "artist": "Christopher Martin",
+            "popularity": 72,
+            "filename": "christopher-martin-paper-loving.json"
+          },
+          {
+            "uri": "spotify:track:5J4FiKDJIdJ8AKx2gaWMt4",
+            "name": "Your Number",
+            "artist": "Ayo Jay",
+            "popularity": 62,
+            "filename": "ayo-jay-your-number.json"
           },
           {
             "uri": "spotify:track:0jGIMIyoRaZPx9tuO69Kvb",
@@ -3629,37 +4007,23 @@
             "filename": "zum-rebel.json"
           },
           {
-            "uri": "spotify:track:5dWfl2PBpKHpBVdz95wxK1",
-            "name": "No Letting Go",
-            "artist": "Wayne Wonder",
-            "popularity": 65,
-            "filename": "wayne-wonder-no-letting-go.json"
-          },
-          {
-            "uri": "spotify:track:3WU2blK7YBcugEEU9CATvF",
-            "name": "No Games",
-            "artist": "Serani",
-            "popularity": 65,
-            "filename": "serani-no-games.json"
-          },
-          {
-            "uri": "spotify:track:5jz145Zwo1I3tZ3g018AEX",
-            "name": "Wine Slow",
-            "artist": "Gyptian",
-            "popularity": 64,
-            "filename": "gyptian-wine-slow.json"
+            "uri": "spotify:track:5o5yQsdZblzaqzgBFDVJTv",
+            "name": "Whine & Kotch",
+            "artist": "J Capri",
+            "popularity": 62,
+            "filename": "j-capri-whine-kotch.json"
           }
         ],
         "features": {
-          "danceability": 0.68,
-          "energy": 0.79,
-          "speechiness": 0.13,
-          "acousticness": 0.05,
-          "valence": 0.55,
-          "popularity": 65.0,
+          "danceability": 0.7,
+          "energy": 0.63,
+          "speechiness": 0.23,
+          "acousticness": 0.09,
+          "valence": 0.77,
+          "popularity": 66.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 101.96,
-          "tempo_norm": 0.25
+          "tempo_bpm": 105.15,
+          "tempo_norm": 0.27
         }
       },
       "afrobeat": {
@@ -3670,13 +4034,6 @@
             "artist": "Jorge Drexler",
             "popularity": 66,
             "filename": "jorge-drexler-me-haces-bien.json"
-          },
-          {
-            "uri": "spotify:track:2CFDPiNUxcSOqfQtUHYNxF",
-            "name": "De Nada Sirve",
-            "artist": "No Te Va Gustar",
-            "popularity": 61,
-            "filename": "no-te-va-gustar-de-nada-sirve.json"
           },
           {
             "uri": "spotify:track:5SkiVFWCP3NPEgNk3PaL2I",
@@ -3691,6 +4048,13 @@
             "artist": "Dona Ivone Lara",
             "popularity": 62,
             "filename": "dona-ivone-lara-sonho-meu.json"
+          },
+          {
+            "uri": "spotify:track:2CFDPiNUxcSOqfQtUHYNxF",
+            "name": "De Nada Sirve",
+            "artist": "No Te Va Gustar",
+            "popularity": 61,
+            "filename": "no-te-va-gustar-de-nada-sirve.json"
           },
           {
             "uri": "spotify:track:5NOtC9vnvCuEy6IaNflffX",
@@ -3729,18 +4093,11 @@
             "filename": "lax-sempe.json"
           },
           {
-            "uri": "spotify:track:11RIJRbBfyLlJut96itSFd",
-            "name": "Energy (Stay Far Away)",
-            "artist": "Skepta",
-            "popularity": 67,
-            "filename": "skepta-energy-stay-far-away.json"
-          },
-          {
-            "uri": "spotify:track:4ou5xyFUJX4VwX76tw1qb1",
-            "name": "Fall",
-            "artist": "DaVido",
-            "popularity": 62,
-            "filename": "davido-fall.json"
+            "uri": "spotify:track:5zzbORcD0GwLY0wQHP1Xs1",
+            "name": "Arcoíris",
+            "artist": "J Balvin",
+            "popularity": 65,
+            "filename": "j-balvin-arcoris.json"
           },
           {
             "uri": "spotify:track:1090OWoP6JTpYAaSSEBvGy",
@@ -3748,18 +4105,25 @@
             "artist": "Maleek Berry",
             "popularity": 67,
             "filename": "maleek-berry-kontrol.json"
+          },
+          {
+            "uri": "spotify:track:3Yt1ovsh3v3VEzRuhI1TL5",
+            "name": "Joro",
+            "artist": "WizKid",
+            "popularity": 71,
+            "filename": "wizkid-joro.json"
           }
         ],
         "features": {
-          "danceability": 0.84,
-          "energy": 0.61,
+          "danceability": 0.7,
+          "energy": 0.69,
           "speechiness": 0.23,
-          "acousticness": 0.34,
-          "valence": 0.6,
+          "acousticness": 0.25,
+          "valence": 0.59,
           "popularity": 67.0,
           "instrumentalness": 0.0,
-          "tempo_bpm": 113.99,
-          "tempo_norm": 0.34
+          "tempo_bpm": 119.7,
+          "tempo_norm": 0.38
         }
       },
       "amapiano": {
@@ -3786,18 +4150,18 @@
             "filename": "mr-jazziq-woza.json"
           },
           {
-            "uri": "spotify:track:0kNOuZYnpu1RiQTWXUUzE8",
-            "name": "Dinaledi",
-            "artist": "Major League Djz",
-            "popularity": 54,
-            "filename": "major-league-djz-dinaledi.json"
-          },
-          {
             "uri": "spotify:track:0SZtkfDkXwoZshG9hv98WR",
             "name": "Dakiwe",
             "artist": "Lady Du",
             "popularity": 55,
             "filename": "lady-du-dakiwe.json"
+          },
+          {
+            "uri": "spotify:track:0kNOuZYnpu1RiQTWXUUzE8",
+            "name": "Dinaledi",
+            "artist": "Major League Djz",
+            "popularity": 54,
+            "filename": "major-league-djz-dinaledi.json"
           }
         ],
         "features": {
@@ -3817,18 +4181,11 @@
   "classical": {
     "seeds": [
       {
-        "uri": "spotify:track:2kyEgPaAW8wdpvevPnkf0Z",
-        "name": "Ave Maria",
-        "artist": "Charles Gounod",
-        "popularity": 64,
-        "filename": "charles-gounod-ave-maria.json"
-      },
-      {
-        "uri": "spotify:track:0jOnZhF75V68VsBObWx2XO",
-        "name": "The Carnival of the Animals, R. 125: XIII. The Swan (Arr. for Cello and Piano)",
-        "artist": "Camille Saint-Saëns",
-        "popularity": 70,
-        "filename": "camille-saint-sans-the-carnival-of-the-animals-r-125-xiii-the-swan-arr-for-cello-and-piano.json"
+        "uri": "spotify:track:6cUCckpdlqHJ5Ascf2uH2A",
+        "name": "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",
+        "artist": "Ludwig van Beethoven",
+        "popularity": 65,
+        "filename": "ludwig-van-beethoven-symphony-no-5-in-c-minor-op-67-i-allegro-con-brio.json"
       },
       {
         "uri": "spotify:track:7n92QzQomRCLlciO14X0kd",
@@ -3838,30 +4195,37 @@
         "filename": "frdric-chopin-nocturne-en-mi-bmol-majeur-opus-9-n2-ballade-en-sol-mineur-no1.json"
       },
       {
-        "uri": "spotify:track:5NGtFXVpXSvwunEIGeviY3",
-        "name": "Gymnopédie No. 1",
-        "artist": "Erik Satie",
-        "popularity": 69,
-        "filename": "erik-satie-gymnopdie-no-1.json"
+        "uri": "spotify:track:0jOnZhF75V68VsBObWx2XO",
+        "name": "The Carnival of the Animals, R. 125: XIII. The Swan (Arr. for Cello and Piano)",
+        "artist": "Camille Saint-Saëns",
+        "popularity": 70,
+        "filename": "camille-saint-sans-the-carnival-of-the-animals-r-125-xiii-the-swan-arr-for-cello-and-piano.json"
       },
       {
-        "uri": "spotify:track:6cUCckpdlqHJ5Ascf2uH2A",
-        "name": "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",
-        "artist": "Ludwig van Beethoven",
-        "popularity": 65,
-        "filename": "ludwig-van-beethoven-symphony-no-5-in-c-minor-op-67-i-allegro-con-brio.json"
+        "uri": "spotify:track:2kyEgPaAW8wdpvevPnkf0Z",
+        "name": "Ave Maria",
+        "artist": "Charles Gounod",
+        "popularity": 64,
+        "filename": "charles-gounod-ave-maria.json"
+      },
+      {
+        "uri": "spotify:track:419qlOGNXoyICx4jO0hqaj",
+        "name": "Rhapsody On A Theme Of Paganini, Op.43: Variation 18. Andante cantabile",
+        "artist": "Sergei Rachmaninoff",
+        "popularity": 61,
+        "filename": "sergei-rachmaninoff-rhapsody-on-a-theme-of-paganini-op43-variation-18-andante-cantabile.json"
       }
     ],
     "features": {
-      "danceability": 0.25,
-      "energy": 0.02,
+      "danceability": 0.2,
+      "energy": 0.05,
       "speechiness": 0.04,
       "acousticness": 0.99,
-      "valence": 0.14,
-      "popularity": 66.0,
+      "valence": 0.07,
+      "popularity": 65.0,
       "instrumentalness": 0.9,
-      "tempo_bpm": 81.62,
-      "tempo_norm": 0.09
+      "tempo_bpm": 88.32,
+      "tempo_norm": 0.14
     },
     "subgenres": {
       "romantic": {
@@ -3872,13 +4236,6 @@
             "artist": "Johannes Brahms",
             "popularity": 63,
             "filename": "johannes-brahms-sechs-klavierstcke-op-118-ii-intermezzo-in-a-major.json"
-          },
-          {
-            "uri": "spotify:track:2u9VGZmVz7Rm01SfDgzcfA",
-            "name": "Liebestraum No. 3 in A-Flat Major, S. 541 / 3",
-            "artist": "Franz Liszt",
-            "popularity": 60,
-            "filename": "franz-liszt-liebestraum-no-3-in-a-flat-major-s-541-3.json"
           },
           {
             "uri": "spotify:track:0CJuLeZpCdqrqoCMXWZw8k",
@@ -3893,6 +4250,13 @@
             "artist": "Gustav Mahler",
             "popularity": 58,
             "filename": "gustav-mahler-mahler-symphony-no-5-in-c-sharp-minor-iv-adagietto.json"
+          },
+          {
+            "uri": "spotify:track:2u9VGZmVz7Rm01SfDgzcfA",
+            "name": "Liebestraum No. 3 in A-Flat Major, S. 541 / 3",
+            "artist": "Franz Liszt",
+            "popularity": 60,
+            "filename": "franz-liszt-liebestraum-no-3-in-a-flat-major-s-541-3.json"
           },
           {
             "uri": "spotify:track:36XWhADD7DpCYfe2EYwgWF",
@@ -3924,13 +4288,6 @@
             "filename": "samuel-barber-barber-adagio-for-strings.json"
           },
           {
-            "uri": "spotify:track:5p6me2mwQrGfH30eExHn6v",
-            "name": "Take Five",
-            "artist": "Dave Brubeck",
-            "popularity": 54,
-            "filename": "dave-brubeck-take-five.json"
-          },
-          {
             "uri": "spotify:track:4BlM6AO7TOtqxcY9qMHIuc",
             "name": "Song Book: The Man I Love. Slow and in singing style",
             "artist": "George Gershwin",
@@ -3938,18 +4295,25 @@
             "filename": "george-gershwin-song-book-the-man-i-love-slow-and-in-singing-style.json"
           },
           {
-            "uri": "spotify:track:2LiWNkeUOAeibGxJKxmjsD",
-            "name": "Romeo And Juliet, Op.64 / Act 1: Dance Of The Knights",
-            "artist": "Sergei Prokofiev",
-            "popularity": 54,
-            "filename": "sergei-prokofiev-romeo-and-juliet-op64-act-1-dance-of-the-knights.json"
-          },
-          {
             "uri": "spotify:track:3LOi1V051Obp9hHRgAC0JU",
             "name": "Jazz Suite No.2: 6. Waltz II",
             "artist": "Dmitri Shostakovich",
             "popularity": 55,
             "filename": "dmitri-shostakovich-jazz-suite-no2-6-waltz-ii.json"
+          },
+          {
+            "uri": "spotify:track:5p6me2mwQrGfH30eExHn6v",
+            "name": "Take Five",
+            "artist": "Dave Brubeck",
+            "popularity": 54,
+            "filename": "dave-brubeck-take-five.json"
+          },
+          {
+            "uri": "spotify:track:2LiWNkeUOAeibGxJKxmjsD",
+            "name": "Romeo And Juliet, Op.64 / Act 1: Dance Of The Knights",
+            "artist": "Sergei Prokofiev",
+            "popularity": 54,
+            "filename": "sergei-prokofiev-romeo-and-juliet-op64-act-1-dance-of-the-knights.json"
           }
         ],
         "features": {
@@ -3983,54 +4347,54 @@
     },
     "means": {
       "danceability": 0.61,
-      "energy": 0.61,
-      "speechiness": 0.1,
-      "acousticness": 0.29,
-      "valence": 0.54,
-      "tempo_norm": 0.38,
-      "popularity": 62.57,
-      "instrumentalness": 0.17
+      "energy": 0.59,
+      "speechiness": 0.09,
+      "acousticness": 0.31,
+      "valence": 0.53,
+      "tempo_norm": 0.39,
+      "popularity": 62.63,
+      "instrumentalness": 0.18
     },
     "stddevs": {
       "danceability": 0.19,
       "energy": 0.25,
       "speechiness": 0.1,
       "acousticness": 0.32,
-      "valence": 0.27,
+      "valence": 0.26,
       "tempo_norm": 0.23,
-      "popularity": 5.37,
-      "instrumentalness": 0.31
+      "popularity": 5.72,
+      "instrumentalness": 0.32
     },
     "quantiles": {
       "danceability": {
         "p10": 0.36,
-        "p50": 0.63,
-        "p90": 0.85
+        "p50": 0.62,
+        "p90": 0.84
       },
       "energy": {
-        "p10": 0.26,
-        "p50": 0.65,
+        "p10": 0.21,
+        "p50": 0.62,
         "p90": 0.91
       },
       "speechiness": {
         "p10": 0.03,
         "p50": 0.05,
-        "p90": 0.26
+        "p90": 0.25
       },
       "acousticness": {
         "p10": 0.0,
-        "p50": 0.15,
-        "p90": 0.83
+        "p50": 0.18,
+        "p90": 0.87
       },
       "valence": {
-        "p10": 0.16,
-        "p50": 0.57,
-        "p90": 0.91
+        "p10": 0.15,
+        "p50": 0.54,
+        "p90": 0.89
       },
       "tempo_norm": {
-        "p10": 0.1,
+        "p10": 0.09,
         "p50": 0.38,
-        "p90": 0.75
+        "p90": 0.76
       },
       "popularity": {
         "p10": 55.0,
@@ -4040,7 +4404,7 @@
       "instrumentalness": {
         "p10": 0.0,
         "p50": 0.0,
-        "p90": 0.84
+        "p90": 0.85
       }
     },
     "display": {
@@ -4064,6 +4428,6 @@
     "dataset_id": "prepped_v7_2025-11-04",
     "track_count": 43160,
     "sample_size_per_genre": 5,
-    "generated_at": "2025-11-06T06:55:46Z"
+    "generated_at": "2025-11-06T07:16:10Z"
   }
 }

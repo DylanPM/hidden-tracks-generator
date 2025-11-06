@@ -238,7 +238,7 @@ GENRE_TREE = {
             "metal": {
                 "_seeds": "metal",
                 "subgenres": {
-                    "doom & black metal": {"_seeds": "doom & black metal"},
+                    "stoner metal": {"_seeds": "stoner metal"},  # Changed from "doom & black metal" - matches actual Spotify tags
                     "sludge metal": {"_seeds": "sludge metal"},
                     "death metal": {"_seeds": "death metal"},
                     "progressive metal": {"_seeds": "progressive metal"},
@@ -310,7 +310,6 @@ GENRE_TREE = {
     },
 
     "r&b / soul / funk": {
-        "_seeds": "r&b / soul / funk",
         "subgenres": {
             "r&b": {
                 "_seeds": "r&b",
@@ -361,7 +360,7 @@ GENRE_TREE = {
             "country rock": {"_seeds": "country rock"},
             "southern rock": {"_seeds": "southern rock"},
             "roots rock": {"_seeds": "roots rock"},
-            "americana folk": {"_seeds": "americana folk"}
+            "indie folk": {"_seeds": "indie folk"}  # Changed from "americana folk" - matches actual Spotify tags
         }
     },
 
@@ -631,9 +630,9 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
   },
 
   "dubstep": {
-    "require_artist_genres_any": ["dubstep", "brostep", "uk dubstep", "post-dubstep"],
-    "deny_artist_genres_any": ["future bass", "progressive house", "electro house", "edm"],
-    "whitelist_artists": ["Skream", "Benga", "Mala", "Burial", "Rusko", "Flux Pavilion", "Distance", "Coki", "Digital Mystikz", "Skrillex"],
+    "require_artist_genres_any": ["dubstep", "brostep", "uk dubstep", "post-dubstep", "melodic dubstep"],
+    "deny_artist_genres_any": ["future bass", "progressive house", "electro house"],  # Removed edm
+    "whitelist_artists": ["Skream", "Benga", "Mala", "Burial", "Rusko", "Flux Pavilion", "Distance", "Coki", "Digital Mystikz", "Skrillex", "Seven Lions", "NERO"],
     "min_year": 2006,
     "max_year": 2024,
     "popularity_min": 15,
@@ -828,26 +827,26 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
   },
 
   "bebop": {
-    "require_artist_genres_any": ["bebop", "hard bop"],
-    "deny_artist_genres_any": ["swing", "cool jazz", "vocal jazz"],
-    "max_year": 1965,
+    "require_artist_genres_any": ["bebop", "hard bop", "bop"],
+    "deny_artist_genres_any": ["smooth jazz", "vocal jazz", "easy listening"],
+    "max_year": 1970,  # Relaxed slightly
     "popularity_min": 5,
     "popularity_max": 80
   },
 
   "cool jazz": {
-    "require_artist_genres_any": ["cool jazz", "west coast jazz"],
-    "deny_artist_genres_any": ["bebop", "hard bop", "vocal jazz", "jazz funk", "fusion", "modal jazz"],
-    "max_year": 1975,
+    "require_artist_genres_any": ["cool jazz", "west coast jazz", "modal jazz"],
+    "deny_artist_genres_any": ["smooth jazz", "vocal jazz", "easy listening"],
+    "max_year": 1980,  # Relaxed
     "popularity_min": 5,
     "popularity_max": 85
   },
 
   "hard bop": {
     "require_artist_genres_any": ["hard bop", "post bop", "bebop", "modal jazz", "spiritual jazz"],
-    "deny_artist_genres_any": ["cool jazz", "swing", "vocal jazz"],
+    "deny_artist_genres_any": ["smooth jazz", "vocal jazz", "easy listening"],
     "min_year": 1955,
-    "max_year": 1975,
+    "max_year": 1980,  # Relaxed
     "popularity_min": 5,
     "popularity_max": 85
   },
@@ -991,19 +990,19 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "popularity_max": 85
     },
 
-    "doom & black metal": {
-        "require_artist_genres_any": ["doom metal", "black metal", "atmospheric black metal", "first wave black metal"],
+    "stoner metal": {
+        "require_artist_genres_any": ["stoner metal", "stoner rock", "uk doom metal", "doom metal", "sludge metal"],
         "deny_artist_genres_any": ["symphonic metal", "gothic metal", "power metal", "metalcore"],
-        "deny_name_contains": ["remaster", "remastered", "live", "edit"],
-        "min_year": 1984,
-        "max_year": 2010,
+        "deny_name_contains": ["live", "edit", "remix"],
+        "min_year": 1988,
+        "max_year": 2020,
         "popularity_min": 5,
-        "popularity_max": 75
+        "popularity_max": 85
     },
 
     "sludge metal": {
         "require_artist_genres_any": ["sludge metal", "stoner metal", "stoner rock","southern metal","doom metal"],
-        "deny_artist_genres_any": ["doom metal", "black metal", "power metal"],
+        "deny_artist_genres_any": ["black metal", "power metal", "symphonic metal"],  # Removed doom metal conflict
         "whitelist_artists": ["Melvins", "Crowbar", "Eyehategod", "Corrosion Of Conformity", "Down", "Neurosis", "Sleep", "Mastodon"],
         "deny_name_contains": ["remaster", "remastered", "live", "edit"],
         "min_year": 1989,
@@ -1079,10 +1078,10 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
 
     "post-punk": {
         "require_artist_genres_any": ["post-punk", "post punk", "gothic rock", "coldwave", "no wave"],
-        "deny_artist_genres_any": ["classic rock", "soft rock", "dance pop", "pop", "punk", "pop punk", "alternative rock", "grunge"],
+        "deny_artist_genres_any": ["classic rock", "soft rock", "dance pop", "pop punk", "grunge", "hardcore punk"],
         "deny_name_contains": ["remix", "edit", "radio edit", "live"],
         "min_year": 1978,
-        "max_year": 1993,
+        "max_year": 1995,  # Relaxed slightly
         "popularity_min": 5,
         "popularity_max": 85
     },
@@ -1123,11 +1122,11 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "min_year": 1995, "max_year": 2020, "popularity_min": 10, "popularity_max": 85
     },
     "jungle": {
-        "require_artist_genres_any": ["jungle", "ragga jungle", "oldschool jungle"],
-        "deny_artist_genres_any": ["drum and bass", "dubstep", "uk garage"],
-        "whitelist_artists": ["SHY FX", "DJ Hype", "Roni Size", "General Levy", "M-Beat", "Aphrodite"],
+        "require_artist_genres_any": ["jungle", "ragga jungle", "oldschool jungle", "drum and bass"],  # Added dnb
+        "deny_artist_genres_any": ["dubstep", "uk garage", "house"],
+        "whitelist_artists": ["SHY FX", "DJ Hype", "Roni Size", "General Levy", "M-Beat", "Aphrodite", "Andy C"],
         "deny_name_contains": ["radio edit", "remix", "vip", "edit", "live"],
-        "min_year": 1993, "max_year": 2003, "popularity_min": 5, "popularity_max": 80
+        "min_year": 1993, "max_year": 2015, "popularity_min": 5, "popularity_max": 80  # Relaxed year
     },
     "uk garage": {
         "require_artist_genres_any": ["uk garage", "ukg", "2-step", "speed garage"],
@@ -1208,18 +1207,18 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
 
     # ===== COUNTRY MISSING =====
     "classic country": {
-        "require_artist_genres_any": ["classic country", "country", "nashville sound"],
-        "deny_artist_genres_any": ["country pop", "bro country"],
-        "whitelist_artists": ["Johnny Cash", "Merle Haggard", "Patsy Cline", "George Jones", "Loretta Lynn", "Conway Twitty"],
+        "require_artist_genres_any": ["classic country", "country", "nashville sound", "classic country pop"],
+        "deny_artist_genres_any": ["bro country", "country road"],  # Removed country pop
+        "whitelist_artists": ["Johnny Cash", "Merle Haggard", "Patsy Cline", "George Jones", "Loretta Lynn", "Conway Twitty", "Dolly Parton", "John Denver"],
         "deny_name_contains": ["remix", "edit", "radio edit", "live"],
-        "max_year": 1980, "popularity_min": 10, "popularity_max": 85
+        "max_year": 1990, "popularity_min": 10, "popularity_max": 85  # Relaxed slightly
     },
-    "americana folk": {
-        "require_artist_genres_any": ["americana", "folk", "alt-country", "indie folk"],
-        "deny_artist_genres_any": ["country pop", "dance pop"],
-        "whitelist_artists": ["Gillian Welch", "Jason Isbell", "Wilco", "The Avett Brothers", "Fleet Foxes", "Neko Case"],
+    "indie folk": {
+        "require_artist_genres_any": ["indie folk", "folk-pop", "chamber folk", "folk", "stomp and holler"],
+        "deny_artist_genres_any": ["dance pop", "electropop", "indie pop", "bedroom pop"],
+        "whitelist_artists": ["Fleet Foxes", "Bon Iver", "Iron & Wine", "The Lumineers", "Mumford & Sons", "Of Monsters and Men"],
         "deny_name_contains": ["remix", "edit", "radio edit"],
-        "min_year": 1995, "max_year": 2024, "popularity_min": 10, "popularity_max": 85
+        "min_year": 2005, "max_year": 2024, "popularity_min": 10, "popularity_max": 85
     },
 
     # ===== LATIN MISSING =====
@@ -1302,19 +1301,23 @@ def passes_rules(target_genre: str, track: Dict[str, Any]) -> bool:
     artist = (track.get("artists") or [""])[0].lower()
     name = (track.get("name") or "").lower()
 
-    # Hard denies
+    # Hard denies (with word boundary matching to avoid false positives)
     deny = rules.get("deny_artist_genres_any") or []
     if deny:
         for d in deny:
-            if any(d.lower() in g for g in a_gen):
+            # Use word boundaries so "punk" doesn't match "post-punk"
+            deny_pattern = re.compile(rf'\b{re.escape(d.lower())}\b')
+            if any(deny_pattern.search(g) for g in a_gen):
                 return False
 
-    # Require at least one
+    # Require at least one (with word boundary matching for consistency)
     req = rules.get("require_artist_genres_any") or []
     if req:
         found = False
         for r in req:
-            if any(r.lower() in g for g in a_gen):
+            # Use word boundaries for more precise matching
+            req_pattern = re.compile(rf'\b{re.escape(r.lower())}\b')
+            if any(req_pattern.search(g) for g in a_gen):
                 found = True
                 break
         if not found:
