@@ -515,8 +515,9 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
 
   "psychedelic rock": {
     "require_artist_genres_any": ["psychedelic rock", "acid rock", "space rock", "neo-psychedelic", "psych pop"],
-    "deny_artist_genres_any": ["post-punk", "punk", "proto-punk", "new wave", "garage rock revival"],
+    "deny_artist_genres_any": ["post-punk", "punk", "proto-punk", "new wave", "garage rock revival", "hip hop", "rap", "edm", "dubstep", "brostep", "electro"],
     "whitelist_artists": ["The 13th Floor Elevators", "Pink Floyd", "The Doors", "Jefferson Airplane", "Cream", "Tame Impala", "Temples", "MGMT"],
+    "deny_name_contains": ["remix", "live", "radio edit"],
     "min_year": 1966,
     "max_year": 2024,
     "popularity_min": 25,
@@ -629,12 +630,13 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
 
   "dubstep": {
     "require_artist_genres_any": ["dubstep", "brostep", "uk dubstep", "post-dubstep", "melodic dubstep"],
-    "deny_artist_genres_any": ["future bass", "progressive house", "electro house"],  # Removed edm
+    "deny_artist_genres_any": ["future bass", "progressive house", "electro house"],
     "whitelist_artists": ["Skream", "Benga", "Mala", "Burial", "Rusko", "Flux Pavilion", "Distance", "Coki", "Digital Mystikz", "Skrillex", "Seven Lions", "NERO"],
+    "deny_name_contains": ["remix", "live"],  # Prevent remixes/live versions
     "min_year": 2006,
     "max_year": 2024,
     "popularity_min": 15,
-    "popularity_max": 85
+    "popularity_max": 90  # Raised to allow popular Skrillex tracks
   },
 
   # ----- HIP HOP -----
@@ -721,8 +723,9 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
 
   "conscious hip hop": {
     "require_artist_genres_any": ["conscious hip hop", "hip hop", "jazz rap", "alternative hip hop", "rap"],
-    "deny_artist_genres_any": ["rock", "alternative rock", "pop rock", "trap", "drill"],
+    "deny_artist_genres_any": ["rock", "alternative rock", "pop rock", "trap", "drill", "reggae", "roots reggae", "modern reggae"],  # Added reggae to avoid crossover
     "boost_artist_contains": ["common", "mos def", "blackstar", "black star", "kendrick lamar", "talib kweli", "little simz"],
+    "deny_name_contains": ["remix", "live", "radio edit"],
     "min_year": 1990,
     "max_year": 2024,
     "popularity_min": 20,
@@ -1107,15 +1110,15 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "require_artist_genres_any": ["pop", "art pop", "baroque pop", "chamber pop"],
         "deny_artist_genres_any": ["dance pop", "indie pop", "electropop", "k-pop", "pop rap", "trap", "hip hop", "r&b", "country pop", "latin pop", "reggaeton"],
         "whitelist_artists": ["Taylor Swift", "Adele", "Ed Sheeran", "Sam Smith", "Coldplay"],
-        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "deny_name_contains": ["remix", "edit", "radio edit", "live"],  # Added live
         "min_year": 2000, "max_year": 2024, "popularity_min": 50, "popularity_max": 100
     },
 
     "dance pop": {
         "require_artist_genres_any": ["dance pop", "pop dance", "eurodance", "post-teen pop"],
-        "deny_artist_genres_any": ["indie pop", "art pop", "chamber pop", "k-pop", "j-pop", "hip hop", "trap", "edm"],
+        "deny_artist_genres_any": ["indie pop", "art pop", "chamber pop", "k-pop", "j-pop", "hip hop", "trap", "edm", "art rock", "rock"],  # Added art rock and rock
         "whitelist_artists": ["Dua Lipa", "The Weeknd", "Ariana Grande", "Britney Spears", "Lady Gaga", "Kylie Minogue"],
-        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "deny_name_contains": ["remix", "edit", "radio edit", "live"],  # Added live
         "min_year": 1995, "max_year": 2024, "popularity_min": 55, "popularity_max": 100
     },
 
@@ -1139,7 +1142,8 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
         "require_artist_genres_any": ["k-pop"],
         "deny_artist_genres_any": ["j-pop", "dance pop", "indie pop", "mandopop"],
         "whitelist_artists": ["BTS", "BLACKPINK", "EXO", "TWICE", "Red Velvet", "Stray Kids", "ITZY", "aespa"],
-        "deny_name_contains": ["remix", "instrumental"],
+        "deny_artist_contains": ["irene", "seulgi", "jennie", "rosé", " - "],  # Deny sub-units and solo artists
+        "deny_name_contains": ["remix", "instrumental", "live"],
         "min_year": 2010, "max_year": 2024, "popularity_min": 50, "popularity_max": 100
     },
 
@@ -1201,16 +1205,16 @@ GENRE_RULES: Dict[str, Dict[str, Any]] = {
     # ===== COUNTRY MISSING =====
     "classic country": {
         "require_artist_genres_any": ["classic country", "country", "nashville sound", "classic country pop"],
-        "deny_artist_genres_any": ["bro country", "country road"],  # Removed country pop
-        "whitelist_artists": ["Johnny Cash", "Merle Haggard", "Patsy Cline", "George Jones", "Loretta Lynn", "Conway Twitty", "Dolly Parton", "John Denver"],
+        "deny_artist_genres_any": ["bro country", "country road", "jazz", "vocal jazz", "contemporary vocal jazz", "ccm", "neo mellow"],  # Added jazz and ccm to avoid crossover
+        "whitelist_artists": ["Johnny Cash", "Merle Haggard", "Patsy Cline", "George Jones", "Loretta Lynn", "Conway Twitty"],  # Removed modern artists
         "deny_name_contains": ["remix", "edit", "radio edit", "live"],
-        "max_year": 1990, "popularity_min": 10, "popularity_max": 85  # Relaxed slightly
+        "max_year": 1990, "popularity_min": 10, "popularity_max": 85
     },
     "indie folk": {
         "require_artist_genres_any": ["indie folk", "folk-pop", "chamber folk", "folk", "stomp and holler"],
-        "deny_artist_genres_any": ["dance pop", "electropop", "indie pop", "bedroom pop"],
+        "deny_artist_genres_any": ["dance pop", "electropop", "indie pop", "bedroom pop", "indie soul", "uk alternative pop", "electronic", "electronica"],  # Added electronic genres
         "whitelist_artists": ["Fleet Foxes", "Bon Iver", "Iron & Wine", "The Lumineers", "Mumford & Sons", "Of Monsters and Men"],
-        "deny_name_contains": ["remix", "edit", "radio edit"],
+        "deny_name_contains": ["remix", "edit", "radio edit", "live"],
         "min_year": 2005, "max_year": 2024, "popularity_min": 10, "popularity_max": 85
     },
 
@@ -1316,18 +1320,25 @@ def passes_rules(target_genre: str, track: Dict[str, Any]) -> bool:
         if not found:
             return False
 
-    # Whitelist bypass
-    whitelist = rules.get("whitelist_artists") or []
-    if whitelist:
-        if any(w.lower() in artist for w in whitelist):
-            return True
-
-    # Name denies
+    # Name denies (check BEFORE whitelist so even whitelisted artists can be filtered for live/remix)
     deny_tokens = rules.get("deny_name_contains") or []
     if deny_tokens:
         for t in deny_tokens:
             if t.lower() in name:
                 return False
+
+    # Artist name denies
+    deny_artist_tokens = rules.get("deny_artist_contains") or []
+    if deny_artist_tokens:
+        for t in deny_artist_tokens:
+            if t.lower() in artist:
+                return False
+
+    # Whitelist bypass
+    whitelist = rules.get("whitelist_artists") or []
+    if whitelist:
+        if any(w.lower() in artist for w in whitelist):
+            return True
 
     # Year gates
     y = track.get("release_year")
