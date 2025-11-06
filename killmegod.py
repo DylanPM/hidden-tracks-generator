@@ -1504,18 +1504,22 @@ for idx, genre in enumerate(PLAYABLE_GENRES, 1):
 
     genre_lower = genre.lower()
 
-    # gather candidates
+    # gather candidates from all matching genre index keys
+    # e.g., "dubstep" should match "melodic dubstep", "gaming dubstep", etc.
     candidates = []
-    for track in tracks_by_genre.get(genre_lower, []):
-        tid = track.get("uri") or track.get("id")
-        track_genres = norm_tags(track.get('artist_genres') or track.get('genres'))
-        if not tid:
-            continue
-        if not genre_match(genre, track_genres):
-            continue
-        if not passes_rules(genre, track):
-            continue
-        candidates.append(track)
+    genre_pattern = re.compile(rf"\b{re.escape(genre_lower)}\b")
+    for index_key in tracks_by_genre.keys():
+        if genre_pattern.search(index_key):
+            for track in tracks_by_genre[index_key]:
+                tid = track.get("uri") or track.get("id")
+                track_genres = norm_tags(track.get('artist_genres') or track.get('genres'))
+                if not tid:
+                    continue
+                if not genre_match(genre, track_genres):
+                    continue
+                if not passes_rules(genre, track):
+                    continue
+                candidates.append(track)
 
     if not candidates:
         results[genre] = []
