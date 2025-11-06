@@ -133,12 +133,11 @@ def norm_tags(tags):
             continue
         out.append(g.lower().strip())
     return out
-#makes the drop off plateau not triangle
 def pop_component(pop, center=60.0, plateau=5.0, width=55.0, weight=0.5):
-  #  """
-   # Piecewise linear popularity term with a flat top around center±plateau,
-    #then falling linearly to zero at center±width.
-    #"""
+    """
+    Piecewise linear popularity term with a flat top around center±plateau,
+    then falling linearly to zero at center±width.
+    """
     delta = abs(pop - center)
     if delta <= plateau:
         score = 1.0
@@ -147,15 +146,6 @@ def pop_component(pop, center=60.0, plateau=5.0, width=55.0, weight=0.5):
     else:
         score = 1.0 - (delta - plateau) / (width - plateau)
     return weight * score
-
-# def canon(g: str) -> str:
-#     if not g: return ""
-#     g = g.lower().strip()
-#     g = re.sub(r"[-_/]+", " ", g)     # hyphen, underscore, slash to space
-#     g = re.sub(r"\s+", " ", g)        # collapse spaces
-#     return g
-
-
 
 # -------- Deny URIs --------
 TRACK_DENY_URIS = {
@@ -375,7 +365,7 @@ GENRE_TREE = {
         }
     }
 }
-# ===== after GENRE_TREE =====
+
 from collections.abc import Mapping
 
 def canon(g: str) -> str:
@@ -1336,11 +1326,16 @@ def gather_playable_genres(tree):
         if not isinstance(node, dict): return
         seed = node.get("_seeds")
         if isinstance(seed, str):
-            genres.append(canon(seed))   # canonicalize here
+            genres.append(seed)  # keep original string
         subs = node.get("subgenres")
         if isinstance(subs, dict):
             for v in subs.values():
                 walk(v)
+
+    # Actually walk the tree!
+    for root_node in tree.values():
+        walk(root_node)
+
     # unique preserve order
     seen, ordered = set(), []
     for g in genres:
@@ -1350,16 +1345,13 @@ def gather_playable_genres(tree):
     return ordered
 
 
-# def canon(s: str) -> str:
-#     return re.sub(r'[\s\-]+', ' ', s.lower().strip())
-
 def build_parent_maps(tree: Dict[str, Any]) -> Tuple[Dict[str, str], Dict[str, Set[str]]]:
     genre_to_parent: Dict[str, str] = {}
     parent_to_desc: Dict[str, Set[str]] = {}
 
     def walk(node: Dict[str, Any], parent_seed: str = ""):
         seed_raw = node.get("_seeds")
-        this_seed = canon(seed_raw) if isinstance(seed_raw, str) and seed_raw.strip() else None
+        this_seed = seed_raw if isinstance(seed_raw, str) and seed_raw.strip() else None
 
         subs = node.get("subgenres")
         if isinstance(subs, dict):
@@ -1371,7 +1363,7 @@ def build_parent_maps(tree: Dict[str, Any]) -> Tuple[Dict[str, str], Dict[str, S
                 if not isinstance(child, dict):
                     continue
                 child_raw = child.get("_seeds")
-                child_seed = canon(child_raw) if isinstance(child_raw, str) and child_raw.strip() else None
+                child_seed = child_raw if isinstance(child_raw, str) and child_raw.strip() else None
                 if child_seed:
                     genre_to_parent[child_seed] = parent_label or ""
                     if parent_label:
@@ -1457,10 +1449,6 @@ results: Dict[str, List[Dict[str, Any]]] = {}
 
 
 for idx, genre in enumerate(PLAYABLE_GENRES, 1):
-    g = canon(genre)  # <---- add this right here, once per loop
-    parent = GENRE_TO_PARENT.get(g, "")          # <---- canon applied
-    siblings = PARENT_TO_DESC.get(parent, set()) # <---- canon applied
-
     if idx % 20 == 0:
         print(f"  {idx}/{len(PLAYABLE_GENRES)}...", flush=True)
 
@@ -1518,10 +1506,7 @@ for idx, genre in enumerate(PLAYABLE_GENRES, 1):
         global_seen_ids.add(tid)
         global_seen_artists.add(artist)
 
-    # results[genre] = top_k
-    # after you compute top_k for the genre
-    # results[canon(genre)] = top_k
-    results[g] = top_k
+    results[genre] = top_k
 
 
 processing_time = time.time() - processing_start
@@ -1600,11 +1585,7 @@ def build_manifest(tree: Dict[str, Any]) -> Dict[str, Any]:
     node_median_year = None
 
     if isinstance(seeds_key, str):
-        # genre_name = seeds_key
-        # seeds = results.get(genre_name, [])
-        g = canon(seeds_key)               # <-- add this
-        seeds = results.get(g, [])         # <-- use canonical key
-        print(f"[manifest] seed '{seeds_key}' missing from results", flush=True)
+        seeds = results.get(seeds_key, [])
         if seeds:
             for t in seeds:
                 artist_name = (t.get("artists") or ["Unknown"])[0]
