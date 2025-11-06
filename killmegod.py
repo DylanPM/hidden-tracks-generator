@@ -1806,3 +1806,14 @@ for genre in PLAYABLE_GENRES:
         for track in results[genre]:
             artist = (track.get('artists') or ['Unknown'])[0]
             print(f"{track.get('uri')}  // {artist} — {track.get('name')}")
+
+# Write clean URI list for bulk import
+uris_file = "seed_uris.txt"
+with open(uris_file, 'w', encoding='utf-8') as f:
+    for genre in PLAYABLE_GENRES:
+        if results.get(genre):
+            for track in results[genre]:
+                f.write(f"{track.get('uri')}\n")
+
+print(f"\n✓ Clean URI list saved to: {uris_file}", flush=True)
+print(f"  Total URIs: {sum(len(results.get(g, [])) for g in PLAYABLE_GENRES)}", flush=True)
