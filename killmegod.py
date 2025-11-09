@@ -1630,7 +1630,7 @@ print("Selecting seeds for synthetic parent genres...", flush=True)
 def gather_synthetic_genres(tree, path=""):
     """Find all nodes with _seeds: '__synthetic__' and their direct children."""
     synthetic = []
-    def walk(node, node_path):
+    def walk(node, node_path, node_name):
         if not isinstance(node, dict):
             return
         seed = node.get("_seeds")
@@ -1645,23 +1645,28 @@ def gather_synthetic_genres(tree, path=""):
                         if isinstance(child_seed, str) and child_seed != "__synthetic__":
                             children_seeds.append(child_seed)
             if children_seeds:
-                synthetic.append((node_path, children_seeds))
+                # Store tuple of (full_path, display_name, children)
+                synthetic.append((node_path, node_name, children_seeds))
 
         # Continue walking
         subs = node.get("subgenres", {})
         if isinstance(subs, dict):
             for child_name, child_node in subs.items():
-                walk(child_node, child_name if not node_path else f"{node_path}/{child_name}")
+                child_path = child_name if not node_path else f"{node_path}/{child_name}"
+                walk(child_node, child_path, child_name)
 
     for root_name, root_node in tree.items():
-        walk(root_node, root_name)
+        walk(root_node, root_name, root_name)
 
     return synthetic
 
+# Create mapping of path -> display name for build_manifest lookup
+synthetic_path_to_name = {}
 synthetic_genres = gather_synthetic_genres(GENRE_TREE)
 print(f"Found {len(synthetic_genres)} synthetic parent genres", flush=True)
 
-for synthetic_name, child_seeds in synthetic_genres:
+for full_path, display_name, child_seeds in synthetic_genres:
+    synthetic_path_to_name[full_path] = display_name
     # Take 2 seeds from each child
     synthetic_seeds = []
     for child_seed in child_seeds:
@@ -1671,8 +1676,9 @@ for synthetic_name, child_seeds in synthetic_genres:
             synthetic_seeds.append(track)
 
     if synthetic_seeds:
-        results[synthetic_name] = synthetic_seeds
-        print(f"  ✓ {synthetic_name}: {len(synthetic_seeds)} seeds from {len(child_seeds)} children", flush=True)
+        # Store using display name only
+        results[display_name] = synthetic_seeds
+        print(f"  ✓ {display_name}: {len(synthetic_seeds)} seeds from {len(child_seeds)} children", flush=True)
 
 print(f"✓ Synthetic genre selection complete\n", flush=True)
 
@@ -1750,8 +1756,11 @@ def build_manifest(tree: Dict[str, Any], genre_path: str = "") -> Dict[str, Any]
     node_median_year = None
 
     if isinstance(seeds_key, str):
-        # For synthetic genres, use the genre path as the lookup key
-        lookup_key = genre_path if seeds_key == "__synthetic__" else seeds_key
+        # For synthetic genres, look up the display name from the path mapping
+        if seeds_key == "__synthetic__":
+            lookup_key = synthetic_path_to_name.get(genre_path, genre_path)
+        else:
+            lookup_key = seeds_key
         seeds = results.get(lookup_key, [])
         if seeds:
             for t in seeds:
@@ -1891,12 +1900,12 @@ for genre in PLAYABLE_GENRES:
 
 # Report synthetic genres
 print(f"\nSYNTHETIC PARENT GENRES:")
-for synthetic_name, child_seeds in synthetic_genres:
-    count = len(results.get(synthetic_name, []))
+for full_path, display_name, child_seeds in synthetic_genres:
+    count = len(results.get(display_name, []))
     if count > 0:
         total_found += count
-        avg_pop = sum(t.get('popularity', 0) for t in results[synthetic_name]) / count
-        print(f"✓ {synthetic_name:<30} {count} tracks (avg pop: {avg_pop:.0f})")
+        avg_pop = sum(t.get('popularity', 0) for t in results[display_name]) / count
+        print(f"✓ {display_name:<30} {count} tracks (avg pop: {avg_pop:.0f})")
 
 print(f"\nTotal seed selections: {total_found}", flush=True)
 unique_artists = set()
@@ -1917,7 +1926,7 @@ print("URIS FOR BATCH EXPORT:", flush=True)
 print("=" * 60, flush=True)
 
 # Export both regular and synthetic genres
-all_genres_to_export = list(PLAYABLE_GENRES) + [name for name, _ in synthetic_genres]
+all_genres_to_export = list(PLAYABLE_GENRES) + [display_name for _, display_name, _ in synthetic_genres]
 for genre in all_genres_to_export:
     if results.get(genre):
         print(f"\n# {genre.upper()}")
