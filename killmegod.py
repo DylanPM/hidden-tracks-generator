@@ -235,31 +235,41 @@ GENRE_TREE = {
     "rock": {
         "_seeds": "rock",
         "subgenres": {
-            "metal": {
-                "_seeds": "metal",
+            "Heavy": {
                 "subgenres": {
-                    "stoner metal": {"_seeds": "stoner metal"},
-                    "death metal": {"_seeds": "death metal"},
-                    "nu metal": {"_seeds": "nu metal"},
+                    "metal": {
+                        "_seeds": "metal",
+                        "subgenres": {
+                            "stoner metal": {"_seeds": "stoner metal"},
+                            "death metal": {"_seeds": "death metal"},
+                            "nu metal": {"_seeds": "nu metal"},
+                        }
+                    },
+                    "hard rock": {"_seeds": "hard rock"},
+                    "punk": {
+                        "_seeds": "punk",
+                        "subgenres": {
+                            "post-punk": {"_seeds": "post-punk"},
+                            "emo": {"_seeds": "emo"},
+                        }
+                    },
                 }
             },
-            "punk": {
-                "_seeds": "punk",
+            "Modern": {
                 "subgenres": {
-                    "post-punk": {"_seeds": "post-punk"},
-                    "emo": {"_seeds": "emo"},
-                    #"hardcore": {"_seeds": "hardcore"},
+                    "alternative rock": {"_seeds": "alternative rock"},
+                    "indie rock": {"_seeds": "indie rock"},
+                    "shoegaze": {"_seeds": "shoegaze"},
+                    "post-rock": {"_seeds": "post-rock"},
                 }
             },
-            "alternative rock": {"_seeds": "alternative rock"},
-            "indie rock": {"_seeds": "indie rock"},
-            "shoegaze": {"_seeds": "shoegaze"},
-            "post-rock": {"_seeds": "post-rock"},
-            "classic rock": {"_seeds": "classic rock"},
-            "garage rock": {"_seeds": "garage rock"},
-            "psychedelic rock": {"_seeds": "psychedelic rock"},
-            "hard rock": {"_seeds": "hard rock"},
-            #            "grunge": {"_seeds": "grunge"},
+            "Retro": {
+                "subgenres": {
+                    "classic rock": {"_seeds": "classic rock"},
+                    "garage rock": {"_seeds": "garage rock"},
+                    "psychedelic rock": {"_seeds": "psychedelic rock"},
+                }
+            },
         }
     },
 
@@ -300,18 +310,28 @@ GENRE_TREE = {
         "_seeds": "hip hop",
         "subgenres": {
             "rap": {"_seeds": "rap"},
-            "trap": {"_seeds": "trap"},
-            "drill": {"_seeds": "drill"},
             "gangsta rap": {"_seeds": "gangsta rap"},
-            "east coast hip hop": {"_seeds": "east coast hip hop"},
-            "west coast rap": {"_seeds": "west coast rap"},
-            "southern hip hop": {"_seeds": "southern hip hop"},
-            "conscious hip hop": {"_seeds": "conscious hip hop"},
-            "underground hip hop": {"_seeds": "underground hip hop"},
-            "phonk": {"_seeds": "phonk"},
-            "cloud rap": {"_seeds": "cloud rap"},
-            #"boom bap": {"_seeds": "boom bap"},
-            #"alternative hip hop": {"_seeds": "alternative hip hop"},
+            "Regional Hip Hop": {
+                "subgenres": {
+                    "east coast hip hop": {"_seeds": "east coast hip hop"},
+                    "west coast rap": {"_seeds": "west coast rap"},
+                    "southern hip hop": {"_seeds": "southern hip hop"},
+                }
+            },
+            "Trap & Bass": {
+                "subgenres": {
+                    "trap": {"_seeds": "trap"},
+                    "drill": {"_seeds": "drill"},
+                    "phonk": {"_seeds": "phonk"},
+                }
+            },
+            "Alternative Hip Hop": {
+                "subgenres": {
+                    "conscious hip hop": {"_seeds": "conscious hip hop"},
+                    "underground hip hop": {"_seeds": "underground hip hop"},
+                    "cloud rap": {"_seeds": "cloud rap"},
+                }
+            },
         }
     },
 
@@ -366,15 +386,22 @@ GENRE_TREE = {
     "latin": {
         "_seeds": "latin",
         "subgenres": {
-            "reggaeton": {"_seeds": "reggaeton"},
-            "latin pop": {"_seeds": "latin pop"},
-            "salsa": {"_seeds": "salsa"},
-            "cumbia": {"_seeds": "cumbia"},
-            "merengue": {"_seeds": "merengue"},
-            "tropical": {"_seeds": "tropical"},
-            "mambo": {"_seeds": "mambo"},
-            "bossa nova": {"_seeds": "bossa nova"},
-             #"bachata": {"_seeds": "bachata"},
+            "Classic Dance": {
+                "subgenres": {
+                    "salsa": {"_seeds": "salsa"},
+                    "mambo": {"_seeds": "mambo"},
+                    "merengue": {"_seeds": "merengue"},
+                    "cumbia": {"_seeds": "cumbia"},
+                }
+            },
+            "Modern Latin": {
+                "subgenres": {
+                    "reggaeton": {"_seeds": "reggaeton"},
+                    "latin pop": {"_seeds": "latin pop"},
+                    "tropical": {"_seeds": "tropical"},
+                }
+            },
+            #"bossa nova": {"_seeds": "bossa nova"},
         }
     },
 
