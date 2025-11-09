@@ -236,6 +236,7 @@ GENRE_TREE = {
         "_seeds": "rock",
         "subgenres": {
             "Heavy": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "metal": {
                         "_seeds": "metal",
@@ -256,6 +257,7 @@ GENRE_TREE = {
                 }
             },
             "Modern": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "alternative rock": {"_seeds": "alternative rock"},
                     "indie rock": {"_seeds": "indie rock"},
@@ -264,6 +266,7 @@ GENRE_TREE = {
                 }
             },
             "Retro": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "classic rock": {"_seeds": "classic rock"},
                     "garage rock": {"_seeds": "garage rock"},
@@ -311,6 +314,7 @@ GENRE_TREE = {
         "subgenres": {
             #"gangsta rap": {"_seeds": "gangsta rap"},
             "Regional Hip Hop": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "east coast hip hop": {"_seeds": "east coast hip hop"},
                     "west coast rap": {"_seeds": "west coast rap"},
@@ -318,6 +322,7 @@ GENRE_TREE = {
                 }
             },
             "Trap & Bass": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "trap": {"_seeds": "trap"},
                     "drill": {"_seeds": "drill"},
@@ -325,6 +330,7 @@ GENRE_TREE = {
                 }
             },
             "Alternative Hip Hop": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "conscious hip hop": {"_seeds": "conscious hip hop"},
                     "underground hip hop": {"_seeds": "underground hip hop"},
@@ -335,6 +341,7 @@ GENRE_TREE = {
     },
 
     "r&b / soul / funk": {
+        "_seeds": "__synthetic__",
         "subgenres": {
             "r&b": {
                 "_seeds": "r&b",
@@ -386,6 +393,7 @@ GENRE_TREE = {
         "_seeds": "latin",
         "subgenres": {
             "Classic Dance": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "salsa": {"_seeds": "salsa"},
                     "mambo": {"_seeds": "mambo"},
@@ -394,6 +402,7 @@ GENRE_TREE = {
                 }
             },
             "Modern Latin": {
+                "_seeds": "__synthetic__",
                 "subgenres": {
                     "reggaeton": {"_seeds": "reggaeton"},
                     "latin pop": {"_seeds": "latin pop"},
@@ -405,6 +414,7 @@ GENRE_TREE = {
     },
 
     "Caribbean & African": {
+        "_seeds": "__synthetic__",
         "subgenres": {
             "reggae": {"_seeds": "reggae"},
             "dub": {"_seeds": "dub"},
@@ -1397,7 +1407,7 @@ def gather_playable_genres(tree):
     def walk(node):
         if not isinstance(node, dict): return
         seed = node.get("_seeds")
-        if isinstance(seed, str):
+        if isinstance(seed, str) and seed != "__synthetic__":
             genres.append(seed)  # keep original string
         subs = node.get("subgenres")
         if isinstance(subs, dict):
@@ -1599,6 +1609,58 @@ for idx, genre in enumerate(PLAYABLE_GENRES, 1):
 processing_time = time.time() - processing_start
 print(f"\n✓ Completed in {processing_time:.1f}s\n", flush=True)
 
+# -------- Synthetic genre seed selection --------
+print("Selecting seeds for synthetic parent genres...", flush=True)
+
+def gather_synthetic_genres(tree, path=""):
+    """Find all nodes with _seeds: '__synthetic__' and their direct children."""
+    synthetic = []
+    def walk(node, node_path):
+        if not isinstance(node, dict):
+            return
+        seed = node.get("_seeds")
+        if seed == "__synthetic__":
+            # Find direct children with real seeds
+            children_seeds = []
+            subs = node.get("subgenres", {})
+            if isinstance(subs, dict):
+                for child_name, child_node in subs.items():
+                    if isinstance(child_node, dict):
+                        child_seed = child_node.get("_seeds")
+                        if isinstance(child_seed, str) and child_seed != "__synthetic__":
+                            children_seeds.append(child_seed)
+            if children_seeds:
+                synthetic.append((node_path, children_seeds))
+
+        # Continue walking
+        subs = node.get("subgenres", {})
+        if isinstance(subs, dict):
+            for child_name, child_node in subs.items():
+                walk(child_node, child_name if not node_path else f"{node_path}/{child_name}")
+
+    for root_name, root_node in tree.items():
+        walk(root_node, root_name)
+
+    return synthetic
+
+synthetic_genres = gather_synthetic_genres(GENRE_TREE)
+print(f"Found {len(synthetic_genres)} synthetic parent genres", flush=True)
+
+for synthetic_name, child_seeds in synthetic_genres:
+    # Take 2 seeds from each child
+    synthetic_seeds = []
+    for child_seed in child_seeds:
+        child_tracks = results.get(child_seed, [])
+        # Take first 2 tracks from this child
+        for track in child_tracks[:2]:
+            synthetic_seeds.append(track)
+
+    if synthetic_seeds:
+        results[synthetic_name] = synthetic_seeds
+        print(f"  ✓ {synthetic_name}: {len(synthetic_seeds)} seeds from {len(child_seeds)} children", flush=True)
+
+print(f"✓ Synthetic genre selection complete\n", flush=True)
+
 # -------- Feature computation --------
 FEATURE_FIELDS = ["danceability","energy","speechiness","acousticness","valence","popularity","instrumentalness"]
 
@@ -1656,14 +1718,15 @@ def aggregate_features_from_children(children_nodes: Dict[str, Any]):
 print(f"Building genre manifest...", flush=True)
 manifest_start = time.time()
 
-def build_manifest(tree: Dict[str, Any]) -> Dict[str, Any]:
+def build_manifest(tree: Dict[str, Any], genre_path: str = "") -> Dict[str, Any]:
     result: Dict[str, Any] = {}
     sub = tree.get("subgenres")
     built_sub: Dict[str, Any] = {}
     if isinstance(sub, dict):
         for child_name, child_node in sub.items():
             if isinstance(child_node, dict):
-                child_built = build_manifest(child_node)
+                child_path = child_name if not genre_path else f"{genre_path}/{child_name}"
+                child_built = build_manifest(child_node, child_path)
                 built_sub[child_name] = child_built
 
     seeds_key = tree.get("_seeds")
@@ -1672,7 +1735,9 @@ def build_manifest(tree: Dict[str, Any]) -> Dict[str, Any]:
     node_median_year = None
 
     if isinstance(seeds_key, str):
-        seeds = results.get(seeds_key, [])
+        # For synthetic genres, use the genre path as the lookup key
+        lookup_key = genre_path if seeds_key == "__synthetic__" else seeds_key
+        seeds = results.get(lookup_key, [])
         if seeds:
             for t in seeds:
                 artist_name = (t.get("artists") or ["Unknown"])[0]
@@ -1712,7 +1777,7 @@ def build_manifest(tree: Dict[str, Any]) -> Dict[str, Any]:
 manifest = {}
 for genre_name, genre_node in GENRE_TREE.items():
     if isinstance(genre_node, dict):
-        manifest[genre_name] = build_manifest(genre_node)
+        manifest[genre_name] = build_manifest(genre_node, genre_name)
 
 manifest_build_time = time.time() - manifest_start
 print(f"✓ Manifest structure built in {manifest_build_time:.1f}s", flush=True)
@@ -1809,6 +1874,15 @@ for genre in PLAYABLE_GENRES:
     if 0 < count < target_count:
         issues.append((genre, count))
 
+# Report synthetic genres
+print(f"\nSYNTHETIC PARENT GENRES:")
+for synthetic_name, child_seeds in synthetic_genres:
+    count = len(results.get(synthetic_name, []))
+    if count > 0:
+        total_found += count
+        avg_pop = sum(t.get('popularity', 0) for t in results[synthetic_name]) / count
+        print(f"✓ {synthetic_name:<30} {count} tracks (avg pop: {avg_pop:.0f})")
+
 print(f"\nTotal seed selections: {total_found}", flush=True)
 unique_artists = set()
 for lst in results.values():
@@ -1826,7 +1900,10 @@ if issues:
 print("\n" + "=" * 60, flush=True)
 print("URIS FOR BATCH EXPORT:", flush=True)
 print("=" * 60, flush=True)
-for genre in PLAYABLE_GENRES:
+
+# Export both regular and synthetic genres
+all_genres_to_export = list(PLAYABLE_GENRES) + [name for name, _ in synthetic_genres]
+for genre in all_genres_to_export:
     if results.get(genre):
         print(f"\n# {genre.upper()}")
         for track in results[genre]:
@@ -1836,10 +1913,10 @@ for genre in PLAYABLE_GENRES:
 # Write clean URI list for bulk import
 uris_file = "seed_uris.txt"
 with open(uris_file, 'w', encoding='utf-8') as f:
-    for genre in PLAYABLE_GENRES:
+    for genre in all_genres_to_export:
         if results.get(genre):
             for track in results[genre]:
                 f.write(f"{track.get('uri')}\n")
 
 print(f"\n✓ Clean URI list saved to: {uris_file}", flush=True)
-print(f"  Total URIs: {sum(len(results.get(g, [])) for g in PLAYABLE_GENRES)}", flush=True)
+print(f"  Total URIs: {sum(len(results.get(g, [])) for g in all_genres_to_export)}", flush=True)
