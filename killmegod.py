@@ -438,6 +438,21 @@ GENRE_TREE = {
     }
 }
 
+# -------- GENRE DESCRIPTIONS --------
+GENRE_DESCRIPTIONS = {
+    # Synthetic parent genres
+    "Heavy": "Heavy, distorted rock emphasizing power, aggression, and intensity through metal, hard rock, and punk",
+    "Modern": "Contemporary rock exploring atmospheric textures, experimental sounds, and indie aesthetics",
+    "Retro": "Classic rock rooted in 60s-80s traditions with raw energy and psychedelic exploration",
+    "Regional Hip Hop": "Regional hip hop styles showcasing distinct sounds from East Coast, West Coast, and Southern traditions",
+    "Trap & Bass": "Modern bass-heavy hip hop with 808s, trap production, and dark atmospheric sounds",
+    "Alternative Hip Hop": "Experimental and underground hip hop pushing creative, lyrical, and production boundaries",
+    "Classic Dance": "Traditional Latin dance rhythms including salsa, mambo, merengue, and cumbia",
+    "Modern Latin": "Contemporary Latin fusion with reggaeton, pop, and tropical influences",
+    "r&b / soul / funk": "Soulful Black American music spanning R&B, soul, funk, and blues traditions",
+    "Caribbean & African": "Afro-Caribbean and African rhythms spanning reggae, dancehall, ska, afrobeat, and amapiano",
+}
+
 from collections.abc import Mapping
 
 def canon(g: str) -> str:
