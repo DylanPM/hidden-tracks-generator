@@ -309,7 +309,7 @@ GENRE_TREE = {
     "hip hop": {
         "_seeds": "hip hop",
         "subgenres": {
-            "gangsta rap": {"_seeds": "gangsta rap"},
+            #"gangsta rap": {"_seeds": "gangsta rap"},
             "Regional Hip Hop": {
                 "subgenres": {
                     "east coast hip hop": {"_seeds": "east coast hip hop"},
