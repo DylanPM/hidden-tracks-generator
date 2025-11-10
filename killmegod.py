@@ -1625,6 +1625,16 @@ processing_time = time.time() - processing_start
 print(f"\n✓ Completed in {processing_time:.1f}s\n", flush=True)
 
 # -------- Synthetic genre seed selection --------
+# NOTE: Current implementation uses a simple "representative democracy" approach:
+# Takes the first 2 seeds from each child genre's already-selected top 5.
+# This means tracks/artists appear in BOTH parent and child genres.
+#
+# FUTURE IMPROVEMENT: Could select 2 ADDITIONAL tracks per child (not from top 5)
+# to ensure parent genres have unique tracks with no overlap. Would require:
+# - Re-running candidate selection for synthetic genres
+# - Storing/accessing candidate pools (currently discarded after selection)
+# - Applying global deduplication against all selected tracks
+#
 print("Selecting seeds for synthetic parent genres...", flush=True)
 
 def gather_synthetic_genres(tree, path=""):
