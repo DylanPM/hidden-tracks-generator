@@ -231,6 +231,15 @@ TRACK_DENY_URIS = {
 }
 
 # -------- PASTE YOUR GENRE_TREE HERE --------
+# REMOVED GENRES (previously commented out, removed for clarity):
+# - acid house (electronic > house) - low coverage
+# - breakbeat (electronic) - low coverage
+# - gangsta rap (hip hop) - redundant with hip hop root
+# - bossa nova (latin) - low coverage
+# - baroque (classical) - low coverage
+# - new age (classical) - low coverage
+# - minimalism (classical) - low coverage
+
 GENRE_TREE = {
     "rock": {
         "_seeds": "rock",
@@ -285,7 +294,6 @@ GENRE_TREE = {
                     "deep house": {"_seeds": "deep house"},
                     "tech house": {"_seeds": "tech house"},
                     "progressive house": {"_seeds": "progressive house"},
-                    # "acid house": {"_seeds": "acid house"},
                 }
             },
             "techno": { "_seeds": "techno" },
@@ -295,7 +303,6 @@ GENRE_TREE = {
             "dubstep": { "_seeds": "dubstep" },
             "synthwave": { "_seeds": "synthwave" },
             "ambient": { "_seeds": "ambient" },
-            #"breakbeat": { "_seeds": "breakbeat" },
         }
     },
 
@@ -312,7 +319,6 @@ GENRE_TREE = {
     "hip hop": {
         "_seeds": "hip hop",
         "subgenres": {
-            #"gangsta rap": {"_seeds": "gangsta rap"},
             "Regional Hip Hop": {
                 "_seeds": "__synthetic__",
                 "subgenres": {
@@ -409,7 +415,6 @@ GENRE_TREE = {
                     "tropical": {"_seeds": "tropical"},
                 }
             },
-            #"bossa nova": {"_seeds": "bossa nova"},
         }
     },
 
@@ -431,9 +436,6 @@ GENRE_TREE = {
         "subgenres": {
             "romantic": {"_seeds": "romantic"},
             "modern classical": {"_seeds": "modern classical"},
-            #  "baroque": {"_seeds": "baroque"},
-            #"new age": {"_seeds": "new age"},
-           # "minimalism": {"_seeds": "minimalism"},
         }
     }
 }
@@ -1624,16 +1626,15 @@ for idx, genre in enumerate(PLAYABLE_GENRES, 1):
 processing_time = time.time() - processing_start
 print(f"\n✓ Completed in {processing_time:.1f}s\n", flush=True)
 
+# Define feature fields for both regular and synthetic genres
+FEATURE_FIELDS = ["danceability","energy","speechiness","acousticness","valence","popularity","instrumentalness"]
+
 # -------- Synthetic genre seed selection --------
-# NOTE: Current implementation uses a simple "representative democracy" approach:
-# Takes the first 2 seeds from each child genre's already-selected top 5.
-# This means tracks/artists appear in BOTH parent and child genres.
-#
-# FUTURE IMPROVEMENT: Could select 2 ADDITIONAL tracks per child (not from top 5)
-# to ensure parent genres have unique tracks with no overlap. Would require:
-# - Re-running candidate selection for synthetic genres
-# - Storing/accessing candidate pools (currently discarded after selection)
-# - Applying global deduplication against all selected tracks
+# Selects 5 UNIQUE seeds for synthetic parent genres using:
+# - Aggregate audio features from all child seeds
+# - Candidate tracks matching ANY child genre tag
+# - Global deduplication (no track/artist overlap with any other genre)
+# - Representative diversity (at least 1 from each child if possible)
 #
 print("Selecting seeds for synthetic parent genres...", flush=True)
 
@@ -1655,7 +1656,6 @@ def gather_synthetic_genres(tree, path=""):
                         if isinstance(child_seed, str) and child_seed != "__synthetic__":
                             children_seeds.append(child_seed)
             if children_seeds:
-                # Store tuple of (full_path, display_name, children)
                 synthetic.append((node_path, node_name, children_seeds))
 
         # Continue walking
@@ -1670,6 +1670,72 @@ def gather_synthetic_genres(tree, path=""):
 
     return synthetic
 
+def compute_aggregate_features(child_genres):
+    """Compute aggregate audio features from all child genre seeds."""
+    all_tracks = []
+    for child in child_genres:
+        all_tracks.extend(results.get(child, []))
+
+    if not all_tracks:
+        return None
+
+    # Compute mean of all audio features
+    feature_sums = defaultdict(float)
+    feature_counts = defaultdict(int)
+
+    for track in all_tracks:
+        for feat in FEATURE_FIELDS:
+            val = track.get(feat)
+            if val is not None:
+                try:
+                    feature_sums[feat] += float(val)
+                    feature_counts[feat] += 1
+                except:
+                    pass
+        # Include tempo
+        tempo = track.get("tempo")
+        if tempo is not None:
+            try:
+                feature_sums["tempo_norm"] += tempo_to_norm(float(tempo))
+                feature_counts["tempo_norm"] += 1
+            except:
+                pass
+
+    aggregate = {}
+    for feat, total in feature_sums.items():
+        if feature_counts[feat] > 0:
+            aggregate[feat] = total / feature_counts[feat]
+
+    return aggregate
+
+def feature_distance(track, target_features):
+    """Compute Euclidean distance between track and target features."""
+    distance = 0.0
+    count = 0
+
+    for feat in FEATURE_FIELDS:
+        target_val = target_features.get(feat)
+        track_val = track.get(feat)
+        if target_val is not None and track_val is not None:
+            try:
+                distance += (float(track_val) - float(target_val)) ** 2
+                count += 1
+            except:
+                pass
+
+    # Include tempo
+    if "tempo_norm" in target_features:
+        tempo = track.get("tempo")
+        if tempo is not None:
+            try:
+                tempo_norm = tempo_to_norm(float(tempo))
+                distance += (tempo_norm - target_features["tempo_norm"]) ** 2
+                count += 1
+            except:
+                pass
+
+    return math.sqrt(distance / count) if count > 0 else float('inf')
+
 # Create mapping of path -> display name for build_manifest lookup
 synthetic_path_to_name = {}
 synthetic_genres = gather_synthetic_genres(GENRE_TREE)
@@ -1677,24 +1743,92 @@ print(f"Found {len(synthetic_genres)} synthetic parent genres", flush=True)
 
 for full_path, display_name, child_seeds in synthetic_genres:
     synthetic_path_to_name[full_path] = display_name
-    # Take 2 seeds from each child
-    synthetic_seeds = []
-    for child_seed in child_seeds:
-        child_tracks = results.get(child_seed, [])
-        # Take first 2 tracks from this child
-        for track in child_tracks[:2]:
-            synthetic_seeds.append(track)
 
-    if synthetic_seeds:
-        # Store using display name only
-        results[display_name] = synthetic_seeds
-        print(f"  ✓ {display_name}: {len(synthetic_seeds)} seeds from {len(child_seeds)} children", flush=True)
+    # Compute aggregate features from all children
+    aggregate_features = compute_aggregate_features(child_seeds)
+    if not aggregate_features:
+        results[display_name] = []
+        continue
+
+    # Gather candidate tracks matching ANY child genre
+    candidates = []
+    for child_genre in child_seeds:
+        child_genre_lower = child_genre.lower()
+        genre_pattern = re.compile(rf"\b{re.escape(child_genre_lower)}\b")
+
+        for index_key in tracks_by_genre.keys():
+            if genre_pattern.search(index_key):
+                for track in tracks_by_genre[index_key]:
+                    tid = track.get("uri") or track.get("id")
+                    if not tid or tid in global_seen_ids:
+                        continue
+
+                    track_genres = norm_tags(track.get('artist_genres') or track.get('genres'))
+                    if not genre_match(child_genre, track_genres):
+                        continue
+                    if not passes_rules(child_genre, track):
+                        continue
+
+                    # Add track with metadata for selection
+                    candidates.append({
+                        "track": track,
+                        "child_genre": child_genre,
+                        "distance": feature_distance(track, aggregate_features)
+                    })
+
+    # Remove duplicates within candidates
+    seen_candidate_ids = set()
+    unique_candidates = []
+    for c in candidates:
+        tid = c["track"].get("uri") or c["track"].get("id")
+        if tid not in seen_candidate_ids:
+            seen_candidate_ids.add(tid)
+            unique_candidates.append(c)
+
+    # Sort by distance to aggregate
+    unique_candidates.sort(key=lambda c: c["distance"])
+
+    # Select 5 seeds ensuring diversity (at least 1 per child if possible)
+    selected = []
+    child_representation = {child: 0 for child in child_seeds}
+
+    # First pass: ensure at least 1 from each child
+    for child in child_seeds:
+        if len(selected) >= 5:
+            break
+        for c in unique_candidates:
+            if c["child_genre"] == child:
+                track = c["track"]
+                tid = track.get("uri") or track.get("id")
+                artist = ((track.get("artists") or [""])[0] or "").strip().lower()
+
+                if tid not in global_seen_ids and artist not in global_seen_artists:
+                    selected.append(track)
+                    global_seen_ids.add(tid)
+                    global_seen_artists.add(artist)
+                    child_representation[child] += 1
+                    unique_candidates.remove(c)
+                    break
+
+    # Second pass: fill remaining slots with closest matches
+    for c in unique_candidates:
+        if len(selected) >= 5:
+            break
+        track = c["track"]
+        tid = track.get("uri") or track.get("id")
+        artist = ((track.get("artists") or [""])[0] or "").strip().lower()
+
+        if tid not in global_seen_ids and artist not in global_seen_artists:
+            selected.append(track)
+            global_seen_ids.add(tid)
+            global_seen_artists.add(artist)
+
+    results[display_name] = selected
+    print(f"  ✓ {display_name}: {len(selected)}/5 seeds selected", flush=True)
 
 print(f"✓ Synthetic genre selection complete\n", flush=True)
 
 # -------- Feature computation --------
-FEATURE_FIELDS = ["danceability","energy","speechiness","acousticness","valence","popularity","instrumentalness"]
-
 def compute_features_from_tracks(seed_tracks: List[Dict[str, Any]]):
     fvals = defaultdict(list)
     years = []
